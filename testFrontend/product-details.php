@@ -375,11 +375,28 @@
                                     <img src="assets/images/product-details/01.jpg" id="current" alt="#">
                                 </div>
                                 <div class="images">
-                                    <img src="assets/images/product-details/01.jpg" class="img" alt="#">
-                                    <img src="assets/images/product-details/02.jpg" class="img" alt="#">
-                                    <img src="assets/images/product-details/03.jpg" class="img" alt="#">
+                                    <?php 
+
+                                        $conexion = mysqli_connect("localhost", "root", "", "dawstore");
+
+                                        if(mysqli_connect_errno()) {
+                                            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                                            exit();
+                                        }
+
+                                        $consulta = "SELECT images FROM products WHERE id=1";
+                                        $listaFotos = mysqli_query($conexion, $consulta);
+
+                                    $fotos = explode(',', $listaFotos);
+
+                                    '<img src="'.$fotos[0].'" class="img" alt="#">
+                                    <img src="'.$fotos[1].'" class="img" alt="#">
+                                    <img src="'.$fotos[2].'" class="img" alt="#">
                                     <img src="assets/images/product-details/04.jpg" class="img" alt="#">
-                                    <img src="assets/images/product-details/05.jpg" class="img" alt="#">
+                                    <img src="assets/images/product-details/05.jpg" class="img" alt="#">';
+                                
+
+                                    ?>
                                 </div>
                             </main>
                         </div>
