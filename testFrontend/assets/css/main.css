@@ -49,8 +49,8 @@ button:focus,
 }
 
 .form-check-input:checked {
-  background-color: #0167F3;
-  border-color: #0167F3;
+  background-color: #FFDE5B;
+  border-color: #FFDE5B;
 }
 
 select {
@@ -1250,7 +1250,7 @@ top: -1px;
 
 .pagination .pagination-list li.active a,
 .pagination .pagination-list li:hover a {
-  background: #0167F3;
+  background: #FFDE5B;
   color: #fff;
   border-color: transparent;
 }
@@ -1270,8 +1270,8 @@ top: -1px;
   font-size: 14px;
   font-weight: 600;
   padding: 13px 30px;
-  background-color: #0167F3;
-  color: #fff;
+  background-color: #FFDE5B;
+  color: #000;
   border: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -3084,6 +3084,7 @@ top: 2px;
 .hero-area .hero-slider .single-slider .content .button {
   margin-top: 30px;
 }
+
 
 .hero-area .hero-small-banner {
   height: 244px;
