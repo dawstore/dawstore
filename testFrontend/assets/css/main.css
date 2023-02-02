@@ -2050,8 +2050,8 @@ top: -1px;
 }
 
 .header .main-menu-search .search-btn button {
-  background-color: #0167F3;
-  color: #fff;
+  background-color: #FFDE5B;
+  color: #000;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -2065,8 +2065,8 @@ top: -1px;
 }
 
 .header .main-menu-search .search-btn button:hover {
-  color: #fff;
-  background-color: #081828;
+  color: #FFDE5B;
+  background-color: #FAFBF1;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
