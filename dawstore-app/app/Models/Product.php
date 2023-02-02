@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $casts = [
+        'images' => 'array'
+    ];
+
     use HasFactory;
 }
