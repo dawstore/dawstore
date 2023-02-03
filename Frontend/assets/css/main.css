@@ -1153,7 +1153,7 @@ top: -1px;
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #0167F3;
+  background: #FFDE5B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,7 +1164,7 @@ top: -1px;
   -ms-flex-align: center;
   align-items: center;
   font-size: 16px;
-  color: #fff !important;
+  color: #000 !important;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1436,7 +1436,7 @@ top: -1px;
 }
 
 .header .topbar {
-  background-color: #081828;
+  background-color: #FFD8A9;
   padding: 18px 0;
 }
 
@@ -1458,10 +1458,10 @@ top: -1px;
   position: relative;
   border: none;
   padding: 0 10px 0 0px;
-  color: #fff !important;
+  color: #000 !important;
   font-weight: 500;
   font-size: 14px;
-  background-color: #081828 !important;
+  background-color: #FFD8A9 !important;
 }
 
 .header .topbar .top-left .menu-top-link .select-position select:focus {
@@ -1472,8 +1472,8 @@ top: -1px;
 }
 
 .header .topbar .top-left .menu-top-link .select-position::after {
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
   content: '';
   display: block;
   height: 6px;
@@ -1522,7 +1522,7 @@ top: -1px;
 }
 
 .header .topbar .top-middle .useful-links li a {
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-weight: 500;
 }
@@ -1546,7 +1546,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user {
-  color: #fff;
+  color: #000;
   display: inline-block;
   margin-right: 5px;
   font-weight: 500;
@@ -1554,7 +1554,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user i {
-  color: #fff;
+  color: #000;
   display: inline-block;
   margin-right: 5px;
 }
@@ -1582,7 +1582,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user-login li a {
-  color: #fff;
+  color: #000;
   font-weight: 500;
   font-size: 14px;
   white-space: nowrap;
@@ -3516,7 +3516,7 @@ top: 2px;
     Call Action CSS
 ========================================*/
 .call-action {
-  background-color: #0167F3;
+  background-color: #FDEEDC;
 }
 
 .call-action .content {
@@ -3527,7 +3527,7 @@ top: 2px;
   font-size: 32px;
   font-weight: 800;
   line-height: 42px;
-  color: #fff;
+  color: #000;
   display: block;
   margin-bottom: 20px;
 }
@@ -3549,7 +3549,7 @@ top: 2px;
 .call-action .content p {
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #000;
 }
 
 .call-action .content .button {
@@ -4403,7 +4403,7 @@ top: 2px;
 	Footer CSS
 ========================================*/
 .footer {
-  background-color: #081828;
+  background-color: #FFD8A9;
   position: relative;
   /* Single Footer */
   /* End Single Footer */
@@ -4411,7 +4411,7 @@ top: 2px;
 
 .footer .footer-top .inner-content {
   padding: 60px 0;
-  border-bottom: 1px solid #ffffff26;
+  border-bottom: 1px solid #000;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4450,7 +4450,7 @@ top: 2px;
 }
 
 .footer .footer-top .footer-newsletter .title {
-  color: #fff;
+  color: #000;
   font-size: 20px;
   font-weight: 800;
   float: left;
@@ -4473,7 +4473,7 @@ top: 2px;
 }
 
 .footer .footer-top .footer-newsletter .title span {
-  color: #c2c2c2;
+  color: #000;
   display: block;
   font-size: 14px;
   margin-top: 5px;
@@ -4511,8 +4511,16 @@ top: 2px;
   display: inline-block;
   border: none;
   padding: 0px 20px;
-  color: #fff;
+  color: #000;
+  
 }
+  /* REVSAR POR QUE NO FUNCIONA */
+
+.newsletter-form-head input::placeholder{   
+  color: #000;
+}
+
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .footer .footer-top .footer-newsletter .newsletter-form input {
@@ -4635,7 +4643,7 @@ top: 2px;
   position: relative;
   margin-bottom: 32px;
   padding-bottom: 15px;
-  color: #fff;
+  color: #000;
   font-size: 17px;
   font-weight: 600;
   line-height: 24px;
@@ -4648,7 +4656,7 @@ top: 2px;
   left: 0;
   width: 40px;
   height: 3px;
-  background-color: #0167F3;
+  background-color: #000;
   content: '';
 }
 
@@ -4670,7 +4678,7 @@ top: 2px;
 }
 
 .footer .single-footer.f-link ul li a {
-  color: #d6d6d6;
+  color: #000;
   font-size: 14px;
   font-weight: 500;
   position: relative;
@@ -4682,7 +4690,7 @@ top: 2px;
 }
 
 .footer .single-footer.f-contact .phone {
-  color: #d6d6d6;
+  color: #000;
 }
 
 .footer .single-footer.f-contact ul {
@@ -4692,7 +4700,7 @@ top: 2px;
 .footer .single-footer.f-contact ul li {
   display: block;
   margin-bottom: 10px;
-  color: #d6d6d6;
+  color: #000;
 }
 
 .footer .single-footer.f-contact ul li span {
@@ -4704,11 +4712,11 @@ top: 2px;
 }
 
 .footer .single-footer.f-contact ul li span {
-  color: #d6d6d6;
+  color: #000;
 }
 
 .footer .single-footer.f-contact .mail a {
-  color: #d6d6d6;
+  color: #000;
 }
 
 .footer .single-footer.f-contact .mail a:hover {
@@ -4734,7 +4742,7 @@ top: 2px;
   border-radius: 4px;
   padding: 15px 30px;
   padding-left: 60px;
-  color: #fff;
+  color: #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #ffffff0f;
@@ -4754,7 +4762,7 @@ top: 2px;
 .footer .single-footer.our-app .app-btn li a .small-title {
   font-size: 13px;
   display: block;
-  color: #fff;
+  color: #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -4763,7 +4771,7 @@ top: 2px;
   font-size: 14px;
   font-weight: 500;
   display: block;
-  color: #fff;
+  color: #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -4802,7 +4810,7 @@ top: 2px;
 .footer .footer-bottom .payment-gateway span {
   display: inline-block;
   margin-right: 12px;
-  color: #fff;
+  color: #000;
 }
 
 @media (max-width: 767px) {
@@ -4828,11 +4836,11 @@ top: 2px;
 }
 
 .footer .footer-bottom .copyright p {
-  color: #fff;
+  color: #000;
 }
 
 .footer .footer-bottom .copyright p a {
-  color: #eee;
+  color: #000;
   display: inline-block;
   margin-left: 4px;
 }
@@ -4868,21 +4876,21 @@ top: 2px;
   width: 35px;
   text-align: center;
   display: block;
-  color: #fff;
+  color: #000;
   border-radius: 50%;
   line-height: 35px;
   font-size: 15px;
 }
 
 .footer .footer-bottom .socila li a:hover {
-  background-color: #0167F3;
+  background-color: #000;
   color: #fff;
   border-color: transparent;
 }
 
 .footer .footer-bottom .socila li span {
   display: inline-block;
-  color: #fff;
+  color: #000;
   margin-right: 12px;
 }
 
