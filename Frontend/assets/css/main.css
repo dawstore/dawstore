@@ -1716,8 +1716,8 @@ top: -1px;
 }
 
 .header .navbar-cart .wishlist a:hover {
-  color: #fff;
-  background-color: #0167F3;
+  color: #000;
+  background-color: #FFDE5B;
   border-color: transparent;
 }
 
@@ -1741,8 +1741,8 @@ top: -1px;
 }
 
 .header .navbar-cart .cart-items:hover .main-btn {
-  color: #fff;
-  background-color: #0167F3;
+  color: #000;
+  background-color: #ffde5b;
   border-color: transparent;
 }
 
