@@ -28,13 +28,13 @@
 
 <body>
 
-    @yield('preload');
+    @yield('preload')
 
-    @yield('header');
+    @yield('header')
 
-    @yield('hero');
+    @yield('hero')
 
-    @yield('trending_product');
+    @yield('trending_product')
 
 
     <!-- ========================= scroll-top ========================= -->

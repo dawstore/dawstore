@@ -1,3 +1,5 @@
-@extends('templates.template');
+@extends('templates.template')
 
-@yield('preload');
+@yield('preload')
+    
+@yield('header')
