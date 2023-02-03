@@ -1153,7 +1153,7 @@ top: -1px;
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #0167F3;
+  background: #FFDE5B;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,7 +1164,7 @@ top: -1px;
   -ms-flex-align: center;
   align-items: center;
   font-size: 16px;
-  color: #fff !important;
+  color: #000 !important;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1436,7 +1436,7 @@ top: -1px;
 }
 
 .header .topbar {
-  background-color: #081828;
+  background-color: #FFD8A9;
   padding: 18px 0;
 }
 
@@ -1458,10 +1458,10 @@ top: -1px;
   position: relative;
   border: none;
   padding: 0 10px 0 0px;
-  color: #fff !important;
+  color: #000 !important;
   font-weight: 500;
   font-size: 14px;
-  background-color: #081828 !important;
+  background-color: #FFD8A9 !important;
 }
 
 .header .topbar .top-left .menu-top-link .select-position select:focus {
@@ -1472,8 +1472,8 @@ top: -1px;
 }
 
 .header .topbar .top-left .menu-top-link .select-position::after {
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
   content: '';
   display: block;
   height: 6px;
@@ -1522,7 +1522,7 @@ top: -1px;
 }
 
 .header .topbar .top-middle .useful-links li a {
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-weight: 500;
 }
@@ -1546,7 +1546,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user {
-  color: #fff;
+  color: #000;
   display: inline-block;
   margin-right: 5px;
   font-weight: 500;
@@ -1554,7 +1554,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user i {
-  color: #fff;
+  color: #000;
   display: inline-block;
   margin-right: 5px;
 }
@@ -1582,7 +1582,7 @@ top: -1px;
 }
 
 .header .topbar .top-end .user-login li a {
-  color: #fff;
+  color: #000;
   font-weight: 500;
   font-size: 14px;
   white-space: nowrap;
@@ -3516,7 +3516,7 @@ top: 2px;
     Call Action CSS
 ========================================*/
 .call-action {
-  background-color: #0167F3;
+  background-color: #FDEEDC;
 }
 
 .call-action .content {
@@ -3527,7 +3527,7 @@ top: 2px;
   font-size: 32px;
   font-weight: 800;
   line-height: 42px;
-  color: #fff;
+  color: #000;
   display: block;
   margin-bottom: 20px;
 }
@@ -3549,7 +3549,7 @@ top: 2px;
 .call-action .content p {
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #000;
 }
 
 .call-action .content .button {
