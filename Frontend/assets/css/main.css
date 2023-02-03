@@ -4899,3 +4899,12 @@ top: 2px;
     display: none;
   }
 }
+
+/*======================================
+    MENU USUARIO REGISTRADO
+========================================*/
+.desplegable a{
+  color: #000;
+  font-size: small;
+}
+
