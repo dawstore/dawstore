@@ -11,11 +11,12 @@
     
 
     <!-- ========================= CSS  ========================= -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../css/LineIcons.3.0.css" />
-    <link rel="stylesheet" href="../../css/tiny-slider.css" />
-    <link rel="stylesheet" href="../../css/glightbox.min.css" />
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href=href="{!! asset('../../css/bootstrap.min.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../../css/glightbox.min.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../../css/LineIcons.3.0.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../../css/login.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../../css/main.css') !!}" />
+    <link rel="stylesheet" href="{!! asset('../../css/tiny-slider.css') !!}" />
 
      <!-- ========================= JS  ========================= -->
     <script src="../../js/bootstrap.min.js"></script>
