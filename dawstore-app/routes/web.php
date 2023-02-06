@@ -13,6 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/', function () {
+    return view('index');
+});
+
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+Route::get('/female', function () {
+    return view('female');
+});
+
+Route::get('/male', function () {
+    return view('male');
+});
+
+
+Route::get('/test', function () {
+    return view('test');
+});
+
