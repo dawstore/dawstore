@@ -29,9 +29,14 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::get('/shop', function () {
-    return view('shop');
+Route::get('/male', function () {
+    return view('male');
 });
+
+Route::get('/female', function () {
+    return view('female');
+});
+
 
 Route::get('/test', function () {
     return view('test');
