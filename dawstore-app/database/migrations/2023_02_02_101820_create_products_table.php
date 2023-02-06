@@ -20,6 +20,7 @@ return new class extends Migration
             $table->float('price');
             $table->text('description');
             $table->integer('stock');
+            $table->enum('genre', ['male', 'female', 'unisex']);
             $table->binary('images');
             $table->timestamps();
         });
