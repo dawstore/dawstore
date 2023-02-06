@@ -11,17 +11,17 @@
     
 
     <!-- ========================= CSS  ========================= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
-    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="../../css/tiny-slider.css" />
+    <link rel="stylesheet" href="../../css/glightbox.min.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
 
      <!-- ========================= JS  ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/tiny-slider.js"></script>
+    <script src="../../js/glightbox.min.js"></script>
+    <script src="../../js/main.js"></script>
 
 
 </head>
@@ -35,6 +35,14 @@
     @yield('hero')
 
     @yield('trending_product')
+
+    @yield('call_action')
+
+    @yield('banner')
+
+    @yield('shipping_info')
+
+    @yield('footer')
 
 
     <!-- ========================= scroll-top ========================= -->
