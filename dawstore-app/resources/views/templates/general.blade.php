@@ -3,42 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tello Store | Home</title>
+    <title>Tello Store | @yield('titulo')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- gLightbox gallery-->
-    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/glightbox/css/glightbox.min.css')}}">
     <!-- Range slider-->
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/nouislider/nouislider.min.css')}}">
     <!-- Choices CSS-->
-    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/choices.js/public/assets/styles/choices.min.css')}}">
     <!-- Swiper slider-->
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/swiper/swiper-bundle.min.css')}}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
     <!-- Google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
   </head>
   <body>
       <div class="page-holder">
 
         @yield('navbar')
+<<<<<<< HEAD
+=======
+      
+        {{-- INDEX --}}
+>>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
 
         @yield('modal')
 
         @yield('hero_section')
 
+        {{-- CHECKOUT --}}
+
         @yield('checkout_section')
 
+<<<<<<< HEAD
+=======
+        {{-- CART --}}
+
+        @yield('cart_section')
+
+        {{-- DETAIL --}}
+
+        @yield('detail_section')
+
+        {{-- SHOP --}}
+
+        @yield('shop_section')
+
+        @yield('product_section')
+
+        @yield('lat_izq')
+
+>>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
         @yield('footer')
 
       <!-- JavaScript files-->
+<<<<<<< HEAD
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="vendor/glightbox/js/glightbox.min.js"></script>
       <script src="vendor/nouislider/nouislider.min.js"></script>
@@ -46,6 +73,38 @@
       <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
       <script src="js/front.js"></script>
       <script src="js/icon-svg.js"></script>
+=======
+      <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+      <script src="{{URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/nouislider/nouislider.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
+      <script src="{{URL::asset('js/front.js')}}"></script>
+      <script src="{{URL::asset('js/icon-svg.js')}}"></script>
+      <script src="{{URL::asset('js/range.js')}}"></script>
+      
+      {{-- <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite -
+        //   see more here
+        //   https://css-tricks.com/ajaxing-svg-sprite/
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        // ICONOS SVG
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+>>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
