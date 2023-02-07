@@ -14,6 +14,8 @@
     <title>Admin Panel - Tello Shoes</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -242,21 +244,24 @@
                                 <table class="table table-hover my-0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th class="d-none d-xl-table-cell">Start Date</th>
-                                            <th class="d-none d-xl-table-cell">End Date</th>
-                                            <th>Status</th>
-                                            <th class="d-none d-md-table-cell">Assignee</th>
+                                            <th>ID</th>
+                                            <th class="d-none d-xl-table-cell">Name</th>
+                                            <th class="d-none d-xl-table-cell">Price</th>
+                                            <th>Stock</th>
+                                            <th class="d-none d-md-table-cell">Genre</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($products as $product)
                                         <tr>
-                                            <td>Project Apollo</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                                            <td>{{ $product->id }}</td>
+                                            <td class="d-none d-xl-table-cell">{{ $product->name }}</td>
+                                            <td class="d-none d-xl-table-cell">${{ $product->price }}</td>
+                                            <td><span class="badge bg-success">{{ $product->stock }}</span></td>
+                                            <td class="d-none d-md-table-cell">{{ $product->genre }}</td>
+                                            <td><a href="{{-- {{ route('notas.editar', $product) }} --}}" class="btn btn-warning btn-sm"> <i class="bi bi-pencil-square"></i> </a></td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

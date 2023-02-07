@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminpanelController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //RUTAS ECOMMERCE
 Route::get('/', function () {
     return view('index');
-});
+})->name('Home');
 
 Route::get('/', [ ProductsController::class,'products' ]);
 
@@ -66,6 +67,8 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/admin-panel', function () {
     return view('/admin/admin-panel');
 })->name('admin-panel');
+
+Route::get('/admin/admin-panel', [ AdminpanelController::class,'products' ]);
 
 Route::get('/admin/admin-management', function () {
     return view('/admin/admin-management');
