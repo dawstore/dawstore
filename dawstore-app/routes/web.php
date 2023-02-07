@@ -22,31 +22,31 @@ Route::get('/', [ ProductsController::class,'products' ]);
 
 Route::get('/cart', function () {
     return view('cart');
-});
+})->name('cart');
 
 Route::get('/checkout', function () {
     return view('checkout');
-});
+})->name('checkout');
 
 Route::get('/female', function () {
     return view('female');
-});
+})->name('female');
 
 Route::get('/male', function () {
     return view('male');
-});
+})->name('male');
 
 Route::get('/test', function () {
     return view('test');
-});
+})->name('test');
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
 Route::get('/signup', function () {
     return view('signup');
-});
+})->name('signup');
 
 Route::get('/detail', function () {
     return view('detail');
