@@ -1,8 +1,6 @@
 
 @extends('templates.template')
 
-@yield('navbar')
-
 @section('modal')
       <!--  Modal -->
       <div class="modal fade" id="productView" tabindex="-1">
@@ -285,5 +283,3 @@
         </section>
       </div>
 @endsection
-
-@yield('footer')
