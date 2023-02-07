@@ -40,6 +40,24 @@
 
         @yield('checkout_section')
 
+
+        {{-- CART --}}
+
+        @yield('cart_section')
+
+        {{-- DETAIL --}}
+
+        @yield('detail_section')
+
+        {{-- SHOP --}}
+
+        @yield('shop_section')
+
+        @yield('product_section')
+
+        @yield('lat_izq')
+
+
         @yield('footer')
 
       <!-- JavaScript files-->
@@ -53,6 +71,10 @@
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/range.js')}}"></script>
 
+
+      
+       // ICONOS SVG
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
