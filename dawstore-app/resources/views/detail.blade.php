@@ -1,5 +1,9 @@
 @extends('templates.template')
 
+@section('titulo')
+{{ $product->name }}
+@endsection
+
 @section('detail_section')
 <section class="py-5">
   <div class="container">
@@ -38,9 +42,9 @@
           <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
           <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
         </ul>
-        <h1>Red digital smartwatch</h1>
-        <p class="text-muted lead">$250</p>
-        <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.</p>
+        <h1>{{ $product->name }}</h1>
+        <p class="text-muted lead">${{ $product->price }}</p>
+        <p class="text-sm mb-4">{{ $product->description }}</p>
         <div class="row align-items-stretch mb-4">
           <div class="col-sm-5 pr-sm-0">
             <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>

@@ -42,4 +42,9 @@ Route::get('/test', function () {
 
 Route::get('/detail', function () {
     return view('detail');
-}); 
+})->name('detail'); 
+
+Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
+
+
+
