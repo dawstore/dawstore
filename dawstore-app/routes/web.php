@@ -35,8 +35,16 @@ Route::get('/male', function () {
 
 Route::get('/test', function () {
     return view('test');
-}); 
+});
 
 Route::get('/detail', function () {
     return view('detail');
-}); 
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});

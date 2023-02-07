@@ -29,11 +29,11 @@
       <div class="page-holder">
 
         @yield('navbar')
-      
+
         {{-- INDEX --}}
 
         @yield('modal')
-      
+
         @yield('hero_section')
 
         {{-- CHECKOUT --}}
@@ -57,7 +57,7 @@
         @yield('lat_izq')
 
         @yield('footer')
-            
+
       <!-- JavaScript files-->
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="vendor/glightbox/js/glightbox.min.js"></script>
@@ -67,30 +67,9 @@
       <script src="js/front.js"></script>
       <script src="js/icon-svg.js"></script>
       <script src="js/range.js"></script>
-      {{-- <script>
-        // ------------------------------------------------------- //
-        //   Inject SVG Sprite -
-        //   see more here
-        //   https://css-tricks.com/ajaxing-svg-sprite/
-        // ------------------------------------------------------ //
-        function injectSvgSprite(path) {
-
-            var ajax = new XMLHttpRequest();
-            ajax.open("GET", path, true);
-            ajax.send();
-            ajax.onload = function(e) {
-            var div = document.createElement("div");
-            div.className = 'd-none';
-            div.innerHTML = ajax.responseText;
-            document.body.insertBefore(div, document.body.childNodes[0]);
-            }
-        }
-        // ICONOS SVG
-        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
-
-      </script> --}}
-      <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+      <!-- FontAwesome CSS - Infinite Scroll-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
     </div>
   </body>
 </html>

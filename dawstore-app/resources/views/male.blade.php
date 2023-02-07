@@ -154,7 +154,7 @@ active
             </div>
           </div>
           <!-- PRODUCT-->
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6" data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
             <div class="product text-center">
               <div class="mb-3 position-relative">
                 <div class="badge text-white bg-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="img/product-2.jpg" alt="..."></a>
