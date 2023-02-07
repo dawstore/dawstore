@@ -1,5 +1,13 @@
 @extends('templates.template')
 
+@section('titulo')
+Female
+@endsection
+
+@section('female')
+active
+@endsection
+
 @section('shop_section')
 <section class="py-5 bg-light">
   <div class="container">

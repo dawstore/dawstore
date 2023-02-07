@@ -11,10 +11,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="{{url ('/')}}">Home</a>
+                  <a class="nav-link @yield('home')" href="{{url ('/')}}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
+                    <a class="nav-link dropdown-toggle @yield('female')" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
                     <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item border-0 transition-link" href="{{url ('female')}}">Products</a>
                         <a class="dropdown-item border-0 transition-link" href="#">Feature Products</a>
@@ -22,7 +22,7 @@
                     </div>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Male</a>
+                    <a class="nav-link dropdown-toggle @yield('male')" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Male</a>
                     <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                         <a class="dropdown-item border-0 transition-link" href="{{url ('male')}}">Products</a>
                         <a class="dropdown-item border-0 transition-link" href="#">Feature Products</a>
@@ -30,7 +30,7 @@
                     </div>
                   </li>
                 <li class="nav-item">
-                 <a class="nav-link" href="#">Contact Us</a>
+                 <a class="nav-link @yield('contact')" href="#">Contact Us</a>
                 </li>
 
               </ul>

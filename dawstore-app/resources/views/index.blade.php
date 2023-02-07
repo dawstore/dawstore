@@ -1,5 +1,13 @@
 @extends('templates.template')
 
+@section('titulo')
+Home
+@endsection
+
+@section('home')
+active
+@endsection
+
 @section('hero_section')
       <!-- HERO SECTION-->
       <div class="container">
