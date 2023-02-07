@@ -2,29 +2,28 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
-    <meta name="author" content="AdminKit">
-    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+    <title>Forms | AdminKit Demo</title>
+
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}" />
-    <title>Admin Management - Tello Shoes</title>
-    <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('css/app.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="wrapper">
-    <nav id="sidebar" class="sidebar js-sidebar">
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
                     <span class="align-middle">Admin Panel</span>
                 </a>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-item active">
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="index.html">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
@@ -36,7 +35,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-item">
+                    <li class="sidebar-item active">
                         <a class="sidebar-link" href="{{url ('admin/product-manager')}}">
                             <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Product Manager</span>
                         </a>
@@ -121,22 +120,72 @@
                 <div class="container-fluid p-0">
 
                     <div class="mb-3">
-                        <h1 class="h3 d-inline align-middle">Add and Edit Admin Users</h1>
+                        <h1 class="h3 d-inline align-middle">Product Manager</h1>
+                        <a class="badge bg-dark text-white ms-2" href="#">
+                            Edit, create and remove items
+                        </a>
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title mb-0">Admin Credentials</h5>
+                                    <h5 class="card-title mb-0">General Settings</h5>
                                 </div>
                                 <div class="card-body">
-                                    <input type="text" class="form-control" id="admin-username" name="admin-username" placeholder="Username" required>
+                                    <input type="text" id="product-sku" name="product-sku" class="form-control" placeholder="SKU" required>
                                 </div>
                                 <div class="card-body">
-                                    <input type="email" class="form-control" id="admin-email" name="admin-email" placeholder="Email" required>
+                                    <input type="text" id="product-name" name="product-name" class="form-control" placeholder="Name" required>
                                 </div>
                                 <div class="card-body">
-                                    <input type="password" class="form-control" id="admin-password" name="admin-password" placeholder="Password" required>
+                                    <input type="text" id="product-desc" name="product-desc" class="form-control" placeholder="Description" required>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Price and Discounts</h5>
+                                </div>
+                                <div class="card-body">
+                                    <input type="text" id="product-price" name="product-price" class="form-control" placeholder="Price" required>
+                                </div>
+                                <div class="card-body">
+                                    <input type="text" id="product-discount" name="product-discount" class="form-control" placeholder="Discount %" required>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Stocks</h5>
+                                </div>
+                                <div class="card-body">
+                                    <input class="form-control" type="text" name="product-stock" id="product-stock" placeholder="Product Stock" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Genre</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="radio" value="option1" name="radios-example">
+                                            <span class="form-check-label">
+                                                Female
+                                            </span>
+                                        </label>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="radio" value="option2" name="radios-example">
+                                            <span class="form-check-label">
+                                                Male
+                                            </span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -149,34 +198,20 @@
                                 </div>
                             </div>
 
-                        </div>
-
-                    <div class="col-12 col-lg-6">
-                        <div class="row">
-                            <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-                            <div class="card flex-fill">
+                            <div class="card">
                                 <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Account Actives</h5>
+                                    <h5 class="card-title mb-0">Edit Products</h5>
                                 </div>
-                                <table class="table table-hover my-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>ADMIN HERE</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                    <a href="#" class="btn btn-warning text-dark fw-bold" name="edit-products" role="button" data-bs-toggle="button">Edit Products</a>
+                                    <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
             </main>
@@ -185,7 +220,25 @@
                 <div class="container-fluid">
                     <div class="row text-muted">
                         <div class="col-6 text-start">
-                            <p>Admin Panel by Ilerna Sevilla Daw Team</p>
+                            <p class="mb-0">
+                                <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -193,7 +246,7 @@
         </div>
     </div>
 
-    <script src="{{URL::asset('/js/app.js')}}"></script>
+    <script src="{{URL::asset('js/app.js')}}"></script>
 
 </body>
 
