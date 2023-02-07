@@ -72,8 +72,8 @@
       <script src="{{URL::asset('js/range.js')}}"></script>
 
 
-      
-       // ICONOS SVG
+
+       <!-- JavaScript files-->
         injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
 

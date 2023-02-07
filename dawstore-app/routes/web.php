@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//RUTAS ECOMMERCE
 Route::get('/', function () {
     return view('index');
 });
@@ -48,11 +50,25 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
+
 Route::get('/detail', function () {
     return view('detail');
 })->name('detail');
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+//RUTAS DASHBOARD
+
+Route::get('/admin/dashboard', function () {
+    return view('/admin/dashboard');
+})->name('dashboard');
+
+Route::get('/admin/admin-panel', function () {
+    return view('/admin/admin-panel');
+})->name('admin-panel');
+
+Route::get('/admin/admin-management', function () {
+    return view('/admin/admin-management');
+})->name('admin-management');
 
 

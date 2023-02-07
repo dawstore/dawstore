@@ -44,7 +44,7 @@
                     <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">(0)</small></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#!">
+                    <a class="nav-link" href="{{url ('login')}}">
                     <i class="fas fa-user me-1 text-gray fw-normal"></i>Account</a>
                 </li>
               </ul>
