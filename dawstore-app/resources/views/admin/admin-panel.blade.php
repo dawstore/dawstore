@@ -234,8 +234,12 @@
                         <div class="col-12 col-lg-8 col-xxl-9 d-flex">
                             <div class="card flex-fill">
                                 <div class="card-header">
-
                                     <h5 class="card-title mb-0">Latest Products</h5>
+                                    @if (session('message'))
+                                        <div>
+                                        {{ session('message') }}
+                                        </div>
+                                    @endif
                                 </div>
                                 <table class="table table-hover my-0">
                                     <thead>
@@ -245,6 +249,8 @@
                                             <th class="d-none d-xl-table-cell">Price</th>
                                             <th>Stock</th>
                                             <th class="d-none d-md-table-cell">Genre</th>
+                                            <th class="d-none d-md-table-cell">Edit</th>
+                                            <th class="d-none d-md-table-cell">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -255,7 +261,13 @@
                                             <td class="d-none d-xl-table-cell">${{ $product->price }}</td>
                                             <td><span class="badge bg-success">{{ $product->stock }}</span></td>
                                             <td class="d-none d-md-table-cell">{{ $product->genre }}</td>
-                                            <td><a href="{{-- {{ route('notas.editar', $product) }} --}}" class="btn btn-warning btn-sm"> <i class="bi bi-pencil-square"></i> </a></td>
+                                            <td><a href="{{ route('edit-product', $product) }}" class="btn btn-success btn-sm"> <i class="bi bi-pencil-square"></i> </a></td>
+                                            <td><form action="{{ route('admin-panel', $product) }}" method="POST" class="d-inline">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button class="btn btn-danger btn-sm" type="submit"><i class="bi bi-trash"></i></button>
+                                                </form>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

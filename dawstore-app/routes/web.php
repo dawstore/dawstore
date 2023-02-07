@@ -82,5 +82,14 @@ Route::get('/admin/edit-product', function () {
     return view('/admin/edit-product');
 })->name('edit-product');
 
+Route::get('/admin/edit-product/{id}', [ AdminpanelController::class, 'edit' ]) -> name('edit-product');
+
+Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product'); 
+
+Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
+
+
+
+
 
 
