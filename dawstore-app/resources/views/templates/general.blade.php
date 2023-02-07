@@ -8,22 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- gLightbox gallery-->
-    <link rel="stylesheet" href="vendor/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/glightbox/css/glightbox.min.css')}}">
     <!-- Range slider-->
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/nouislider/nouislider.min.css')}}">
     <!-- Choices CSS-->
-    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/choices.js/public/assets/styles/choices.min.css')}}">
     <!-- Swiper slider-->
-    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{URL::asset('/vendor/swiper/swiper-bundle.min.css')}}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
     <!-- Google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/logos/logoTello.png">
   </head>
   <body>
       <div class="page-holder">
@@ -60,14 +60,14 @@
             
       <!-- JavaScript files-->
       <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="vendor/nouislider/nouislider.min.js"></script>
-      <script src="vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-      <script src="js/front.js"></script>
-      <script src="js/icon-svg.js"></script>
-      <script src="js/range.js"></script>
+      <script src="{{URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/nouislider/nouislider.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
+      <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
+      <script src="{{URL::asset('js/front.js')}}"></script>
+      <script src="{{URL::asset('js/icon-svg.js')}}"></script>
+      <script src="{{URL::asset('js/range.js')}}"></script>
       
       {{-- <script>
         // ------------------------------------------------------- //
