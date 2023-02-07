@@ -125,7 +125,7 @@
                         </a>
                     </div>
 
-                    <form action="{{route('dashboard')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('insert-product') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-12 col-lg-6">
@@ -134,13 +134,13 @@
                                         <h5 class="card-title mb-0">General Settings</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" id="product-sku" name="product-sku" class="form-control" placeholder="SKU" required>
+                                        <input type="text" name="sku" class="form-control" placeholder="SKU" required>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" id="product-name" name="product-name" class="form-control" placeholder="Name" required>
+                                        <input type="text" name="name" class="form-control" placeholder="Name" required>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" id="product-desc" name="product-desc" class="form-control" placeholder="Description" required>
+                                        <input type="text" name="desc" class="form-control" placeholder="Description" required>
                                     </div>
                                 </div>
     
@@ -149,7 +149,7 @@
                                         <h5 class="card-title mb-0">Price</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" id="product-price" name="product-price" class="form-control" placeholder="Price" required>
+                                        <input type="text" name="price" class="form-control" placeholder="Price" required>
                                     </div>
                                 </div>
     
@@ -158,7 +158,7 @@
                                         <h5 class="card-title mb-0">Stock</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input class="form-control" type="text" name="product-stock" id="product-stock" placeholder="Product Stock" required>
+                                        <input class="form-control" type="text" name="stock" placeholder="Product Stock" required>
                                     </div>
                                 </div>
                             </div>
@@ -171,19 +171,19 @@
                                     <div class="card-body">
                                         <div>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="option1" name="radios-example">
+                                                <input class="form-check-input" type="radio" value="male" name="genre">
                                                 <span class="form-check-label">
                                                     Male
                                                 </span>
                                             </label>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="option2" name="radios-example">
+                                                <input class="form-check-input" type="radio" value="female" name="genre">
                                                 <span class="form-check-label">
                                                     Female
                                                 </span>
                                             </label>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="option2" name="radios-example">
+                                                <input class="form-check-input" type="radio" value="unisex" name="genre">
                                                 <span class="form-check-label">
                                                     Unisex
                                                 </span>
@@ -197,7 +197,7 @@
                                         <h5 class="card-title mb-0">Images</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input class="form-control form-control-sm" id="formFileSm" type="file" multiple>
+                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
                                     </div>
                                 </div>
     
@@ -207,7 +207,8 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="mb-3">
-                                        <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a>
+                                        {{-- <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a> --}}
+                                        <button class="btn btn-success text-dark fw-bold" type="submit">Save changes</button>
                                         </div>
     
                                     </div>
@@ -215,6 +216,12 @@
                             </div>
                         </div>
                     </form>
+
+                    @if (session('mensaje'))
+                            <div class="mensaje-nota-creada">
+                                {{ session('mensaje') }}
+                            </div>
+                    @endif
                 </div>
                 
                 <div class="row ">
