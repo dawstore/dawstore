@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url ('admin/admin-management')}}">
+                        <a class="sidebar-link" href="{{url ('admin/create-admin')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Add Admin</span>
                         </a>
                     </li>
