@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,7 +22,7 @@
                 </a>
                 <ul class="sidebar-nav">
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="{{url ('admin/admin-panel')}}">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
                     </li>

@@ -11,6 +11,8 @@
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url ('admin/admin-management')}}">
+                        <a class="sidebar-link" href="{{url ('admin/create-admin')}}">
                             <i class="align-middle" data-feather="user"></i> <span class="align-middle">Add Admin</span>
                         </a>
                     </li>
@@ -232,27 +234,42 @@
                         <div class="col-12 col-lg-8 col-xxl-9 d-flex">
                             <div class="card flex-fill">
                                 <div class="card-header">
-
                                     <h5 class="card-title mb-0">Latest Products</h5>
+                                    @if (session('message'))
+                                        <div>
+                                        {{ session('message') }}
+                                        </div>
+                                    @endif
                                 </div>
                                 <table class="table table-hover my-0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th class="d-none d-xl-table-cell">Start Date</th>
-                                            <th class="d-none d-xl-table-cell">End Date</th>
-                                            <th>Status</th>
-                                            <th class="d-none d-md-table-cell">Assignee</th>
+                                            <th>ID</th>
+                                            <th class="d-none d-xl-table-cell">Name</th>
+                                            <th class="d-none d-xl-table-cell">Price</th>
+                                            <th>Stock</th>
+                                            <th class="d-none d-md-table-cell">Genre</th>
+                                            <th class="d-none d-md-table-cell">Edit</th>
+                                            <th class="d-none d-md-table-cell">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($products as $product)
                                         <tr>
-                                            <td>Project Apollo</td>
-                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
-                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
-                                            <td><span class="badge bg-success">Done</span></td>
-                                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
+                                            <td>{{ $product->id }}</td>
+                                            <td class="d-none d-xl-table-cell">{{ $product->name }}</td>
+                                            <td class="d-none d-xl-table-cell">${{ $product->price }}</td>
+                                            <td><span class="badge bg-success">{{ $product->stock }}</span></td>
+                                            <td class="d-none d-md-table-cell">{{ $product->genre }}</td>
+                                            <td><a href="{{ route('edit-product', $product) }}" class="btn btn-success btn-sm"> <i class="bi bi-pencil-square"></i> </a></td>
+                                            <td><form action="{{ route('admin-panel', $product) }}" method="POST" class="d-inline">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button class="btn btn-danger btn-sm" type="submit"><i class="bi bi-trash"></i></button>
+                                                </form>
+                                            </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
