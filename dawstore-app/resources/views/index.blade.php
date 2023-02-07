@@ -37,7 +37,7 @@ active
           </div>
         </section>
         <!-- TRENDING PRODUCTS-->
-        <section class="py-5">
+        <section class="py-5 text-center">
           <header>
             <p class="small text-muted small text-uppercase mb-1">Made the hard way</p>
             <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
@@ -58,7 +58,7 @@ active
                   </div>
                 </div>
                 <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{ $product->name }}</a></h6>
-                <p class="small text-muted">{{ $product->price }}</p>
+                <p class="small text-muted">${{ $product->price }}</p>
               </div>
             </div>
             @endforeach
