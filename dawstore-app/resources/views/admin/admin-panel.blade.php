@@ -98,10 +98,10 @@
                             </a>
 
                             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="user"></i> <span class="text-dark">Charles Hall</span>
+                                <i class="align-middle" data-feather="user"></i> <span class="text-dark">NOMBRE ADMIN</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <a class="dropdown-item" href="{{url ('admin/profile-admin')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                                 <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
@@ -116,9 +116,7 @@
 
             <main class="content">
                 <div class="container-fluid p-0">
-
-                    <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
-
+                  <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
                     <div class="row">
                         <div class="col-xl-6 col-xxl-5 d-flex">
                             <div class="w-100">

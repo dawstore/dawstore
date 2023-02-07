@@ -79,5 +79,9 @@ Route::get('/admin/edit-product', function () {
     return view('/admin/edit-product');
 })->name('edit-product');
 
+Route::get('/admin/profile-admin', function () {
+    return view('/admin/profile-admin');
+})->name('profile-admin');
+
 
 
