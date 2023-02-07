@@ -38,11 +38,19 @@ Route::get('/male', function () {
 
 Route::get('/test', function () {
     return view('test');
-}); 
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/signup', function () {
+    return view('signup');
+});
 
 Route::get('/detail', function () {
     return view('detail');
-})->name('detail'); 
+})->name('detail');
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 

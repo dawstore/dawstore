@@ -29,11 +29,8 @@
       <div class="page-holder">
 
         @yield('navbar')
-<<<<<<< HEAD
-=======
-      
+
         {{-- INDEX --}}
->>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
 
         @yield('modal')
 
@@ -43,37 +40,9 @@
 
         @yield('checkout_section')
 
-<<<<<<< HEAD
-=======
-        {{-- CART --}}
-
-        @yield('cart_section')
-
-        {{-- DETAIL --}}
-
-        @yield('detail_section')
-
-        {{-- SHOP --}}
-
-        @yield('shop_section')
-
-        @yield('product_section')
-
-        @yield('lat_izq')
-
->>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
         @yield('footer')
 
       <!-- JavaScript files-->
-<<<<<<< HEAD
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="vendor/nouislider/nouislider.min.js"></script>
-      <script src="vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-      <script src="js/front.js"></script>
-      <script src="js/icon-svg.js"></script>
-=======
       <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
       <script src="{{URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{URL::asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
@@ -83,28 +52,8 @@
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/range.js')}}"></script>
-      
-      {{-- <script>
-        // ------------------------------------------------------- //
-        //   Inject SVG Sprite -
-        //   see more here
-        //   https://css-tricks.com/ajaxing-svg-sprite/
-        // ------------------------------------------------------ //
-        function injectSvgSprite(path) {
 
-            var ajax = new XMLHttpRequest();
-            ajax.open("GET", path, true);
-            ajax.send();
-            ajax.onload = function(e) {
-            var div = document.createElement("div");
-            div.className = 'd-none';
-            div.innerHTML = ajax.responseText;
-            document.body.insertBefore(div, document.body.childNodes[0]);
-            }
-        }
-        // ICONOS SVG
-        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
->>>>>>> 7c0bde2e00960cab08b74d657c0e409594cdb226
+
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
