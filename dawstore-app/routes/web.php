@@ -67,9 +67,9 @@ Route::get('/admin/admin-panel', function () {
     return view('/admin/admin-panel');
 })->name('admin-panel');
 
-Route::get('/admin/admin-management', function () {
-    return view('/admin/admin-management');
-})->name('admin-management');
+Route::get('/admin/create-admin', function () {
+    return view('/admin/create-admin');
+})->name('create-admin');
 
 Route::get('/admin/product-manager', function () {
     return view('/admin/product-manager');
