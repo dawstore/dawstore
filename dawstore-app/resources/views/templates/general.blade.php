@@ -29,7 +29,7 @@
       <div class="page-holder">
 
         @yield('navbar')
-      
+
         {{-- INDEX --}}
 
         @yield('modal')
@@ -39,6 +39,7 @@
         {{-- CHECKOUT --}}
 
         @yield('checkout_section')
+
 
         {{-- CART --}}
 
@@ -56,6 +57,7 @@
 
         @yield('lat_izq')
 
+
         @yield('footer')
 
       <!-- JavaScript files-->
@@ -68,9 +70,12 @@
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/range.js')}}"></script>
+
+
       
        // ICONOS SVG
         injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
