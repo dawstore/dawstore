@@ -5,14 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
-    <meta name="author" content="AdminKit">
-    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
-    <title>Admin Panel - Tello Shoes</title>
+    <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
+    <title>Admin Panel - Tello Store</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
@@ -25,7 +22,6 @@
                 <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
                     <span class="align-middle">Admin Panel</span>
                 </a>
-
                 <ul class="sidebar-nav">
                     <li class="sidebar-item active">
                         <a class="sidebar-link" href="index.html">
@@ -40,8 +36,8 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="pages-sign-in.html">
-                            <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Manage Products</span>
+                        <a class="sidebar-link" href="{{url ('admin/product-manager')}}">
+                            <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Product Manager</span>
                         </a>
                     </li>
                 </ul>

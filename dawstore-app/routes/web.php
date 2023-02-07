@@ -74,4 +74,13 @@ Route::get('/admin/admin-management', function () {
     return view('/admin/admin-management');
 })->name('admin-management');
 
+Route::get('/admin/product-manager', function () {
+    return view('/admin/product-manager');
+})->name('product-manager');
+
+Route::get('/admin/edit-product', function () {
+    return view('/admin/edit-product');
+})->name('edit-product');
+
+
 
