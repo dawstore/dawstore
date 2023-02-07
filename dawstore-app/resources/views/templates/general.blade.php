@@ -30,12 +30,32 @@
 
         @yield('navbar')
       
+        {{-- INDEX --}}
+
         @yield('modal')
       
         @yield('hero_section')
 
+        {{-- CHECKOUT --}}
+
         @yield('checkout_section')
-      
+
+        {{-- CART --}}
+
+        @yield('cart_section')
+
+        {{-- DETAIL --}}
+
+        @yield('detail_section')
+
+        {{-- SHOP --}}
+
+        @yield('shop_section')
+
+        @yield('product_section')
+
+        @yield('lat_izq')
+
         @yield('footer')
             
       <!-- JavaScript files-->
@@ -46,6 +66,7 @@
       <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
       <script src="js/front.js"></script>
       <script src="js/icon-svg.js"></script>
+      <script src="js/range.js"></script>
       {{-- <script>
         // ------------------------------------------------------- //
         //   Inject SVG Sprite -

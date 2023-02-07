@@ -33,8 +33,10 @@ Route::get('/male', function () {
     return view('male');
 });
 
-
 Route::get('/test', function () {
     return view('test');
 }); 
 
+Route::get('/detail', function () {
+    return view('detail');
+}); 
