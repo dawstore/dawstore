@@ -26,10 +26,10 @@ class AdminpanelController extends Controller
 
             $imagen = $request->file("images");
             $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
-            $ruta = public_path("img");
+            $ruta = public_path("img/products");
 
             //$imagen->move($ruta,$nombreimagen);
-            copy($imagen->getRealPath(),$ruta.$nombreimagen);
+            copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
 
             $productInsert->images = $nombreimagen;            
             
