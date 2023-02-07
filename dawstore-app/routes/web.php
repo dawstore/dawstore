@@ -48,6 +48,10 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
+Route::get('/admin/dashboard', function () {
+    return view('/admin/dashboard');
+})->name('dashboard');
+
 Route::get('/detail', function () {
     return view('detail');
 })->name('detail');
