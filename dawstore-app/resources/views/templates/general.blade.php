@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tello Store | Home</title>
+    <title>Tello Store | @yield('titulo')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -23,19 +23,39 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/logos/logoTello.png">
   </head>
   <body>
       <div class="page-holder">
 
         @yield('navbar')
       
+        {{-- INDEX --}}
+
         @yield('modal')
       
         @yield('hero_section')
 
+        {{-- CHECKOUT --}}
+
         @yield('checkout_section')
-      
+
+        {{-- CART --}}
+
+        @yield('cart_section')
+
+        {{-- DETAIL --}}
+
+        @yield('detail_section')
+
+        {{-- SHOP --}}
+
+        @yield('shop_section')
+
+        @yield('product_section')
+
+        @yield('lat_izq')
+
         @yield('footer')
             
       <!-- JavaScript files-->
@@ -46,6 +66,7 @@
       <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
       <script src="js/front.js"></script>
       <script src="js/icon-svg.js"></script>
+      <script src="js/range.js"></script>
       {{-- <script>
         // ------------------------------------------------------- //
         //   Inject SVG Sprite -
