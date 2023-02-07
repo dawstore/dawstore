@@ -21,11 +21,6 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/', function () {
-    return view('index');
-});
-
-
 Route::get('/checkout', function () {
     return view('checkout');
 });
