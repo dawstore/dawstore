@@ -5,10 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Forms | AdminKit Demo</title>
+    <title>Product Manager - Tello Store</title>
 
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}" />
     <link href="{{URL::asset('css/app.css')}}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -204,7 +202,6 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-3">
-                                    <a href="#" class="btn btn-warning text-dark fw-bold" name="edit-products" role="button" data-bs-toggle="button">Edit Products</a>
                                     <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a>
                                     </div>
 
@@ -212,7 +209,40 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="row ">
+                        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-header">
 
+                                    <h5 class="card-title mb-0">Latest Products</h5>
+                                </div>
+                                <table class="table table-hover my-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th class="d-none d-xl-table-cell">SKU</th>
+                                            <th class="d-none d-xl-table-cell">Price</th>
+                                            <th>Genre</th>
+                                            <th class="d-none d-md-table-cell">Stock</th>
+                                            <th class="d-none d-md-table-cell">Settings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Air Force</td>
+                                            <td class="d-none d-xl-table-cell">1234561</td>
+                                            <td class="d-none d-xl-table-cell">45</td>
+                                            <td class="d-none d-md-table-cell">Male</td>
+                                            <td class="d-none d-md-table-cell">2 </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <a href="#" class="btn btn-warning text-dark fw-bold" name="edit-product" role="button" data-bs-toggle="button">Edit Product</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                 </div>
             </main>
 
