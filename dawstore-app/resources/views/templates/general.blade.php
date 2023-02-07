@@ -59,6 +59,7 @@
         @yield('footer')
             
       <!-- JavaScript files-->
+      <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="vendor/glightbox/js/glightbox.min.js"></script>
       <script src="vendor/nouislider/nouislider.min.js"></script>
@@ -67,6 +68,7 @@
       <script src="js/front.js"></script>
       <script src="js/icon-svg.js"></script>
       <script src="js/range.js"></script>
+      
       {{-- <script>
         // ------------------------------------------------------- //
         //   Inject SVG Sprite -
