@@ -57,7 +57,7 @@ active
                     </ul>
                   </div>
                 </div>
-                <h6> <a class="reset-anchor" href="detail.html?id={{ $product->id }}">{{ $product->name }}</a></h6>
+                <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{ $product->name }}</a></h6>
                 <p class="small text-muted">{{ $product->price }}</p>
               </div>
             </div>
