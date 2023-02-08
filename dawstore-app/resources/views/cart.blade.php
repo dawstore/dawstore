@@ -99,10 +99,32 @@ Cart
                         </tbody>
                     </table>
                 </div>
+                 <!-- Cart pagination-->
+                 <div class=" px-4 py-3">
+                    <div class="row text-center ">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item items-center">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
                 <!-- CART NAV-->
                 <div class="bg-light px-4 py-3">
                     <div class="row align-items-center text-center">
-                        <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="shop.html">
+                        <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="{{url ('/')}}">
                             <i class="fas fa-long-arrow-alt-left me-2">
                                 </i>Continue shopping</a></div>
                         <div class="col-md-6 text-md-end">
