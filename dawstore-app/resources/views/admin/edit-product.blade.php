@@ -124,9 +124,6 @@
                                 Product Manager/Edit
                             </a>
                         </div>
-                        @if (session('message'))
-                            <div class="alert alert-success">{{ session('message') }}</div>
-                        @endif
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="card">
@@ -214,6 +211,11 @@
                             </div>
                         </div>
                     </form>
+                    @if (session('mensaje'))
+                            <div class="alert alert-success">
+                                {{ session('mensaje') }}
+                            </div>
+                    @endif
                 </div>
             </main>
 

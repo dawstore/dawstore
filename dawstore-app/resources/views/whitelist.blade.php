@@ -95,5 +95,5 @@ Whitelist
             </div>
         </div>
     </section>
-</div>$
+</div>
 @endsection

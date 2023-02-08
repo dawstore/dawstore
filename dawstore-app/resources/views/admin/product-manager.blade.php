@@ -217,9 +217,9 @@
                     </form>
 
                     @if (session('mensaje'))
-                            <div class="mensaje-nota-creada">
-                                {{ session('mensaje') }}
-                            </div>
+                        <div class="alert alert-success" role="alert">
+                            {{ session('mensaje') }}
+                        </div>
                     @endif
                 </div>
             </main>
