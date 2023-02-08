@@ -134,7 +134,7 @@
                                         <h5 class="card-title mb-0">General Settings</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" name="sku" class="form-control" placeholder="SKU" required>
+                                        <input type="text" name="sku" class="form-control" placeholder="Sku" required>
                                     </div>
                                     <div class="card-body">
                                         <input type="text"  name="name" class="form-control" placeholder="Name" required>
@@ -155,7 +155,7 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="card-title mb-0">Stocks</h5>
+                                        <h5 class="card-title mb-0">Stock</h5>
                                     </div>
                                     <div class="card-body">
                                         <input class="form-control" type="number" name="stock" placeholder="Product Stock" required>
@@ -171,15 +171,15 @@
                                     <div class="card-body">
                                         <div>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="female" name="genre">
-                                                <span class="form-check-label">
-                                                    Female
-                                                </span>
-                                            </label>
-                                            <label class="form-check">
                                                 <input class="form-check-input" type="radio" value="male" name="genre">
                                                 <span class="form-check-label">
                                                     Male
+                                                </span>
+                                            </label>
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="radio" value="female" name="genre">
+                                                <span class="form-check-label">
+                                                    Female
                                                 </span>
                                             </label>
                                             <label class="form-check">
@@ -194,10 +194,10 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="card-title mb-0">Profile Pic (Opcional)</h5>
+                                        <h5 class="card-title mb-0">Images</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
                                     </div>
                                 </div>
 
