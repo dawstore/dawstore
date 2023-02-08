@@ -11,6 +11,18 @@ class ProductsController extends Controller
         return view('index', @compact('products'));
     }
 
+    public function productsMale()
+    {
+        $products = Product::all()->where('genre', 'male'); // Nos saca todos los productos de hombre de la BBDD
+        return view('male', @compact('products'));
+    }
+
+    public function productsFemale()
+    {
+        $products = Product::all()->where('genre', 'female'); // Nos saca todos los productos de mujer de la BBDD
+        return view('female', @compact('products'));
+    }
+
     public function detail($id)
     {
         $product = Product::findOrFail($id);
