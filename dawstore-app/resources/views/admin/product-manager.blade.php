@@ -101,7 +101,7 @@
                                 <i class="align-middle" data-feather="user"></i> <span class="text-dark">Charles Hall</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+                                <a class="dropdown-item" href="{{url ('admin/profile-admin')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                                 <a class="dropdown-item" href="{{url ('admin/admin-panel')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Dashboard</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
@@ -143,7 +143,7 @@
                                         <input type="text" name="desc" class="form-control" placeholder="Description" required>
                                     </div>
                                 </div>
-    
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="card-title mb-0">Price</h5>
@@ -152,7 +152,7 @@
                                         <input type="text" name="price" class="form-control" placeholder="Price" required>
                                     </div>
                                 </div>
-    
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="card-title mb-0">Stock</h5>
@@ -162,7 +162,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="col-12 col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
@@ -191,7 +191,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="card-title mb-0">Images</h5>
@@ -200,7 +200,7 @@
                                         <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
                                     </div>
                                 </div>
-    
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="card-title mb-0">Edit Products</h5>
@@ -209,7 +209,7 @@
                                         <div class="mb-3">
                                         <button class="btn btn-success text-dark fw-bold" type="submit">Save changes</button>
                                         </div>
-    
+
                                     </div>
                                 </div>
                             </div>
