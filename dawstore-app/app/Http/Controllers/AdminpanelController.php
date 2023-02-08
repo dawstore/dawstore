@@ -23,16 +23,11 @@ class AdminpanelController extends Controller
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
         if($request->hasFile("images")){
-
             $imagen = $request->file("images");
             $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
             $ruta = public_path("img/products");
-
-            //$imagen->move($ruta,$nombreimagen);
             copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
-
             $productInsert->images = $nombreimagen;            
-            
         }
         // $productInsert->images = $request->images;
         $productInsert->save();
@@ -56,16 +51,11 @@ class AdminpanelController extends Controller
         $productUpdate->stock = $request->stock;
         $productUpdate->genre = $request->genre;
         if($request->hasFile("images")){
-
             $imagen = $request->file("images");
             $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
             $ruta = public_path("img/products");
-
-            //$imagen->move($ruta,$nombreimagen);
             copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
-
             $productUpdate->images = $nombreimagen;            
-            
         }
         $productUpdate->save();
         return back()->with('message', 'updated product');
