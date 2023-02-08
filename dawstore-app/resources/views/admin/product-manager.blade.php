@@ -115,6 +115,7 @@
             </nav>
 
             <main class="content">
+
                 <div class="container-fluid p-0">
 
                     <div class="mb-3">
@@ -123,93 +124,106 @@
                             Edit, create and remove items
                         </a>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">General Settings</h5>
-                                </div>
-                                <div class="card-body">
-                                    <input type="text" id="product-sku" name="product-sku" class="form-control" placeholder="SKU" required>
-                                </div>
-                                <div class="card-body">
-                                    <input type="text" id="product-name" name="product-name" class="form-control" placeholder="Name" required>
-                                </div>
-                                <div class="card-body">
-                                    <input type="text" id="product-desc" name="product-desc" class="form-control" placeholder="Description" required>
-                                </div>
-                            </div>
 
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Price and Discounts</h5>
+                    <form action="{{ route('insert-product') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">General Settings</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="text" name="sku" class="form-control" placeholder="SKU" required>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="text" name="desc" class="form-control" placeholder="Description" required>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <input type="text" id="product-price" name="product-price" class="form-control" placeholder="Price" required>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Price</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="text" name="price" class="form-control" placeholder="Price" required>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <input type="text" id="product-discount" name="product-discount" class="form-control" placeholder="Discount %" required>
-                                </div>
-                            </div>
-
-
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Stocks</h5>
-                                </div>
-                                <div class="card-body">
-                                    <input class="form-control" type="text" name="product-stock" id="product-stock" placeholder="Product Stock" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Genre</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div>
-                                        <label class="form-check">
-                                            <input class="form-check-input" type="radio" value="option1" name="radios-example">
-                                            <span class="form-check-label">
-                                                Female
-                                            </span>
-                                        </label>
-                                        <label class="form-check">
-                                            <input class="form-check-input" type="radio" value="option2" name="radios-example">
-                                            <span class="form-check-label">
-                                                Male
-                                            </span>
-                                        </label>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Stock</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <input class="form-control" type="text" name="stock" placeholder="Product Stock" required>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Profile Pic (Opcional)</h5>
-                                </div>
-                                <div class="card-body">
-                                    <input class="form-control form-control-sm" id="formFileSm" type="file">
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Edit Products</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="mb-3">
-                                    <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a>
+    
+                            <div class="col-12 col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Genre</h5>
                                     </div>
-
+                                    <div class="card-body">
+                                        <div>
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="radio" value="male" name="genre">
+                                                <span class="form-check-label">
+                                                    Male
+                                                </span>
+                                            </label>
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="radio" value="female" name="genre">
+                                                <span class="form-check-label">
+                                                    Female
+                                                </span>
+                                            </label>
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="radio" value="unisex" name="genre">
+                                                <span class="form-check-label">
+                                                    Unisex
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Images</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
+                                    </div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Edit Products</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                        {{-- <a href="#" class="btn btn-success text-dark fw-bold" name="save-changes" role="button" data-bs-toggle="button">Save Changes</a> --}}
+                                        <button class="btn btn-success text-dark fw-bold" type="submit">Save changes</button>
+                                        </div>
+    
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
+                    @if (session('mensaje'))
+                            <div class="mensaje-nota-creada">
+                                {{ session('mensaje') }}
+                            </div>
+                    @endif
                 </div>
+                
                 <div class="row ">
                         <div class="col-12 col-lg-8 col-xxl-9 d-flex">
                             <div class="card flex-fill">

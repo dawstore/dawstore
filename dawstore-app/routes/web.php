@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminpanelController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //RUTAS ECOMMERCE
 Route::get('/', function () {
     return view('index');
-});
+})->name('Home');
 
 Route::get('/', [ ProductsController::class,'products' ]);
 
@@ -67,9 +68,11 @@ Route::get('/admin/admin-panel', function () {
     return view('/admin/admin-panel');
 })->name('admin-panel');
 
-Route::get('/admin/create-admin', function () {
-    return view('/admin/create-admin');
-})->name('create-admin');
+Route::get('/admin/admin-panel', [ AdminpanelController::class,'products' ]);
+
+Route::get('/admin/admin-management', function () {
+    return view('/admin/admin-management');
+})->name('admin-management');
 
 Route::get('/admin/product-manager', function () {
     return view('/admin/product-manager');
@@ -82,6 +85,18 @@ Route::get('/admin/edit-product', function () {
 Route::get('/admin/profile-admin', function () {
     return view('/admin/profile-admin');
 })->name('profile-admin');
+
+Route::post('/admin/product-manager', [ AdminpanelController::class, 'insert' ]) -> name('insert-product');
+
+Route::get('/admin/edit-product/{id}', [ AdminpanelController::class, 'edit' ]) -> name('edit-product');
+
+Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product');
+
+Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
+
+
+
+
 
 
 
