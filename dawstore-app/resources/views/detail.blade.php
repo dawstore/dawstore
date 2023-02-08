@@ -1,3 +1,4 @@
+
 @extends('templates.template')
 
 @section('titulo')
@@ -14,20 +15,20 @@
           <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0 px-xl-2">
             <div class="swiper product-slider-thumbs">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/product-detail-1.jpg')}}" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/product-detail-2.jpg')}}" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/product-detail-3.jpg')}}" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/product-detail-4.jpg')}}" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
               </div>
             </div>
           </div>
           <div class="col-sm-10 order-1 order-sm-2">
             <div class="swiper product-slider">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="{{URL::asset('img/product-detail-1.jpg')}}" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="{{URL::asset('img/product-detail-1.jpg')}}" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="{{URL::asset('img/product-detail-2.jpg')}}" data-gallery="gallery2" data-glightbox="Product item 2"><img class="img-fluid" src="{{URL::asset('img/product-detail-2.jpg')}}" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="{{URL::asset('img/product-detail-3.jpg')}}" data-gallery="gallery2" data-glightbox="Product item 3"><img class="img-fluid" src="{{URL::asset('img/product-detail-3.jpg')}}" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="{{URL::asset('img/product-detail-4.jpg')}}" data-gallery="gallery2" data-glightbox="Product item 4"><img class="img-fluid" src="{{URL::asset('img/product-detail-4.jpg')}}" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 2"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 3"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 4"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
               </div>
             </div>
           </div>
@@ -44,7 +45,6 @@
         </ul>
         <h1>{{ $product->name }}</h1>
         <p class="text-muted lead">${{ $product->price }}</p>
-        <p class="text-sm mb-4">{{ $product->description }}</p>
         <div class="row align-items-stretch mb-4">
           <div class="col-sm-5 pr-sm-0">
             <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
@@ -58,9 +58,9 @@
           <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
         </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
         <ul class="list-unstyled small d-inline-block">
-          <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ms-2 text-muted">039</span></li>
+          <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ms-2 text-muted">{{$product->sku}}</span></li>
           <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" href="#!">Demo Products</a></li>
-          <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Tags:</strong><a class="reset-anchor ms-2" href="#!">Innovation</a></li>
+          <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Genre:</strong><a class="reset-anchor ms-2 " href="#!">{{$product->genre}}</a></li>
         </ul>
       </div>
     </div>
@@ -73,7 +73,7 @@
       <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
         <div class="p-4 p-lg-5 bg-white">
           <h6 class="text-uppercase">Product description </h6>
-          <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text-muted text-sm mb-0">{{ $product->description }}</p>
         </div>
       </div>
       <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
