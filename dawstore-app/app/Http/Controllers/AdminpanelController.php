@@ -42,7 +42,6 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $productUpdate = Product::findOrFail($id);
         $productUpdate->sku = $request->sku;
         $productUpdate->name = $request->name;
