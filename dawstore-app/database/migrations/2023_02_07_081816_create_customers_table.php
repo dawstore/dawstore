@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('full_name');
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('billing_address');
-            $table->string('shipping_address');
             $table->string('country');
             $table->integer('phone');
             $table->rememberToken();
