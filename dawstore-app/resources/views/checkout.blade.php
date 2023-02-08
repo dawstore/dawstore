@@ -68,25 +68,7 @@ Checkout
                             <label class="form-label text-sm text-uppercase" for="zip-code">Zip Code </label>
                             <input class="form-control form-control-lg" type="text" id="zip-code" name="zip-code" required>
                         </div>
-                        <div class="col-lg-6">
-                            <button class="btn btn-succes text-dark p-0 shadow-0" type="button" data-bs-toggle="collapse" data-bs-target="#alternateAddress">
-                                <div class="form-check">
-                                    <input class="form-check-input" id="alternateAddressCheckbox" type="checkbox">
-                                    <label class="form-check-label" for="alternateAddressCheckbox">Payment Option</label>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="collapse" id="alternateAddress">
-                            <div class="row gy-3">
-                                <div class="col-lg-6">
-                                    <label class="form-label text-sm text-uppercase" for="firstName"> </label>
-                                    <input class="form-control form-control-lg" type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-lg-12 form-group">
-                            <button class="btn btn-dark" type="submit">Place order</button>
                         </div>
                     </div>
                 </form>
