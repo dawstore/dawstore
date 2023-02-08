@@ -18,10 +18,11 @@ return new class extends Migration
             $table->bigInteger('sku')->unique();
             $table->string('name');
             $table->float('price');
-            $table->text('description');
+            $table->string('description');
+            // $table->text('product_description');
             $table->integer('stock');
             $table->enum('genre', ['male', 'female', 'unisex']);
-            $table->binary('images');
+            $table->text('images');
             $table->timestamps();
         });
         
