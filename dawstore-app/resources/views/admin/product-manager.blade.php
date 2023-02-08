@@ -223,41 +223,6 @@
                             </div>
                     @endif
                 </div>
-                
-                <div class="row ">
-                        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-
-                                    <h5 class="card-title mb-0">Latest Products</h5>
-                                </div>
-                                <table class="table table-hover my-0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th class="d-none d-xl-table-cell">SKU</th>
-                                            <th class="d-none d-xl-table-cell">Price</th>
-                                            <th>Genre</th>
-                                            <th class="d-none d-md-table-cell">Stock</th>
-                                            <th class="d-none d-md-table-cell">Settings</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Air Force</td>
-                                            <td class="d-none d-xl-table-cell">1234561</td>
-                                            <td class="d-none d-xl-table-cell">45</td>
-                                            <td class="d-none d-md-table-cell">Male</td>
-                                            <td class="d-none d-md-table-cell">2 </td>
-                                            <td class="d-none d-md-table-cell">
-                                                <a href="#" class="btn btn-warning text-dark fw-bold" name="edit-product" role="button" data-bs-toggle="button">Edit Product</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                </div>
             </main>
 
             <footer class="footer">
