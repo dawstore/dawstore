@@ -49,9 +49,9 @@
                     </li>
                 </ul>
             </div>
-          </nav>
-        </div>
-      </header>
+        </nav>
+    </div>
+</header>
 
 @endsection
 
@@ -64,27 +64,56 @@
             <div class="modal-body p-0">
                 <div class="row align-items-stretch">
                     <div class="p-4 my-md-4">
-                        <h2 class="h4">Contact Us</h2>
-                            <form>
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Name" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Email" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-email" name="contact-message" row="2" placeholder="Message" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <input class="btn btn-primary" type="submit" name="Send">
-                                </div>
-                            </form>
-                        </div>
+                        <h2 class="h4">Profile Manager</h2>
+                        <form>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Current Name: @auth {{Auth::user()->name}} @endauth" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Current Email @auth {{Auth::user()->email}} @endauth" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="btn btn-primary" type="submit" name="Send">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+@endsection
+
+@section('profile-modal')
+<!--  Edit profile Form Modal -->
+<div class="modal fade" id="contact-us" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content overflow-hidden border-0">
+            <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body p-0">
+                <div class="row align-items-stretch">
+                    <div class="p-4 my-md-4">
+                        <h2 class="h4">Contact Us</h2>
+                        <form>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Name" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Email" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-email" name="contact-message" row="2" placeholder="Message" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="btn btn-primary" type="submit" name="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('footer')
