@@ -30,7 +30,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @yield('contact')" href="#">Contact Us</a>
+                        <a class="nav-link @yield('contact')" href="#contact-us" data-bs-toggle="modal">Contact Us</a>
                     </li>
 
                 </ul>

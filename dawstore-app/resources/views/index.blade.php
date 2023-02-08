@@ -52,7 +52,6 @@ active
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{url ('cart')}}">Add to cart</a></li>
                                 <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
 
@@ -102,7 +101,6 @@ active
                     </div>
                 </div>
             </div>
-
             @endforeach
     </section>
     <!-- SERVICES-->
@@ -170,5 +168,35 @@ active
             </div>
         </div>
     </section>
+</div>
+<!--  Contact Form Modal -->
+<div class="modal fade" id="contact-us" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content overflow-hidden border-0">
+            <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body p-0">
+                <div class="row align-items-stretch">
+                    <div class="p-4 my-md-4">
+                        <h2 class="h4">Contact Us</h2>
+                        <form>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Name" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Email" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-email" name="contact-message" row="2" placeholder="Message" required>
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="btn btn-primary" type="submit" name="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 @endsection
