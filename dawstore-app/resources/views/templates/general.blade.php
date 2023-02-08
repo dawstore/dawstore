@@ -33,6 +33,7 @@
         {{-- INDEX --}}
 
         @yield('modal')
+        @yield('contact-modal')
 
         @yield('hero_section')
 
