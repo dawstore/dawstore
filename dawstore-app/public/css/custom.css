@@ -18,3 +18,9 @@
 .sneakers{
     background-color: #F5F5D0;
 }
+
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
