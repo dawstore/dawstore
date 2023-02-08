@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
     <title>Admin Panel - Tello Store</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -22,9 +23,9 @@
                 <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
                     <span class="align-middle">Admin Panel</span>
                 </a>
-                <ul class="sidebar-nav">
+                <ul class="sidebar-nav menu">
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="{{url ('admin/admin-panel')}}">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
@@ -49,7 +50,7 @@
                             Log Out and go to Store
                         </div>
                         <div class="d-grid">
-                            <a href="{{url ('/')}}" class="btn btn-primary">Log Out</a>
+                            <a href="{{url ('/')}}" class="btn btn-danger">Log Out</a>
                         </div>
                     </div>
                 </div>

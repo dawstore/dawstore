@@ -47,7 +47,7 @@
                             Log Out and go to Store
                         </div>
                         <div class="d-grid">
-                            <a href="{{url ('/')}}" class="btn btn-primary">Log Out</a>
+                            <a href="{{url ('/')}}" class="btn btn-danger">Log Out</a>
                         </div>
                     </div>
                 </div>
