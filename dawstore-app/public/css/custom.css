@@ -19,4 +19,12 @@
     background-color: #F5F5D0;
 }
 
+<<<<<<< HEAD
 
+=======
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> 449c32f8d9c17bb66b917bf1c19631a4b8136117
