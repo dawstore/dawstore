@@ -4989,8 +4989,8 @@ fieldset:disabled .btn {
 
 .page-link:focus {
   z-index: 3;
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #F5F5D0;
   outline: 0;
   box-shadow: none;
 }

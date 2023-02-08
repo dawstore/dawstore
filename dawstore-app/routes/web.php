@@ -51,9 +51,9 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
-Route::get('/payment', function () {
-    return view('payment');
-})->name('payment');
+Route::get('/whitelist', function () {
+    return view('whitelist');
+})->name('whitelist');
 
 
 Route::get('/detail', function () {
