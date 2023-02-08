@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}" />
-    <title>Dashboard - Tello Store</title>
+    <title>Forgot Password - Tello Store</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,7 +24,7 @@
                         <div class="text-center mt-4">
                             <h1 class="h2">Dashboard - Tello Store</h1>
                             <p class="lead">
-                                Sign in to your account to continue
+                                Acount recovery
                             </p>
                         </div>
 
@@ -40,22 +40,15 @@
                                             <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required/>
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" required />
-                                            <small>
-                                                <a href="{{url ('admin/forgot-password')}}">Forgot password?</a>
-                                            </small>
+                                            <label class="form-label">New Password</label>
+                                            <input class="form-control form-control-lg" type="password" name="recovery-pass" placeholder="Enter your new password" required/>
                                         </div>
-                                        <div>
-                                            <label class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="remember-me" name="remember-me">
-                                                <span class="form-check-label">
-                                                    Remember me next time
-                                                </span>
-                                            </label>
+                                        <div class="mb-3">
+                                            <label class="form-label">Repit Password</label>
+                                            <input class="form-control form-control-lg" type="password" name="password" placeholder="Repit your new password" required />
                                         </div>
                                         <div class="text-center mt-3">
-                                            <a href="{{url ('admin/admin-panel')}}" class="btn btn-lg btn-primary">Sign in</a>
+                                            <a href="{{url ('admin/dashboard')}}" class="btn btn-lg btn-primary">Recovery Account</a>
                                         </div>
                                     </form>
                                 </div>
