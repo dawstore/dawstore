@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Cart;
 
 class AdminpanelController extends Controller
 {
@@ -29,9 +30,8 @@ class AdminpanelController extends Controller
             copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
             $productInsert->images = $nombreimagen;            
         }
-        // $productInsert->images = $request->images;
         $productInsert->save();
-        return back() -> with('mensaje', 'Nota agregada exitosamente');
+        return back() -> with('mensaje', 'Producto creado exitosamente');
     }
 
     public function edit($id)
@@ -58,12 +58,12 @@ class AdminpanelController extends Controller
             $productUpdate->images = $nombreimagen;            
         }
         $productUpdate->save();
-        return back()->with('message', 'updated product');
+        return back()->with('mensaje', 'Producto editado exitosamente');
     }        
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
         $deleteProduct -> delete();
         return back() -> with('message', '');
-        }
+    }
 }

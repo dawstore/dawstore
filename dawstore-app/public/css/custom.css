@@ -19,12 +19,8 @@
     background-color: #F5F5D0;
 }
 
-.send{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.profile-cart{
+    color: #0000;
 }
 
-.profile-cart{
-    color: #000;
-}
+
