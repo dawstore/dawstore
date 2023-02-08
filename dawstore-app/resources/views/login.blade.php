@@ -17,22 +17,23 @@
             <h2 class="p-3">Login</h2>
           </div>
           <div class="card-body">
-            <form>
+            <form action="{{route ('inicio-sesion')}}" method="POST">
+                @csrf
               <div class="mb-4">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required />
+                <input type="email" class="form-control" id="email" name="email" required />
               </div>
               <div class="mb-4">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required />
+                <input type="password" class="form-control" id="password" name="password" required />
               </div>
               <div class="mb-4">
-                <input type="checkbox" class="form-check-input" id="remember" required />
+                <input type="checkbox" class="form-check-input" id="remember" name="remember" />
                 <label for="remember" class="form-label">Remember Me</label>
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn text-dark bg-warning">Login</button>
-                <a class="text-center mt-3 text-decoration-none" href="{{url ('signup')}}">Haven´t an Account?</a>
+                <a class="text-center mt-3 text-decoration-none" href="{{route ('signup')}}">Haven´t an Account?</a>
               </div>
             </form>
           </div>

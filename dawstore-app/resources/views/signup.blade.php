@@ -17,19 +17,20 @@
             <h2 class="p-3">Sign Up</h2>
           </div>
           <div class="card-body">
-            <form>
+            <form method="POST" action="{{route ('validar-registro')}}">
+                @csrf
             <div class="mb-4">
-                <input type="text" class="form-control" id="username" placeholder="Username"  required />
+                <input type="text" class="form-control" id="username" name="name" placeholder="Full Name"  required />
               </div>
               <div class="mb-4">
-                <input type="email" class="form-control" id="email" placeholder="Email"  required />
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email"  required />
               </div>
               <div class="mb-4">
-                <input type="password" class="form-control" id="password" placeholder="Password" required />
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn text-dark bg-warning">Create Account</button>
-                <a class="text-center mt-3 text-decoration-none" href="{{url('login')}}">Have an Account?</a>
+                <a class="text-center mt-3 text-decoration-none" href="{{route('login')}}">Have an Account?</a>
               </div>
             </form>
           </div>
