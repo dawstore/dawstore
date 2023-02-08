@@ -69,10 +69,6 @@ Checkout
                             <input class="form-control form-control-lg" type="text" id="zip-code" name="zip-code" required>
                         </div>
 
-                        <div class="col-lg-12 form-group">
-                            <a href="{{url ('payment')}}">
-                                <button class="btn btn-dark" type="submit">Checkout</button>
-                            </a>
                         </div>
                     </div>
                 </form>
