@@ -19,7 +19,15 @@ active
                 <a class="badge bg-dark text-white ms-2" href="#">
                     Product Manager/Edit
                 </a>
-
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">General Settings</h5>
+                        </div>
+                        <div class="card-body">
+                            <input type="text" name="sku" class="form-control" placeholder="Sku" value="{{ $product->sku }}" required>
                         </div>
                         <div class="card-body">
                             <input type="text"  name="name" class="form-control" placeholder="Name" value="{{ $product->name }}" required>
@@ -48,6 +56,10 @@ active
                     </div>
                 </div>
 
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Genre</h5>
                         </div>
                         <div class="card-body">
                             <div>
@@ -102,7 +114,15 @@ active
                             <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" value="{{ $product->images }}" multiple>
                         </div>
                     </div>
-                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Edit Products</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                            <button class="btn btn-success text-dark fw-bold" type="submit">Save Changes</button>
+                            </div>
                         </div>
                     </div>
                 </div>
