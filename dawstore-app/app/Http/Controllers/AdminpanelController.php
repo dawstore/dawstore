@@ -67,7 +67,7 @@ class AdminpanelController extends Controller
             $imagen->move($ruta,$nombreimagen); 
             $productUpdate->images = $nombreimagen;            
         }
-        $productUpdate->save();
+        $productUpdate->update();
 
         // $fileUpdate = Product::findOrFail($id);
         // if($request->hasFile("images")){
