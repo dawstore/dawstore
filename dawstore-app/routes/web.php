@@ -37,7 +37,7 @@ Route::get('/products', function () {
     return view('products');
 })->name('products');
 
-Route::get('products/{genre}', [ ProductsController::class,'productsGenre']);
+Route::get('products/{genre},{option?}', [ ProductsController::class,'productsGenre']);
 
 Route::get('/detail', function () {
     return view('detail');
