@@ -34,7 +34,8 @@
                                     <div class="text-center">
                                         <img src="{{URL::asset('/img/logos/logoTello.png')}}" alt="Charles Hall" class="img-fluid rounded-circle" width="132" height="132" />
                                     </div>
-                                    <form>
+                                    <form action="" method="POST">
+                                        @csrf
                                         <div class="mb-3">
                                             <label class="form-label">Email</label>
                                             <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required/>
@@ -48,14 +49,14 @@
                                         </div>
                                         <div>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="remember-me" name="remember-me">
+                                                <input class="form-check-input" type="checkbox" id="remember" name="remember">
                                                 <span class="form-check-label">
                                                     Remember me next time
                                                 </span>
                                             </label>
                                         </div>
                                         <div class="text-center mt-3">
-                                            <a href="{{url ('admin/admin-panel')}}" class="btn btn-lg btn-primary">Sign in</a>
+                                            <button type="submit" class="btn text-dark bg-warning">Sign in</button>
                                         </div>
                                     </form>
                                 </div>
