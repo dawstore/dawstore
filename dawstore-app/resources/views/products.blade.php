@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('titulo')
-{{$genre}} 
+{{$genre}}
 @endsection
 
 @section('shop_section')
@@ -64,7 +64,7 @@
         <div class="row">
           <!-- PRODUCT-->
           @foreach ($products as $product)
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6" data-aos="zoom-out" data-aos-duration="1500">
             <div class="product text-center">
               <div class="mb-3 position-relative">
                 <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a>

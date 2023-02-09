@@ -1,3 +1,4 @@
+
 .footer{
     background-color: #F5F5D0;
 
@@ -23,6 +24,7 @@
     color: #0000;
 }
 
+/*
 .loade {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -37,6 +39,7 @@
         opacity: 1;
      }
 }
+*/
 
 .loader{
     background-color: white;

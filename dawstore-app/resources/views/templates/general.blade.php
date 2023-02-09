@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
+    <!-- data-aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
     <!-- Google fonts-->
@@ -26,7 +28,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
   </head>
   <body>
+
       <div class="page-holder">
+
 
         @yield('navbar')
 
@@ -74,6 +78,13 @@
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
       <script src="{{URL::asset('js/loads.js')}}"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+
+
       <!---<script src="{{URL::asset('js/range.js')}}"></script>-->
 
 
