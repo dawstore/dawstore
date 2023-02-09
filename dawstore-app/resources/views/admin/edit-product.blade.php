@@ -132,13 +132,13 @@
                                         <h5 class="card-title mb-0">General Settings</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" name="sku" class="form-control" placeholder="Sku" required>
+                                        <input type="text" name="sku" class="form-control" placeholder="Sku" value="{{ $product->sku }}" required>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text"  name="name" class="form-control" placeholder="Name" required>
+                                        <input type="text"  name="name" class="form-control" placeholder="Name" value="{{ $product->name }}" required>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text"  name="description" class="form-control" placeholder="Description" required>
+                                        <input type="text"  name="description" class="form-control" placeholder="Description" value="{{ $product->description }}" required>
                                     </div>
                                 </div>
 
@@ -147,7 +147,7 @@
                                         <h5 class="card-title mb-0">Price</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" name="price" class="form-control" placeholder="Price" required>
+                                        <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $product->price }}" required>
                                     </div>
                                 </div>
 
@@ -156,7 +156,7 @@
                                         <h5 class="card-title mb-0">Stock</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input class="form-control" type="number" name="stock" placeholder="Product Stock" required>
+                                        <input class="form-control" type="number" name="stock" placeholder="Product Stock" value="{{ $product->stock }}" required>
                                     </div>
                                 </div>
                             </div>
@@ -169,22 +169,43 @@
                                     <div class="card-body">
                                         <div>
                                             <label class="form-check">
+                                                @if ($product->genre == 'male')
+                                                <input class="form-check-input" type="radio" value="male" checked="checked" name="genre">
+                                                <span class="form-check-label">
+                                                    Male
+                                                </span>
+                                                @else
                                                 <input class="form-check-input" type="radio" value="male" name="genre">
                                                 <span class="form-check-label">
                                                     Male
                                                 </span>
+                                                @endif
                                             </label>
                                             <label class="form-check">
+                                                @if ($product->genre == 'female')
+                                                <input class="form-check-input" type="radio" value="female" checked="checked" name="genre">
+                                                <span class="form-check-label">
+                                                    Female
+                                                </span>
+                                                @else
                                                 <input class="form-check-input" type="radio" value="female" name="genre">
                                                 <span class="form-check-label">
                                                     Female
                                                 </span>
+                                                @endif
                                             </label>
                                             <label class="form-check">
+                                                @if ($product->genre == 'unisex')
+                                                <input class="form-check-input" type="radio" value="unisex" checked="checked" name="genre">
+                                                <span class="form-check-label">
+                                                    Unisex
+                                                </span>
+                                                @else
                                                 <input class="form-check-input" type="radio" value="unisex" name="genre">
                                                 <span class="form-check-label">
                                                     Unisex
                                                 </span>
+                                                @endif
                                             </label>
                                         </div>
                                     </div>
@@ -195,7 +216,7 @@
                                         <h5 class="card-title mb-0">Images</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
+                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" value="{{ $product->images }}" multiple>
                                     </div>
                                 </div>
 
