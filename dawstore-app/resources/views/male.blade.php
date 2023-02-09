@@ -52,15 +52,14 @@ active
           </div>
           <div class="col-lg-6">
             <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
-              <li class="list-inline-item text-muted me-3"><a class="reset-anchor p-0" href="#!"><i class="fas fa-th-large"></i></a></li>
-              <li class="list-inline-item text-muted me-3"><a class="reset-anchor p-0" href="#!"><i class="fas fa-th"></i></a></li>
               <li class="list-inline-item">
-                <select class="selectpicker" data-customclass="form-control form-control-sm">
-                  <option value>Sort By </option>
-                  <option value="default">Default sorting </option>
-                  <option value="popularity">Popularity </option>
-                  <option value="desc">Price: Low to High </option>
-                  <option value="asc">Price: High to Low </option>
+                <select class="selectpicker" onchange="location = this.value;" data-customclass="form-control form-control-sm">
+                  <option disabled>Sort By</option>
+                  <option value="{{url('male')}}">Default sorting</option>
+                  <option value="{{url('male','name','asc')}}">A-Z</option>
+                  <option value="{{url('male','name','desc')}}">Z-A</option>
+                  <option value="{{url('male')}}">Price: Low to High </a></option>
+                 <option value="{{url('male')}}">Price: High to Low </a></option>
                 </select>
               </li>
             </ul>
