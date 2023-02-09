@@ -54,12 +54,12 @@ active
             <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
               <li class="list-inline-item">
                 <select class="selectpicker" onchange="location = this.value;" data-customclass="form-control form-control-sm">
-                  <option disabled>Sort By</option>
+                  <option value>Sort By</option>
                   <option value="{{url('male')}}">Default sorting</option>
                   <option value="{{url('male','name','asc')}}">A-Z</option>
                   <option value="{{url('male','name','desc')}}">Z-A</option>
-                  <option value="{{url('male')}}">Price: Low to High </a></option>
-                 <option value="{{url('male')}}">Price: High to Low </a></option>
+                  <option value="{{url('male')}}">Price: Low to High</option>
+                 <option value="{{url('male')}}">Price: High to Low</option>
                 </select>
               </li>
             </ul>
