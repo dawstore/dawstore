@@ -1,19 +1,26 @@
 @extends('templates.template')
 
 @section('titulo')
-
+{{$genre}} 
 @endsection
 
-@section("")
-active
-@endsection
+@if ('{{$genre}}' == 'Male')
+  @section('male')
+    active
+  @endsection
+@endif
+@if ('{{$genre}}' == 'Female')
+  @section('female')
+    active
+  @endsection
+@endif
 
 @section('shop_section')
 <section class="py-5 bg-light">
   <div class="container">
     <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
       <div class="col-lg-6">
-        <h1 class="h2 text-uppercase mb-0">Shop / </h1>
+        <h1 class="h2 text-uppercase mb-0">Shop / {{$genre}} </h1>
       </div>
       <div class="col-lg-6 text-lg-end">
         <nav aria-label="breadcrumb">
