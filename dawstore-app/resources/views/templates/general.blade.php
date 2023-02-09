@@ -47,6 +47,8 @@
 
         @yield('cart_section')
 
+
+
         {{-- DETAIL --}}
 
         @yield('detail_section')

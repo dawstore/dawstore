@@ -27,7 +27,7 @@ Profile
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
                         <h5 class="my-3">
                             @auth
-                                {{Auth::user()->name}}
+                                {{Auth::user()->full_name}}
                             @endauth
                         </h5>
                         <p class="text-muted mb-1">Full Stack Developer</p>
@@ -36,8 +36,8 @@ Profile
                             <a href="{{route('logout')}}">
                                 <button type="button" class="btn btn-danger">Logout</button>
                             </a>
-                            <a href="#contact-us" data-bs-toggle="modal">
-                                <button type="button" class="btn btn-outline-primary ms-1 profile-cart">Edit Profile</button>
+                            <a href="#profile-modal" data-bs-toggle="modal">
+                                <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Profile</button>
                             </a>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ Profile
                                 <p class="mb-0">Full Name</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">@auth {{Auth::user()->name}} @endauth</p>
+                                <p class="text-muted mb-0">@auth {{Auth::user()->full_name}} @endauth</p>
                             </div>
                         </div>
                         <hr>

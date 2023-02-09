@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -76,7 +77,6 @@ Route::get('/whitelist', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
-
 
 
 //RUTAS DASHBOARD

@@ -30,22 +30,23 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-4">
-									<form>
+									<form action="" method="POST">
+                                        @csrf
 										<div class="mb-3">
-											<label class="form-label">Name</label>
-											<input class="form-control form-control-lg" type="text" name="admin-name" placeholder="Enter your name" required/>
+											<label for="adminName" class="form-label">Name</label>
+											<input class="form-control form-control-lg" type="text" name="adminName" id="adminName" placeholder="Enter your name" required/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Email</label>
-											<input class="form-control form-control-lg" type="email" name="admin-email" placeholder="Enter your email" required />
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required />
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input class="form-control form-control-lg" type="password" name="admin-password" placeholder="Enter password" required />
+											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" required />
 										</div>
 										<div class="text-center mt-3">
 											<a href="{{url ('admin/admin-panel')}}" class="btn btn-lg btn-danger">Back to Dashboard</a>
-                                            <a href="#" class="btn btn-lg btn-success">Create Account</a>
+                                            <button type="submit" class="btn text-dark bg-sucess">Create Account</button>
 										</div>
 									</form>
 								</div>
