@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -77,10 +78,6 @@ Route::get('/detail', function () {
 })->name('detail');
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
-
-
-
-
 
 //RUTAS DASHBOARD
 
