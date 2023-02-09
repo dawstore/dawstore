@@ -15,7 +15,7 @@
           <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0 px-xl-2">
             <div class="swiper product-slider-thumbs">
               <div class="swiper-wrapper">
-             
+
                 {{-- TODO: Mario tiene que terminar el array de imágenes --}}
                 {{-- @foreach ($product->images as $image )
                 <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$image.'')}}" alt="..."></div>
@@ -29,6 +29,7 @@
             <div class="swiper product-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a></div>
+
               </div>
             </div>
           </div>
