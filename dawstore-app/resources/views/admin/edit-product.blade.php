@@ -170,12 +170,12 @@
                                         <div>
                                             <label class="form-check">
                                                 @if ($product->genre == 'male')
-                                                <input class="form-check-input" type="radio" value="male" checked="checked" name="genre">
+                                                <input class="form-check-input" type="radio" value="Male" checked="checked" name="genre">
                                                 <span class="form-check-label">
                                                     Male
                                                 </span>
                                                 @else
-                                                <input class="form-check-input" type="radio" value="male" name="genre">
+                                                <input class="form-check-input" type="radio" value="Male" name="genre">
                                                 <span class="form-check-label">
                                                     Male
                                                 </span>
@@ -183,12 +183,12 @@
                                             </label>
                                             <label class="form-check">
                                                 @if ($product->genre == 'female')
-                                                <input class="form-check-input" type="radio" value="female" checked="checked" name="genre">
+                                                <input class="form-check-input" type="radio" value="Female" checked="checked" name="genre">
                                                 <span class="form-check-label">
                                                     Female
                                                 </span>
                                                 @else
-                                                <input class="form-check-input" type="radio" value="female" name="genre">
+                                                <input class="form-check-input" type="radio" value="Female" name="genre">
                                                 <span class="form-check-label">
                                                     Female
                                                 </span>
@@ -196,12 +196,12 @@
                                             </label>
                                             <label class="form-check">
                                                 @if ($product->genre == 'unisex')
-                                                <input class="form-check-input" type="radio" value="unisex" checked="checked" name="genre">
+                                                <input class="form-check-input" type="radio" value="Unisex" checked="checked" name="genre">
                                                 <span class="form-check-label">
                                                     Unisex
                                                 </span>
                                                 @else
-                                                <input class="form-check-input" type="radio" value="unisex" name="genre">
+                                                <input class="form-check-input" type="radio" value="Unisex" name="genre">
                                                 <span class="form-check-label">
                                                     Unisex
                                                 </span>

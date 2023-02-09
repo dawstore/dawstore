@@ -171,19 +171,19 @@
                                     <div class="card-body">
                                         <div>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="male" name="genre">
+                                                <input class="form-check-input" type="radio" value="Male" name="genre">
                                                 <span class="form-check-label">
                                                     Male
                                                 </span>
                                             </label>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="female" name="genre">
+                                                <input class="form-check-input" type="radio" value="Female" name="genre">
                                                 <span class="form-check-label">
                                                     Female
                                                 </span>
                                             </label>
                                             <label class="form-check">
-                                                <input class="form-check-input" type="radio" value="unisex" name="genre">
+                                                <input class="form-check-input" type="radio" value="Unisex" name="genre">
                                                 <span class="form-check-label">
                                                     Unisex
                                                 </span>

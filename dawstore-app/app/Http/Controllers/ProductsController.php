@@ -14,14 +14,7 @@ class ProductsController extends Controller
     public function productsGenre($genre)
     {
         $products = Product::where('genre', $genre)->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
-        return view('products', @compact('products'));
-    }
-
-
-    public function productsGenre($genre)
-    {
-        $products = Product::where('genre', $genre)->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
-        return view($genre, @compact('products'));
+        return view('products', @compact('products','genre'));
     }
 
     public function detail($id = 1)

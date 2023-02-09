@@ -33,12 +33,17 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
-Route::get('/products', function () {
+Route::get('/products', function ($genre) {
     return view('products');
 })->name('products');
 
-Route::get('products/{genre}', [ ProductsController::class,'productsGenre' ]);
+Route::get('products/{genre}', [ ProductsController::class,'productsGenre']);
 
+Route::get('/detail', function () {
+    return view('detail');
+})->name('detail');
+
+Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
 Route::get('/test', function () {
     return view('test');
