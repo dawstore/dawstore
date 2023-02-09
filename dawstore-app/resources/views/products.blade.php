@@ -4,16 +4,10 @@
 {{$genre}} 
 @endsection
 
-@if ('{{$genre}}' == 'Male')
-  @section('male')
-    active
-  @endsection
-@endif
-@if ('{{$genre}}' == 'Female')
-  @section('female')
-    active
-  @endsection
-@endif
+@section('{{$genre}}')
+active
+@endsection
+
 
 @section('shop_section')
 <section class="py-5 bg-light">
