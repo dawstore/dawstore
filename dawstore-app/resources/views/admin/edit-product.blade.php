@@ -116,7 +116,8 @@
 
             <main class="content">
                 <div class="container-fluid p-0">
-                    <form action="{{ route('edit-product', $product->id) }}" method="POST"> @method('PUT')
+                    <form action="{{ route('edit-product', $product->id) }}" method="POST" enctype="multipart/form-data"> 
+                        @method('PUT')
                         @csrf {{-- Cláusula para obtener un token de formulario al enviarlo --}}
                         <div class="mb-3">
                             <h1 class="h3 d-inline align-middle">{{ $product->name }}</h1>
