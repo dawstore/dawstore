@@ -4,11 +4,6 @@
 {{$genre}} 
 @endsection
 
-@section('{{$genre}}')
-active
-@endsection
-
-
 @section('shop_section')
 <section class="py-5 bg-light">
   <div class="container">
