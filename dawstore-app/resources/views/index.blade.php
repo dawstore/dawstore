@@ -45,10 +45,10 @@ active
         <div class="row">
             <!-- PRODUCT-->
             @foreach ($products as $product)
-            <div class="col-xl-3 col-lg-4 col-sm-6" data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
+            <div class="col-xl-3 col-lg-4 col-sm-6 products load" >
                 <div class="product text-center">
                     <div class="position-relative mb-3">
-                        <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a>
+                        <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..." loading="lazy"></a>
 
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
@@ -61,6 +61,7 @@ active
                     <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{ $product->name }}</a></h6>
                     <p class="small text-muted">${{ $product->price }}</p>
                 </div>
+
             </div>
             <!--  Modal -->
             <div class="modal fade" id="productView{{$product->id}}" tabindex="-1">
@@ -103,6 +104,26 @@ active
             </div>
             @endforeach
     </section>
+
+    <!--Pagination-->
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Pagination-->
+
     <!-- SERVICES-->
     <section class="py-5 bg-light">
         <div class="container">
