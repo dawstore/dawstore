@@ -13,7 +13,7 @@ class LoginController extends Controller
         //Validación de datos aqui
 
         $user = new User();
-        $user->name = $request->name;
+        $user->full_name = $request->full_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
 
@@ -42,8 +42,6 @@ class LoginController extends Controller
         }
 
     }
-
-
 
     public function logout(Request $request){
 

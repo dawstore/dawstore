@@ -20,7 +20,7 @@
             <form method="POST" action="{{route ('validar-registro')}}">
                 @csrf
             <div class="mb-4">
-                <input type="text" class="form-control" id="username" name="name" placeholder="Full Name"  required />
+                <input type="text" class="form-control" id="username" name="full_name" placeholder="Full Name"  required />
               </div>
               <div class="mb-4">
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email"  required />
