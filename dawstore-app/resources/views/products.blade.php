@@ -1,10 +1,10 @@
 @extends('templates.template')
 
 @section('titulo')
-Male
+
 @endsection
 
-@section('male')
+@section("")
 active
 @endsection
 
@@ -13,7 +13,7 @@ active
   <div class="container">
     <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
       <div class="col-lg-6">
-        <h1 class="h2 text-uppercase mb-0">Shop / Male</h1>
+        <h1 class="h2 text-uppercase mb-0">Shop / </h1>
       </div>
       <div class="col-lg-6 text-lg-end">
         <nav aria-label="breadcrumb">
@@ -71,7 +71,7 @@ active
           <div class="col-lg-4 col-sm-6">
             <div class="product text-center">
               <div class="mb-3 position-relative">
-                <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a>
+                <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a>
                 <div class="product-overlay">
                   <ul class="mb-0 list-inline">
                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -92,7 +92,7 @@ active
                   <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                   <div class="modal-body p-0">
                     <div class="row align-items-stretch">
-                      <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="img/products/{{$product->images}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                      <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->images.'')}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                       <div class="col-lg-6">
                         <div class="p-4 my-md-4">
                           <ul class="list-inline mb-2">

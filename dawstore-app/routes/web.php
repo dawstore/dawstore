@@ -32,18 +32,11 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
-Route::get('/female', function () {
-    return view('female');
-})->name('female');
+Route::get('/products', function () {
+    return view('products');
+})->name('products');
 
-Route::get('female', [ ProductsController::class,'productsFemale' ]);
-
-
-Route::get('/male', function () {
-    return view('male');
-})->name('male');
-
-Route::get('male/', [ ProductsController::class,'productsMale' ]);
+Route::get('products/{genre}', [ ProductsController::class,'productsGenre' ]);
 
 Route::get('/test', function () {
     return view('test');
