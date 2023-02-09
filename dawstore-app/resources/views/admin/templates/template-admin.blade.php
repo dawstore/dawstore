@@ -2,7 +2,7 @@
 
 @section('navbar-admin')
 <nav id="sidebar" class="sidebar js-sidebar">
-    <div class="sidebar-content js-simplebar">
+    <div class="sidebar-content js-simplebar" data-aos="fade-right" data-aos-duration="1500">
         <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
             <span class="align-middle">Admin Panel</span>
         </a>
