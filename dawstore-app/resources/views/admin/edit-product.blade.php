@@ -1,269 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('admin.templates.template-admin')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Edit Product - Tello Store</title>
+@section('titulo')
+Edit Product
+@endsection
 
-    <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}" />
-    <link href="{{URL::asset('css/app.css')}}" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
+@section('admin-panel-active')
+active
+@endsection
 
-<body>
-    <div class="wrapper">
-        <nav id="sidebar" class="sidebar js-sidebar">
-            <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
-                    <span class="align-middle">Admin Panel</span>
+@section('edit-product-section')
+<main class="content">
+    <div class="container-fluid p-0">
+        <form action="{{ route('edit-product', $product->id) }}" method="POST" enctype="multipart/form-data"> 
+            @method('PUT')
+            @csrf {{-- Cláusula para obtener un token de formulario al enviarlo --}}
+            <div class="mb-3">
+                <h1 class="h3 d-inline align-middle">{{ $product->name }}</h1>
+                <a class="badge bg-dark text-white ms-2" href="#">
+                    Product Manager/Edit
                 </a>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url ('admin')}}">
-                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-                        </a>
-                    </li>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{url ('admin/admin-management')}}">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Add Admin</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="{{url ('admin/product-manager')}}">
-                            <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Product Manager</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="sidebar-cta">
-                    <div class="sidebar-cta-content">
-                        <strong class="d-inline-block mb-2">Back to Store</strong>
-                        <div class="mb-3 text-sm">
-                            Log Out and go to Store
                         </div>
-                        <div class="d-grid">
-                            <a href="{{url ('/')}}" class="btn btn-danger">Log Out</a>
+                        <div class="card-body">
+                            <input type="text"  name="name" class="form-control" placeholder="Name" value="{{ $product->name }}" required>
+                        </div>
+                        <div class="card-body">
+                            <input type="text"  name="description" class="form-control" placeholder="Description" value="{{ $product->description }}" required>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Price</h5>
+                        </div>
+                        <div class="card-body">
+                            <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $product->price }}" required>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Stock</h5>
+                        </div>
+                        <div class="card-body">
+                            <input class="form-control" type="number" name="stock" placeholder="Product Stock" value="{{ $product->stock }}" required>
+                        </div>
+                    </div>
+                </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <label class="form-check">
+                                    @if ($product->genre == 'Male')
+                                    <input class="form-check-input" type="radio" value="Male" checked="checked" name="genre">
+                                    <span class="form-check-label">
+                                        Male
+                                    </span>
+                                    @else
+                                    <input class="form-check-input" type="radio" value="Male" name="genre">
+                                    <span class="form-check-label">
+                                        Male
+                                    </span>
+                                    @endif
+                                </label>
+                                <label class="form-check">
+                                    @if ($product->genre == 'Female')
+                                    <input class="form-check-input" type="radio" value="Female" checked="checked" name="genre">
+                                    <span class="form-check-label">
+                                        Female
+                                    </span>
+                                    @else
+                                    <input class="form-check-input" type="radio" value="Female" name="genre">
+                                    <span class="form-check-label">
+                                        Female
+                                    </span>
+                                    @endif
+                                </label>
+                                <label class="form-check">
+                                    @if ($product->genre == 'Unisex')
+                                    <input class="form-check-input" type="radio" value="Unisex" checked="checked" name="genre">
+                                    <span class="form-check-label">
+                                        Unisex
+                                    </span>
+                                    @else
+                                    <input class="form-check-input" type="radio" value="Unisex" name="genre">
+                                    <span class="form-check-label">
+                                        Unisex
+                                    </span>
+                                    @endif
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Images</h5>
+                        </div>
+                        <div class="card-body">
+                            <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" value="{{ $product->images }}" multiple>
+                        </div>
+                    </div>
+                    
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-
-        <div class="main">
-            <nav class="navbar navbar-expand navbar-light navbar-bg">
-                <a class="sidebar-toggle js-sidebar-toggle">
-                    <i class="hamburger align-self-center"></i>
-                </a>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav navbar-align">
-                        <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
-                                <div class="position-relative">
-                                    <i class="align-middle" data-feather="bell"></i>
-                                    <span class="indicator">1</span>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-                                <div class="dropdown-menu-header">
-                                    1 New Notifications
-                                </div>
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item">
-                                        <div class="row g-0 align-items-center">
-                                            <div class="col-2">
-                                                <i class="text-danger" data-feather="alert-circle"></i>
-                                            </div>
-                                            <div class="col-10">
-                                                <div class="text-dark">Update completed</div>
-                                                <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                                                <div class="text-muted small mt-1">30m ago</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="dropdown-menu-footer">
-                                    <a href="#" class="text-muted">Show all notifications</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="settings"></i>
-                            </a>
-
-                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                                <i class="align-middle" data-feather="user"></i> <span class="text-dark">Charles Hall</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-                                <a class="dropdown-item" href="{{url ('admin/admin-panel')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Dashboard</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                                <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{url ('/')}}">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
+        </form>
+        @if (session('mensaje'))
+                <div class="alert alert-success">
+                    {{ session('mensaje') }}
                 </div>
-            </nav>
-
-            <main class="content">
-                <div class="container-fluid p-0">
-                    <form action="{{ route('edit-product', $product->id) }}" method="POST" enctype="multipart/form-data">
-                        @method('PUT')
-                        @csrf {{-- Cláusula para obtener un token de formulario al enviarlo --}}
-                        <div class="mb-3">
-                            <h1 class="h3 d-inline align-middle">{{ $product->name }}</h1>
-                            <a class="badge bg-dark text-white ms-2" href="#">
-                                Product Manager/Edit
-                            </a>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">General Settings</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <input type="text" name="sku" class="form-control" placeholder="Sku" value="{{ $product->sku }}" required>
-                                    </div>
-                                    <div class="card-body">
-                                        <input type="text"  name="name" class="form-control" placeholder="Name" value="{{ $product->name }}" required>
-                                    </div>
-                                    <div class="card-body">
-                                        <input type="text"  name="description" class="form-control" placeholder="Description" value="{{ $product->description }}" required>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Price</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $product->price }}" required>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Stock</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <input class="form-control" type="number" name="stock" placeholder="Product Stock" value="{{ $product->stock }}" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-lg-6">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Genre</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div>
-                                            <label class="form-check">
-                                                @if ($product->genre == 'male')
-                                                <input class="form-check-input" type="radio" value="Male" checked="checked" name="genre">
-                                                <span class="form-check-label">
-                                                    Male
-                                                </span>
-                                                @else
-                                                <input class="form-check-input" type="radio" value="Male" name="genre">
-                                                <span class="form-check-label">
-                                                    Male
-                                                </span>
-                                                @endif
-                                            </label>
-                                            <label class="form-check">
-                                                @if ($product->genre == 'female')
-                                                <input class="form-check-input" type="radio" value="Female" checked="checked" name="genre">
-                                                <span class="form-check-label">
-                                                    Female
-                                                </span>
-                                                @else
-                                                <input class="form-check-input" type="radio" value="Female" name="genre">
-                                                <span class="form-check-label">
-                                                    Female
-                                                </span>
-                                                @endif
-                                            </label>
-                                            <label class="form-check">
-                                                @if ($product->genre == 'unisex')
-                                                <input class="form-check-input" type="radio" value="Unisex" checked="checked" name="genre">
-                                                <span class="form-check-label">
-                                                    Unisex
-                                                </span>
-                                                @else
-                                                <input class="form-check-input" type="radio" value="Unisex" name="genre">
-                                                <span class="form-check-label">
-                                                    Unisex
-                                                </span>
-                                                @endif
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Images</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" value="{{ $product->images }}" multiple>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Edit Products</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="mb-3">
-                                        <button class="btn btn-success text-dark fw-bold" type="submit">Save Changes</button>
-                                            @if (session('mensaje'))
-                                                <div class="alert alert-success mt-4" role="alert">
-                                                    {{ session('mensaje') }}
-                                                </div>
-                                            @endif
-                                        </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </main>
-            <div class="alert alert-primary" role="alert">
-              <h4 class="alert-heading">Alert Heading</h4>
-              <p>Alert Content</p>
-              <hr>
-              <p class="mb-0">Alert Description</p>
-            </div>
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <p>Admin Panel by Ilerna Sevilla Daw Team</p>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
+        @endif
     </div>
-
-    <script src="{{URL::asset('js/app.js')}}"></script>
-
-</body>
-
-</html>
+</main>
+@endsection

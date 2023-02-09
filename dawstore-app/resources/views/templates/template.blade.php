@@ -1,6 +1,7 @@
 @extends('templates.general')
 
 @section('navbar')
+
 <!-- navbar-->
 <header class="header bg-white">
 
@@ -14,6 +15,7 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('home')" href="{{url ('/')}}">Home</a>
                     </li>
+                    {{-- {{$genre=="Female"?'active':''}} --}}
                     <li class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
