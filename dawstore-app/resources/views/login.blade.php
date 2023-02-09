@@ -21,11 +21,13 @@
                 @csrf
               <div class="mb-4">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required />
+                <input type="email" class="form-control" id="email" value="{{old('email')}}"  name="email" />
               </div>
+
               <div class="mb-4">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required />
+                <input type="password" class="form-control" id="password" name="password" />
+
               </div>
               <div class="mb-4">
                 <input type="checkbox" class="form-check-input" id="remember" name="remember" />
@@ -33,7 +35,13 @@
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn text-dark bg-warning">Login</button>
+                @if(count($errors) > 0)
+                    @foreach($errors->all() as $errors)
+                    <div class="alert alert-danger mt-3" role="alert">{{$errors}}</div>
+                    @endforeach
+                @endif
                 <a class="text-center mt-3 text-decoration-none" href="{{route ('signup')}}">Haven´t an Account?</a>
+
               </div>
             </form>
           </div>

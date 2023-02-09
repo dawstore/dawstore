@@ -79,10 +79,6 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
-
-
-
-
 //RUTAS DASHBOARD
 
 Route::get('/admin/dashboard', function () {
