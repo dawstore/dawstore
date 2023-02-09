@@ -73,10 +73,9 @@
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
+      <script src="{{URL::asset('js/loads.js')}}"></script>
       <!---<script src="{{URL::asset('js/range.js')}}"></script>-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>  
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

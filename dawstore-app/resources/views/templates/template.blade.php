@@ -14,7 +14,8 @@
                         <a class="nav-link @yield('home')" href="{{url ('/')}}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{$genre=="female"?'active':''}}" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
+
+                        <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
                         <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                             <a class="dropdown-item border-0 transition-link" href="{{url ('products','Female')}}">Products</a>
 
@@ -23,7 +24,8 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{$genre=="male"?'active':''}}" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Male</a>
+
+                        <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Male</a>
                         <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                             <a class="dropdown-item border-0 transition-link" href="{{url ('products','Male')}}">Products</a>
 

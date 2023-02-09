@@ -23,7 +23,7 @@
     color: #0000;
 }
 
-.load {
+.loade {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -36,4 +36,8 @@
     100% {
         opacity: 1;
      }
+}
+
+.loader{
+    background-color: white;
 }
