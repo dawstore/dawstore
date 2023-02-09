@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
