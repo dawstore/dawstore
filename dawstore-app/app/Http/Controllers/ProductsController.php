@@ -11,23 +11,12 @@ class ProductsController extends Controller
         $products = Product::all(); // Nos saca todos los productos de la BBDD
         return view('index', @compact('products'));
     }
-
-    public function productsMale($value = "",$value2 = "")
+    public function productsGenre($genre)
     {
-        if($value ==  ""  &&  $value2 == ""){
-            $products = Product::where('genre', 'male')->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de hombre y unisex de la BBDD
-        return view('male', @compact('products'));
-        }else if($value !=  ""  &&  $value2 != ""){
-            $products = Product::where('genre', 'male')->orWhere('genre', 'unisex')->orderBy($value,$value2)->get();
-            return view('male', @compact('products'));
-        }
+        $products = Product::where('genre', $genre)->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
+        return view('products', @compact('products'));
     }
 
-    public function productsFemale()
-    {
-        $products = Product::where('genre', 'female')->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
-        return view('female', @compact('products'));
-    }
 
     public function productsGenre($genre)
     {
