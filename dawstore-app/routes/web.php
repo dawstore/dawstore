@@ -36,14 +36,20 @@ Route::get('/female', function () {
     return view('female');
 })->name('female');
 
-Route::get('female', [ ProductsController::class,'productsFemale' ]);
+Route::get('female', [ ProductsController::class,'productsFemale']);
 
 
 Route::get('/male', function () {
     return view('male');
 })->name('male');
 
-Route::get('male/', [ ProductsController::class,'productsMale' ]);
+Route::get('male/{genre}', [ ProductsController::class,'productsGenre']);
+
+Route::get('/detail', function () {
+    return view('detail');
+})->name('detail');
+
+Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
 Route::get('/test', function () {
     return view('test');
@@ -70,15 +76,6 @@ Route::get('/whitelist', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
-
-
-Route::get('/detail', function () {
-    return view('detail');
-})->name('detail');
-
-Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
-
-
 
 
 

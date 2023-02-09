@@ -29,6 +29,12 @@ class ProductsController extends Controller
         return view('female', @compact('products'));
     }
 
+    public function productsGenre($genre)
+    {
+        $products = Product::where('genre', $genre)->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
+        return view($genre, @compact('products'));
+    }
+
     public function detail($id = 1)
     {
         $product = Product::findOrFail($id);
