@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('customer_id')->references('id')->on('customers');
             $table->float('ammount');
-            $table->string('shipping_address');
+            $table->string('billing_address');
             $table->string('order_address');
             $table->string('order_email');
             $table->date('order_date');

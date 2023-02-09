@@ -14,13 +14,13 @@ class ProductsController extends Controller
 
     public function productsMale()
     {
-        $products = Product::all()->where('genre', 'male'); // Nos saca todos los productos de hombre de la BBDD
+        $products = Product::where('genre', 'male')->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de hombre y unisex de la BBDD
         return view('male', @compact('products'));
     }
 
     public function productsFemale()
     {
-        $products = Product::all()->where('genre', 'female'); // Nos saca todos los productos de mujer de la BBDD
+        $products = Product::where('genre', 'female')->orWhere('genre', 'unisex')->get(); // Nos saca todos los productos de mujer y unisex de la BBDD
         return view('female', @compact('products'));
     }
 

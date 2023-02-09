@@ -18,8 +18,7 @@ return new class extends Migration
             $table->bigInteger('sku')->unique();
             $table->string('name');
             $table->float('price');
-            $table->string('description');
-            // $table->text('product_description');
+            $table->text('description');
             $table->integer('stock');
             $table->enum('genre', ['male', 'female', 'unisex']);
             $table->text('images');

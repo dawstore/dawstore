@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,9 +57,19 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
+//Iniciar sesion y Registro
+Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
+Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
 Route::get('/whitelist', function () {
     return view('whitelist');
 })->name('whitelist');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
 
 
 Route::get('/detail', function () {
@@ -66,6 +77,10 @@ Route::get('/detail', function () {
 })->name('detail');
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
+
+
+
+
 
 //RUTAS DASHBOARD
 

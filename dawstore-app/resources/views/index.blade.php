@@ -49,6 +49,9 @@ active
                 <div class="product text-center">
                     <div class="position-relative mb-3">
                         <div class="badge text-white bg-"></div><a class="d-block" href={{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/products({{$product->sku}}).jpg" alt="..."></a>
+
+                        <div class="badge text-white bg-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a>
+
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -68,7 +71,7 @@ active
                         <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body p-0">
                             <div class="row align-items-stretch">
-                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="img/products/products({{$product->sku}}).jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><img class="img-fluid w-100" src="img/products/products({{$product->sku}}).jpg" alt="..."></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="img/products/{{$product->images}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                                 <div class="col-lg-6">
                                     <div class="p-4 my-md-4">
                                         <ul class="list-inline mb-2">

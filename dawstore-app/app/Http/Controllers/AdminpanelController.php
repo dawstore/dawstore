@@ -24,10 +24,10 @@ class AdminpanelController extends Controller
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
         if($request->hasFile("images")){
-            $imagen = $request->file("images");
-            $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
-            $ruta = public_path("img/products");
-            copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
+            $imagen = $request->images;
+            $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
+            $ruta = public_path("img/products/");
+            $imagen->move($ruta,$nombreimagen); 
             $productInsert->images = $nombreimagen;            
         }
         $productInsert->save();
@@ -42,7 +42,6 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $productUpdate = Product::findOrFail($id);
         $productUpdate->sku = $request->sku;
         $productUpdate->name = $request->name;
@@ -51,10 +50,10 @@ class AdminpanelController extends Controller
         $productUpdate->stock = $request->stock;
         $productUpdate->genre = $request->genre;
         if($request->hasFile("images")){
-            $imagen = $request->file("images");
-            $nombreimagen = Str::slug($request->nombre).".".$imagen->guessExtension();
-            $ruta = public_path("img/products");
-            copy($imagen->getRealPath(),$ruta.'/products('.$request->sku.')'.$nombreimagen);
+            $imagen = $request->images;
+            $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
+            $ruta = public_path("img/products/");
+            $imagen->move($ruta,$nombreimagen); 
             $productUpdate->images = $nombreimagen;            
         }
         $productUpdate->save();
