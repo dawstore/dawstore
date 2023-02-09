@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('index');
 })->name('Home');
 
-Route::get('/', [ ProductsController::class,'products' ]);
+Route::get('/', [ ProductsController::class,'products']);
 
 Route::get('/cart', function () {
     return view('cart');
@@ -33,7 +33,7 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
-Route::get('/products', function ($genre) {
+Route::get('/products', function () {
     return view('products');
 })->name('products');
 
