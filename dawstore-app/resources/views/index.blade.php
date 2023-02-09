@@ -48,13 +48,15 @@ active
             <div class="col-xl-3 col-lg-4 col-sm-6" data-infinite-scroll='{ "path": ".pagination__next", "append": ".post", "history": false }'>
                 <div class="product text-center">
                     <div class="position-relative mb-3">
+                        <div class="badge text-white bg-"></div><a class="d-block" href={{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/products({{$product->sku}}).jpg" alt="..."></a>
+
                         <div class="badge text-white bg-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a>
+
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{url ('cart')}}">Add to cart</a></li>
                                 <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-
                             </ul>
                         </div>
                     </div>

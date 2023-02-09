@@ -59,8 +59,8 @@ active
                   <option value>Sort By </option>
                   <option value="default">Default sorting </option>
                   <option value="popularity">Popularity </option>
-                  <option value="low-high">Price: Low to High </option>
-                  <option value="high-low">Price: High to Low </option>
+                  <option value="desc">Price: Low to High </option>
+                  <option value="asc">Price: High to Low </option>
                 </select>
               </li>
             </ul>
@@ -76,7 +76,7 @@ active
                 <div class="product-overlay">
                   <ul class="mb-0 list-inline">
                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
+                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="{{url ('cart')}}">Add to cart</a></li>
                     <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                   </ul>
                 </div>
