@@ -17,7 +17,7 @@ active
                 <div class="w-100">
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="card">
+                            <div class="card" data-aos="zoom-in-right" data-aos-duration="1500">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col mt-0">
@@ -37,7 +37,7 @@ active
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-aos="zoom-in-right" data-aos-duration="1500">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col mt-0">
@@ -59,7 +59,7 @@ active
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="card">
+                            <div class="card" data-aos="zoom-in-left" data-aos-duration="1500">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col mt-0">
@@ -79,7 +79,7 @@ active
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" data-aos="zoom-in-left" data-aos-duration="1500">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col mt-0">
@@ -104,10 +104,9 @@ active
                 </div>
             </div>
 
-            <div class="col-xl-6 col-xxl-7">
+            <div class="col-xl-6 col-xxl-7" data-aos="flip-down" data-aos-duration="1500">
                 <div class="card flex-fill w-100">
                     <div class="card-header">
-
                         <h5 class="card-title mb-0">Recent Movement</h5>
                     </div>
                     <div class="card-body py-3">
@@ -122,7 +121,7 @@ active
 
 
         <div class="row">
-            <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+            <div class="col-12 col-lg-8 col-xxl-9 d-flex" data-aos="flip-down" data-aos-duration="1000">
                 <div class="card flex-fill">
                     <div class="card-header">
                         <h5 class="card-title mb-0">Latest Products</h5>
@@ -167,10 +166,9 @@ active
                     </table>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+            <div class="col-12 col-lg-4 col-xxl-3 d-flex" data-aos="flip-down" data-aos-duration="1000">
                 <div class="card flex-fill w-100">
                     <div class="card-header">
-
                         <h5 class="card-title mb-0">Monthly Sales</h5>
                     </div>
                     <div class="card-body d-flex w-100">
