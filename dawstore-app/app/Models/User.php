@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Numeros de usuarios registraos para el Dashboard
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'id_user','id');
+    }
+
 }

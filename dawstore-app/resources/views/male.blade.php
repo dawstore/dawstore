@@ -60,6 +60,7 @@ active
                   <option value="{{url('male','name','desc')}}">Z-A</option>
                   <option value="{{url('male','price','asc')}}">Price: Low to High </a></option>
                   <option value="{{url('male','price','desc')}}">Price: High to Low </a></option>
+
                 </select>
               </li>
             </ul>

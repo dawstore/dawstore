@@ -17,6 +17,7 @@
                         <a class="nav-link dropdown-toggle @yield('female')" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Female</a>
                         <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                             <a class="dropdown-item border-0 transition-link" href="{{url ('products','female')}}">Products</a>
+
                             <a class="dropdown-item border-0 transition-link" href="#">Feature Products</a>
                             <a class="dropdown-item border-0 transition-link" href="#">Outlet</a>
                         </div>
@@ -25,6 +26,7 @@
                         <a class="nav-link dropdown-toggle @yield('male')" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Male</a>
                         <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
                             <a class="dropdown-item border-0 transition-link" href="{{url ('products','male')}}">Products</a>
+
                             <a class="dropdown-item border-0 transition-link" href="#">Feature Products</a>
                             <a class="dropdown-item border-0 transition-link" href="#">Outlet</a>
                         </div>
@@ -55,9 +57,9 @@
 
 @endsection
 
-@section('contact-modal')
+@section('profile-modal')
 <!--  Contact Form Modal -->
-<div class="modal fade" id="contact-us" tabindex="-1">
+<div class="modal fade" id="profile-modal" tabindex="-1">
     <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content overflow-hidden border-0">
             <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -65,9 +67,11 @@
                 <div class="row align-items-stretch">
                     <div class="p-4 my-md-4">
                         <h2 class="h4">Profile Manager</h2>
-                        <form>
+                        <form action="/contact">
+                        {{ csrf_field() }}
+
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Current Name: @auth {{Auth::user()->name}} @endauth" required>
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Current Name: @auth {{Auth::user()->full_name}} @endauth" required>
                             </div>
                             <div class="col-lg-12">
                                 <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Current Email @auth {{Auth::user()->email}} @endauth" required>
@@ -84,8 +88,8 @@
 </div>
 @endsection
 
-@section('profile-modal')
-<!--  Edit profile Form Modal -->
+@section('contact-modal')
+<!--  contact Form Modal -->
 <div class="modal fade" id="contact-us" tabindex="-1">
     <div class="modal-dialog modal-sm modal-dialog-centered">
         <div class="modal-content overflow-hidden border-0">
