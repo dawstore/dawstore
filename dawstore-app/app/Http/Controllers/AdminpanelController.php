@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Cart;
+use Illuminate\Support\Facades\File;
 
 class AdminpanelController extends Controller
 {
@@ -42,6 +42,17 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
+        // $filePath = $request->get('images');
+        // if(File::exists($filePath)) {
+        //     File::delete($filePath);
+        // }
+
+        $file_path = Product::findOrFail($id);
+
+        if (File::exists(public_path("img/products/" . $file_path->images))) {
+            File::delete(public_path("img/products/" . $file_path->images));
+        }
+
         $productUpdate = Product::findOrFail($id);
         $productUpdate->sku = $request->sku;
         $productUpdate->name = $request->name;
@@ -57,12 +68,22 @@ class AdminpanelController extends Controller
             $productUpdate->images = $nombreimagen;            
         }
         $productUpdate->save();
+
+        // $fileUpdate = Product::findOrFail($id);
+        // if($request->hasFile("images")){
+        //     $imagen = $request->images;
+        //     $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
+        //     $ruta = public_path("img/products/");
+        //     $imagen->move($ruta,$nombreimagen); 
+        //     $fileUpdate->images = $nombreimagen;            
+        // }
+        // $fileUpdate->save();
         return back()->with('mensaje', 'Producto editado exitosamente');
     }        
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
-        $deleteProduct -> delete();
-        return back() -> with('message', '');
+        $deleteProduct->delete();
+        return back()->with('message', '');
     }
 }

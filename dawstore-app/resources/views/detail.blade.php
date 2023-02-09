@@ -15,20 +15,20 @@
           <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0 px-xl-2">
             <div class="swiper product-slider-thumbs">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></div>
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></div>
               </div>
             </div>
           </div>
           <div class="col-sm-10 order-1 order-sm-2">
             <div class="swiper product-slider">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 2"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 3"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 4"><img class="img-fluid" src="http://localhost:8000/img\products\products({{$product->sku}}).jpg" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 2"><img class="img-fluid" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 3"><img class="img-fluid" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></a></div>
+                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 4"><img class="img-fluid" src="http://localhost:8000/img/products/{{$product->images}}" alt="..."></a></div>
               </div>
             </div>
           </div>
