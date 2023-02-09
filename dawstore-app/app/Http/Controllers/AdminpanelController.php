@@ -42,11 +42,6 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
-        // $filePath = $request->get('images');
-        // if(File::exists($filePath)) {
-        //     File::delete($filePath);
-        // }
-
         $file_path = Product::findOrFail($id);
 
         if (File::exists(public_path("img/products/" . $file_path->images))) {
