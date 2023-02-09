@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
+    <!-- data-aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
     <!-- Google fonts-->
@@ -26,7 +28,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
   </head>
   <body>
+
       <div class="page-holder">
+
 
         @yield('navbar')
 
@@ -65,7 +69,6 @@
         @yield('footer')
 
       <!-- JavaScript files-->
-      <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
       <script src="{{URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{URL::asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
       <script src="{{URL::asset('vendor/nouislider/nouislider.min.js')}}"></script>
@@ -73,7 +76,17 @@
       <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
-      <script src="{{URL::asset('js/range.js')}}"></script>
+      <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
+      <script src="{{URL::asset('js/loads.js')}}"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+
+
+
+      <!---<script src="{{URL::asset('js/range.js')}}"></script>-->
+
 
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
