@@ -43,7 +43,7 @@ Route::get('/male', function () {
     return view('male');
 })->name('male');
 
-Route::get('male', [ ProductsController::class,'productsMale' ]);
+Route::get('male/', [ ProductsController::class,'productsMale' ]);
 
 Route::get('/test', function () {
     return view('test');
