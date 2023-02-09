@@ -33,13 +33,14 @@ Route::get('/checkout', function () {
     return view('checkout');
 })->name('checkout');
 
-Route::get('/female', function () {
-    return view('female');
-})->name('female');
+Route::get('/products', function () {
+    return view('products');
+})->name('products');
 
-Route::get('female', [ ProductsController::class,'productsFemale']);
+Route::get('products/{genre}', [ ProductsController::class,'productsGenre' ]);
 
 
+<<<<<<< HEAD
 Route::get('/male', function () {
     return view('male');
 })->name('male');
@@ -52,6 +53,8 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+=======
+>>>>>>> e1afdde10978c550d8ee9a385a3c8eae24c1df3b
 Route::get('/test', function () {
     return view('test');
 })->name('test');
