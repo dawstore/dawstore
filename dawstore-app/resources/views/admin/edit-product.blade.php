@@ -22,7 +22,7 @@
                 </a>
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="{{url ('admin')}}">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
@@ -116,7 +116,7 @@
 
             <main class="content">
                 <div class="container-fluid p-0">
-                    <form action="{{ route('edit-product', $product->id) }}" method="POST" enctype="multipart/form-data"> 
+                    <form action="{{ route('edit-product', $product->id) }}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf {{-- Cláusula para obtener un token de formulario al enviarlo --}}
                         <div class="mb-3">
@@ -227,19 +227,26 @@
                                     <div class="card-body">
                                         <div class="mb-3">
                                         <button class="btn btn-success text-dark fw-bold" type="submit">Save Changes</button>
+                                            @if (session('mensaje'))
+                                                <div class="alert alert-success mt-4" role="alert">
+                                                    {{ session('mensaje') }}
+                                                </div>
+                                            @endif
+                                        </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    @if (session('mensaje'))
-                            <div class="alert alert-success">
-                                {{ session('mensaje') }}
-                            </div>
-                    @endif
                 </div>
             </main>
+            <div class="alert alert-primary" role="alert">
+              <h4 class="alert-heading">Alert Heading</h4>
+              <p>Alert Content</p>
+              <hr>
+              <p class="mb-0">Alert Description</p>
+            </div>
 
             <footer class="footer">
                 <div class="container-fluid">

@@ -5002,8 +5002,7 @@ fieldset:disabled .btn {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #dcb14a;
 }
 
 .page-item.disabled .page-link {
