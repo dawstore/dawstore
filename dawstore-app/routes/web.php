@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
@@ -37,7 +38,7 @@ Route::get('/products', function () {
     return view('products');
 })->name('products');
 
-Route::get('products/{genre}', [ ProductsController::class,'productsGenre']);
+Route::get('products/{genre},{option?}', [ ProductsController::class,'productsGenre']);
 
 Route::get('/detail', function () {
     return view('detail');

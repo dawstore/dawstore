@@ -30,8 +30,7 @@
   </head>
   <body>
 
-      <div class="page-holder pageLoader">
-
+      <div class="page-holder">
 
         @yield('navbar')
 

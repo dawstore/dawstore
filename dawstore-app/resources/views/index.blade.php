@@ -8,6 +8,8 @@ Home
 active
 @endsection
 
+
+
 @section('hero_section')
 <!-- HERO SECTION-->
 <div class="container">
