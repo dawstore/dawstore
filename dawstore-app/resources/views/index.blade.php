@@ -8,6 +8,10 @@ Home
 active
 @endsection
 
+@section('loader')
+<div class="lds-ring loaderNetflix" id="loaderNetflix"><source src="img/loader/loaderNetflix.mp4" width="1920" height="1080"></div>
+@endsection
+
 @section('hero_section')
 <!-- HERO SECTION-->
 <div class="container">
