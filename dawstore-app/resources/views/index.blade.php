@@ -45,7 +45,7 @@ active
         <div class="row">
             <!-- PRODUCT-->
             @foreach ($products as $product)
-            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="flip-left" data-aos-duration="1500">
+            <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="flip-down" data-aos-duration="1500">
                 <div class="product text-center">
                     <div class="position-relative mb-3">
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..." loading="lazy"></a>
@@ -61,6 +61,7 @@ active
                     <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{ $product->name }}</a></h6>
                     <p class="small text-muted">${{ $product->price }}</p>
                 </div>
+
             </div>
             <!--  Modal -->
             <div class="modal fade" id="productView{{$product->id}}" tabindex="-1">
@@ -103,6 +104,7 @@ active
             </div>
             @endforeach
     </section>
+
     <!-- SERVICES-->
     <section class="py-5 bg-light">
         <div class="container">
