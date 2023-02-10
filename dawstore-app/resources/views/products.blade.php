@@ -52,10 +52,10 @@
                 <select class="selectpicker" onchange="location = this.value;" data-customclass="form-control form-control-sm">
                   <option value>Sort By</option>
                   <option value="{{url('products',$genre)}}">Default sorting</option>
-                  <option value="{{url('products',$genre,'1')}}">A-Z</option>
-                  <option value="{{url('products',$genre,'0')}}">Z-A</option>
-                  <option value="{{url('products',$genre,'2')}}">Price: Low to High </a></option>
-                  <option value="{{url('products',$genre,'3')}}">Price: High to Low </a></option>
+                  <option value="{{url('products',$genre)."/1"}}">A-Z</option>
+                  <option value="{{url('products',$genre)."/0"}}">Z-A</option>
+                  <option value="{{url('products',$genre)."/2"}}">Price: Low to High </a></option>
+                  <option value="{{url('products',$genre)."/3"}}">Price: High to Low </a></option>
                 </select>
               </li>
             </ul>
