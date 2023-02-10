@@ -72,8 +72,8 @@
                 <div class="row align-items-stretch">
                     <div class="p-4 my-md-4">
                         <h2 class="h4">Profile Manager</h2>
-                        <form action="/contact">
-                        {{ csrf_field() }}
+                        <form action="" method="POST">
+                            @csrf
 
                             <div class="col-lg-12">
                                 <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Current Name: @auth {{Auth::user()->full_name}} @endauth" required>

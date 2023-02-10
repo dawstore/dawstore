@@ -117,6 +117,7 @@ Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]
 Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
 
 
+//Contact Us
 
 
 
