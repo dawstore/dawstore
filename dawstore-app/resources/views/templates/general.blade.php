@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
   </head>
-  <body data-aos="zoom-in-up" data-aos-duration="1000">
+  <body>
 
       <div class="page-holder">
 
