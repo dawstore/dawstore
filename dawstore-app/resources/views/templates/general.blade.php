@@ -29,9 +29,8 @@
   </head>
   <body>
 
-      <div class="page-holder pageLoader">
+      <div class="page-holder">
 
-        @yield('loader')
 
         @yield('navbar')
 
@@ -79,7 +78,6 @@
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
       <script src="{{URL::asset('js/loads.js')}}"></script>
-      <script src="{{URL::asset('js/custom.js')}}"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();

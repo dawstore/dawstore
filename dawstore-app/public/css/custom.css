@@ -44,14 +44,3 @@
 .loader{
     background-color: white;
 }
-
-.loaderNetflix {
-    width: auto;
-    position: fixed;
-    z-index: 10000;
-    transition: 5s ease-in-out;
-}
-
-.loader2Netlix {
-    visibility: hidden;
-}
