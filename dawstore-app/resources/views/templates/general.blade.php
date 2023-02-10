@@ -29,8 +29,7 @@
   </head>
   <body data-aos="zoom-in-up" data-aos-duration="1000">
 
-      <div class="page-holder ">
-
+      <div class="page-holder">
 
         @yield('navbar')
 
@@ -78,6 +77,7 @@
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
       <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
       <script src="{{URL::asset('js/loads.js')}}"></script>
+      <script src="{{URL::asset('js/custom.js')}}"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
