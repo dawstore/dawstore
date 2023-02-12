@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
   </head>
-  <body>
+  <body data-aos="fade-up">
 
       <div class="page-holder">
 
@@ -75,9 +75,6 @@
       <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
-      <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
-      <script src="{{URL::asset('js/loads.js')}}"></script>
-      <script src="{{URL::asset('js/custom.js')}}"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
