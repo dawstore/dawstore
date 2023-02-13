@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('titulo')
-All Products 
+{{$genre}}
 @endsection
 
 @section('shop_section')
