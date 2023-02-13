@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
@@ -81,4 +82,45 @@ class AdminpanelController extends Controller
         $deleteProduct->delete();
         return back()->with('message', '');
     }
+
+
+/* CATEGORIAS */
+
+
+    public function category()
+    {
+        $categories = Category::all(); // Nos saca todos las categorias de la BBDD
+        return view('admin/category-manager', @compact('categories'));
+    }
+
+    public function insert_category(Request $request)
+    {
+        $categoryInsert = new Category;
+        $categoryInsert->name = $request->name;
+        $categoryInsert->description = $request->desc;
+        $categoryInsert->save();
+        return back() -> with('mensaje', 'Categoria creada exitosamente');
+    }
+    public function edit_category($id)
+    {
+        $category = Category::findOrFail($id);
+        return view('admin/edit-category', compact('category'));
+    }
+    public function update_category(Request $request, $id)
+    {
+        $categoryUpdate = Category::findOrFail($id);
+        $categoryUpdate->name = $request->name;
+        $categoryUpdate->description = $request->description;
+        $categoryUpdate->update();
+        return back()->with('mensaje', 'Producto editado exitosamente');
+    }        
+
+    public function delete_category($id) {
+        $deleteCategory = Category::findOrFail($id);
+        $deleteCategory->delete();
+        return back()->with('message', '');
+    }
 }
+
+
+
