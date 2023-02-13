@@ -35,6 +35,8 @@
 
             @yield('product-manager-section')
 
+            @yield('edit-category-section')
+
             @yield('profile-admin-section')
 
             @yield('footer-admin')
