@@ -5,6 +5,7 @@ use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,24 +51,14 @@ Route::get('/test', function () {
     return view('test');
 })->name('test');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
-
-Route::get('/signup', function () {
-    return view('signup');
-})->name('signup');
 
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
 
-
 //Iniciar sesion y Registro
-Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
-Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 
 Route::get('/whitelist', function () {

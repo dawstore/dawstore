@@ -19,25 +19,31 @@
             <h2 class="p-3">Sign Up</h2>
           </div>
           <div class="card-body">
-            <form method="POST" action="{{route ('validar-registro')}}">
+          <form action="{{route ('register')}}" method="POST">
                 @csrf
             <div class="mb-4">
                 <input type="text" class="form-control" id="username" name="full_name" value="{{old('full_name')}}" placeholder="Full Name" />
+                @error('name') <div class="alert alert-danger mt-3" role="alert">{{$message}}</div>@enderror
+
               </div>
               <div class="mb-4">
                 <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="Email"/>
+                @error('email') <div class="alert alert-danger mt-3" role="alert">{{$message}}</div>@enderror
+
               </div>
               <div class="mb-4">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+                @error('password') <div class="alert alert-danger mt-3" role="alert">{{$message}}</div>@enderror
+              </div>
+
+              <div class="mb-4">
+                <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password"/>
+                @error('confirm-password') <div class="alert alert-danger mt-3" role="alert">{{$message}}</div>@enderror
+
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn text-dark bg-warning">Create Account</button>
                 <a class="text-center mt-3 text-decoration-none" href="{{route('login')}}">Have an Account?</a>
-                @if(count($errors) > 0)
-                    @foreach($errors->all() as $errors)
-                    <div class="alert alert-danger mt-3" role="alert">{{$errors}}</div>
-                    @endforeach
-                @endif
               </div>
             </form>
           </div>
