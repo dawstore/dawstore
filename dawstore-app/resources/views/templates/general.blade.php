@@ -41,6 +41,7 @@
         @yield('profile-modal')
 
         @yield('hero_section')
+        @yield('contact_section')
 
         {{-- CHECKOUT --}}
 

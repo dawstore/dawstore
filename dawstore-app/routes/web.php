@@ -58,6 +58,10 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 
 
 //Iniciar sesion y Registro
