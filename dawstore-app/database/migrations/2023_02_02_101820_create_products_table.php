@@ -21,7 +21,6 @@ return new class extends Migration
             $table->text('description');
             $table->integer('stock');
             $table->enum('genre', ['Male', 'Female', 'Unisex']);
-            $table->text('images');
             $table->timestamps();
         });
         

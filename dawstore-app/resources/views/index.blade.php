@@ -29,14 +29,35 @@ active
             <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
             <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
         </header>
-        <div class="row">
-            <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid" src="img/cat-img-1.jpg" alt="" /></a>
-            </div>
-            <div class="col-md-4" ><a class="category-item mb-4" href="shop.html"><img class="img-fluid" src="img/cat-img-2.jpg" alt="" /></a><a class="category-item" href="shop.html"><img class="img-fluid" src="img/cat-img-3.jpg" alt="" /></a>
-            </div>
-            <div class="col-md-4"><a class="category-item" href="shop.html"><img class="img-fluid" src="img/cat-img-4.jpg" alt="" /></a>
-            </div>
-        </div>
+    </section>
+
+    <section class="hero-section" data-aos="zoom-in">
+        <div class="card-grid">
+            <a class="card" href="#">
+                <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">Category</p>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">Category</p>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">Category</p>
+                </div>
+                </li>
+                <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
+                    <div class="card__content">
+                        <p class="card__category">Category</p>
+                    </div>
+                </a>
+                <div>
     </section>
     <!-- TRENDING PRODUCTS-->
     <section class="py-5 text-center">
@@ -50,8 +71,7 @@ active
             <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="flip-down" data-aos-duration="1500">
                 <div class="product text-center">
                     <div class="position-relative mb-3">
-                        <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..." loading="lazy"></a>
-
+                        <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." loading="lazy"></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -72,7 +92,9 @@ active
                         <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body p-0">
                             <div class="row align-items-stretch">
-                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="img/products/{{$product->images}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><img class="img-fluid w-100" src="img/products/{{$product->images}}" alt="..."></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
+                                        <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
+                                        <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[3]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                                 <div class="col-lg-6">
                                     <div class="p-4 my-md-4">
                                         <ul class="list-inline mb-2">

@@ -58,9 +58,11 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
-Route::get('/product-detail', function () {
-    return view('product-detail');
-})->name('product-detail');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+
 
 //Iniciar sesion y Registro
 Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
@@ -97,6 +99,14 @@ Route::get('/admin/product-manager', function () {
     return view('/admin/product-manager');
 })->name('product-manager');
 
+Route::get('/admin/category-manager', function () {
+    return view('/admin/category-manager');
+})->name('category-manager');
+
+Route::get('/admin/edit-category', function () {
+    return view('/admin/edit-category');
+})->name('edit-category');
+
 Route::get('/admin/edit-product', function () {
     return view('/admin/edit-product');
 })->name('edit-product');
@@ -120,6 +130,19 @@ Route::get('/admin/edit-product/{id}', [ AdminpanelController::class, 'edit' ]) 
 Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product');
 
 Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
+
+//CATEGORIAS
+
+Route::get('/admin/category-manager', [ AdminpanelController::class,'category' ]);
+
+Route::get('/admin/edit-category/{id}', [ AdminpanelController::class, 'edit_category' ]) -> name('edit-category');
+
+Route::post('/admin/category-manager', [ AdminpanelController::class, 'insert_category' ]) -> name('insert-category');
+
+Route::put('/admin/edit-category/{id}', [ AdminpanelController::class, 'update_category' ]) -> name('update-category');
+
+Route::delete('/admin/category-manager/{id}', [ AdminpanelController::class, 'delete_category' ]) -> name('category-manager');
+
 
 
 

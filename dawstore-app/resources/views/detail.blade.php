@@ -16,20 +16,18 @@
             <div class="swiper product-slider-thumbs">
               <div class="swiper-wrapper">
 
-                {{-- TODO: Mario tiene que terminar el array de imágenes --}}
-                {{-- @foreach ($product->images as $image )
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$image.'')}}" alt="..."></div>
-                @endforeach --}}
-                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></div>
-                
+                @foreach ($product->images as $image )
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'.$image->image_name)}}" alt="..."></div>
+                @endforeach
               </div>
             </div>
           </div>
           <div class="col-sm-10 order-1 order-sm-2">
             <div class="swiper product-slider">
               <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto"><a class="glightbox product-view" href="" data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a></div>
-
+                @foreach ($product->images as $image )
+                <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'.$image->image_name)}}" alt="..."></div>
+                @endforeach
               </div>
             </div>
           </div>
@@ -120,7 +118,7 @@
     <h2 class="h5 text-uppercase mb-4">Related products</h2>
     <div class="row">
       <!-- PRODUCT-->
-      <div class="col-lg-3 col-sm-6">
+      <div class="col-lg-3 col-sm-6" data-aos="fade-right">
         <div class="product text-center skel-loader">
           <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="{{URL::asset('img/product-1.jpg')}}" alt="..."></a>
             <div class="product-overlay">
