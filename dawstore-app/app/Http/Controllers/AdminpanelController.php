@@ -32,9 +32,8 @@ class AdminpanelController extends Controller
         {
             $imagen = new Image();
             $imagen->product_id = $productInsert->id; 
-            $name = strtr($request->name, " ", "-");
-            $imagen->image_name = $name."-".$i.".".$image->extension();
-            $ruta = public_path("img/products/".$name."-files");
+            $imagen->image_name = $request->sku."-".$i.".".$image->extension();
+            $ruta = public_path("img/products/".$request->sku."-files");
             $image->move($ruta,$imagen->image_name);
             $imagen->save();           
             $i++;
