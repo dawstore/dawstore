@@ -139,7 +139,6 @@ active
                                 <th class="d-none d-xl-table-cell">Price</th>
                                 <th>Stock</th>
                                 <th class="d-none d-md-table-cell">Genre</th>
-                                <th class="d-none d-md-table-cell">Images</th>
                                 <th class="d-none d-md-table-cell">Edit</th>
                                 <th class="d-none d-md-table-cell">Delete</th>
                             </tr>
@@ -152,7 +151,6 @@ active
                                 <td class="d-none d-xl-table-cell">${{ $product->price }}</td>
                                 <td><span class="badge bg-success">{{ $product->stock }}</span></td>
                                 <td class="d-none d-md-table-cell">{{ $product->genre }}</td>
-                                <td class="d-none d-md-table-cell">{{ $product->images }}</td>
                                 <td><a href="{{ route('edit-product', $product) }}" class="btn btn-success btn-sm"> <i class="bi bi-pencil-square"></i> </a></td>
                                 <td><form action="{{ route('admin-panel', $product) }}" method="POST" class="d-inline">
                                         @method('DELETE')
