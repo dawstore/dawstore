@@ -34,25 +34,25 @@ active
     <section class="hero-section" data-aos="zoom-in">
         <div class="card-grid">
             <a class="card" href="#">
-                <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
-                <div class="card__content">
-                    <p class="card__category">Category</p>
-                </div>
-            </a>
-            <a class="card" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
                     <p class="card__category">Category</p>
                 </div>
             </a>
             <a class="card" href="#">
-                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">Category</p>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
                     <p class="card__category">Category</p>
                 </div>
                 </li>
                 <a class="card" href="#">
-                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
                         <p class="card__category">Category</p>
                     </div>
@@ -93,8 +93,8 @@ active
                         <div class="modal-body p-0">
                             <div class="row align-items-stretch">
                                 <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
-                                    <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
-                                    <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[3]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                                        <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
+                                        <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[3]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                                 <div class="col-lg-6">
                                     <div class="p-4 my-md-4">
                                         <ul class="list-inline mb-2">
