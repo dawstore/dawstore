@@ -8,14 +8,18 @@
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
     <title>@yield('titulo') - Tello Store</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('/css/adminProfile.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- data-aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="{{URL::asset('/js/app.js')}}"></script>
     <script src="{{URL::asset('/js/chart-movement.js')}}"></script>
     <script src="{{URL::asset('/js/mounthly-sales.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
 </head>
 <body>
 

@@ -11,65 +11,29 @@ active
 @section('admin-management-section')
 <main class="content">
     <div class="container-fluid p-0">
-
-        <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Add and Edit Admin Users</h1>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">Admin Credentials</h5>
-                    </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{URL::asset('/img/dashboard/adminList.png')}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <input type="text" class="form-control" id="admin-username" name="admin-username" placeholder="Username" required>
+                        <h4 class="card-title">Nombre Admin</h4>
+                        <span class="badge bg-danger">Super-Admin</span>
                     </div>
+                    <ul class="list-group list-group-flush">
+                        <a href="">
+                            <li class="list-group-item">An item</li>
+                        </a>
+                        
+                        <a href="">
+                            <li class="list-group-item">An item</li>
+                        </a>
+                        <li class="list-group-item">A third item</li>
+                    </ul>
                     <div class="card-body">
-                        <input type="email" class="form-control" id="admin-email" name="admin-email" placeholder="Email" required>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
                     </div>
-                    <div class="card-body">
-                        <input type="password" class="form-control" id="admin-password" name="admin-password" placeholder="Password" required>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">Profile Pic (Opcional)</h5>
-                    </div>
-                    <div class="card-body">
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
-                    </div>
-                </div>
-
-            </div>
-
-        <div class="col-12 col-lg-6">
-            <div class="row">
-                <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-                <div class="card flex-fill">
-                    <div class="card-header">
-
-                        <h5 class="card-title mb-0">Account Actives</h5>
-                    </div>
-                    <table class="table table-hover my-0">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ADMIN HERE</td>
-                                <td><span class="badge bg-success">Done</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
-        </div>
-    </div>
-
-    </div>
 </main>
 @endsection

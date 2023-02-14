@@ -35,7 +35,7 @@ active
         <h2 class="h5 text-uppercase mb-4">Contact Us</h2>
         <div class="row">
             <div class="col-lg-8">
-                <form action="#">
+                <form name="contactForm" onsubmit="confirmForm" action="" >
                     <div class="row gy-3">
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="firstName">First name </label>
@@ -58,7 +58,7 @@ active
                             <textarea class="form-control form-control-lg" type="text" id="contactMessage" name="contactMessage" placeholder="Message" required></textarea>
                         </div>
                         <div class="col-lg-12">
-                           <button class="btn btn-success" type="submit">Submit</button>
+                           <button class="btn btn-success" type="submit" >Submit</button>
                         </div>
                     </div>
                 </form>

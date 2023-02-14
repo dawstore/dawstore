@@ -13,9 +13,15 @@
                 </a>
             </li>
 
-            <li class="sidebar-item @yield('admin-management-active')">
+            <li class="sidebar-item @yield('admin-management-active') ">
                 <a class="sidebar-link" href="{{url ('admin/admin-management')}}">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Add Admin</span>
+                    <i class="align-middle" data-feather="tool"></i> <span class="align-middle">Admin Management</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="#">
+                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Admin Users</span>
                 </a>
             </li>
 
@@ -24,7 +30,7 @@
                     <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Product Manager</span>
                 </a>
             </li>
-            
+
             <li class="sidebar-item @yield('category-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/category-manager')}}">
                     <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Category</span>
