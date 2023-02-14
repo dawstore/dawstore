@@ -24,20 +24,21 @@ class AdminpanelController extends Controller
         $productInsert->description = $request->desc;
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
+        $productInsert->save();
 
-        $i = 0;
+        $i = 1;
         foreach ($request->images as $image) 
         {
             $imagen = new Image();
+            $imagen->product_id = $productInsert->id; 
+            $name = strtr($request->name, " ", "-");
+            $imagen->image_name = $name."-".$i.".".$image->extension();
+            $ruta = public_path("img/products/".$name."-files");
+            $image->move($ruta,$imagen->image_name);
+            $imagen->save();           
             $i++;
-            $imagen->image_name = $request->name."(".$i.")".$image->extension();
-            $ruta = public_path("img/products/");
-            $image->move($ruta,$imagen); 
-            $imagen->save();
-            // $productInsert->images = $image;            
         }
-        $productInsert->save();
-        return back() -> with('mensaje', 'Producto creado exitosamente');
+        return back() -> with('mensaje', 'Producto creado exitosamente'.$request);
     }
 
     public function edit($id)
