@@ -105,13 +105,13 @@
                         <h2 class="h4">Contact Us</h2>
                         <form>
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Name" required>
+                                <input class="form-control form-control-lg mb-4" type="text" id="contactName" name="contactName" placeholder="Name" required>
                             </div>
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Email" required>
+                                <input class="form-control form-control-lg mb-4" type="email" id="contactEmail" name="contactEmail" placeholder="Email" required>
                             </div>
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="text" id="contact-email" name="contact-message" row="2" placeholder="Message" required>
+                                <input class="form-control form-control-lg mb-4" type="text" id="contactMessage" name="contactMessage" row="2" placeholder="Message" required>
                             </div>
                             <div class="col-lg-12">
                                 <input class="btn btn-primary" type="submit" name="Send">

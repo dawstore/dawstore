@@ -58,9 +58,7 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
-Route::get('/allProducts', function () {
-    return view('allProducts');
-})->name('allProducts');
+
 
 //Iniciar sesion y Registro
 Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
