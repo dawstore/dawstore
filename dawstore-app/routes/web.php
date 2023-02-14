@@ -58,6 +58,10 @@ Route::get('/signup', function () {
     return view('signup');
 })->name('signup');
 
+Route::get('/product-detail', function () {
+    return view('product-detail');
+})->name('product-detail');
+
 //Iniciar sesion y Registro
 Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
