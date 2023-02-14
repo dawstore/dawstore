@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {   
 
-        $sku = ['1','2','3','4','5','6','7','8','9','10','11'];
-        $name = ['Adidas Forum','Adidas Yeezy Foam','Air Force 1','Nike Blazer','Nike Air Max 97 Premium','Nike Air Vapormax','New Balance 550','Adidas Yeezy','New Balance 530','Adidas All Star','Jordan 4'];
+        $sku = ['1','2','3','4','8','9','7','11','6','10','5'];
+        $name = ['Adidas Forum','Adidas Yeezy Foam','Air Force 1','Nike Blazer','Nike Air Max 97 Premium','Nike Air Vapormax','New Balance 550','Adidas Yeezy','New Balance 530','Adidas Super Star','Jordan 4'];
         $price = ['100','100','100','100','100','100','100','100','100','100','100'];
         $description = ['Description 1','Description 2','Description 3','Description 4','Description 5','Description 6','Description 7','Description 8','Description 9','Description 10','Description 11'];
         $stock = ['50','50','50','50','50','50','50','50','50','50','50'];

@@ -67,7 +67,7 @@
           <div class="col-lg-4 col-sm-6" data-aos="zoom-out" data-aos-duration="1500">
             <div class="product text-center">
               <div class="mb-3 position-relative">
-                <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></a>
+                <div class="badge text-white bg-info">Sale</div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a>
                 <div class="product-overlay">
                   <ul class="mb-0 list-inline">
                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
