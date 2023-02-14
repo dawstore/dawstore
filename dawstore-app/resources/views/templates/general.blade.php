@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('/css/3d-products.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/cards.css')}}">
     <!-- data-aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
@@ -41,6 +41,7 @@
         @yield('profile-modal')
 
         @yield('hero_section')
+        @yield('contact_section')
 
         {{-- CHECKOUT --}}
 
@@ -79,6 +80,8 @@
       <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
       <script src="{{URL::asset('js/loads.js')}}"></script>
       <script src="{{URL::asset('js/custom.js')}}"></script>
+      <script src="{{URL::asset('js/confirmForms.js')}}"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
