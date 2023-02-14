@@ -92,7 +92,7 @@ active
                             <h5 class="card-title mb-0">Images</h5>
                         </div>
                         <div class="card-body">
-                            <input class="form-control form-control-sm" id="formFileSm" name="images" type="file" multiple>
+                            <input class="form-control form-control-sm" id="formFileSm" name="images[]" type="file" multiple>
                         </div>
                     </div>
 

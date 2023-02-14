@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Image;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -24,14 +25,19 @@ class AdminpanelController extends Controller
         $productInsert->description = $request->desc;
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
-        if($request->hasFile("images")){
-            $imagen = $request->images;
-            $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
-            $ruta = public_path("img/products/");
-            $imagen->move($ruta,$nombreimagen); 
-            $productInsert->images = $nombreimagen;            
-        }
         $productInsert->save();
+
+        $i = 1;
+        foreach ($request->images as $image) 
+        {
+            $imagen = new Image();
+            $imagen->product_id = $productInsert->id; 
+            $imagen->image_name = $request->sku."-".$i.".".$image->extension();
+            $ruta = public_path("img/products/".$request->sku."-files");
+            $image->move($ruta,$imagen->image_name);
+            $imagen->save();           
+            $i++;
+        }
         return back() -> with('mensaje', 'Producto creado exitosamente');
     }
 
@@ -79,7 +85,10 @@ class AdminpanelController extends Controller
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
+        $deleteImg = Image::where('product_id', $id);
+        $deleteImg->delete();
         $deleteProduct->delete();
+
         return back()->with('message', '');
     }
 

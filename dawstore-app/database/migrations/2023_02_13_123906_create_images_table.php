@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('sku')->unique();
-            $table->string('name');
-            $table->float('price');
-            $table->text('description');
-            $table->integer('stock');
-            $table->enum('genre', ['Male', 'Female', 'Unisex']);
+            $table->string('image_name');
+            $table->foreignId('product_id')->references('id')->on('products');
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('images');
     }
 };
