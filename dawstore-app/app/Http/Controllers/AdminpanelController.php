@@ -38,7 +38,7 @@ class AdminpanelController extends Controller
             $imagen->save();           
             $i++;
         }
-        return back() -> with('mensaje', 'Producto creado exitosamente'.$request);
+        return back() -> with('mensaje', 'Producto creado exitosamente');
     }
 
     public function edit($id)
