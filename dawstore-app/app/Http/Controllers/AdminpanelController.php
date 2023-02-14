@@ -85,7 +85,10 @@ class AdminpanelController extends Controller
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
+        $deleteImg = Image::where('product_id', $id);
+        $deleteImg->delete();
         $deleteProduct->delete();
+
         return back()->with('message', '');
     }
 
