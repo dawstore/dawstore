@@ -21,7 +21,7 @@
                 <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$image.'')}}" alt="..."></div>
                 @endforeach --}}
                 <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="{{URL::asset('img/products/'.$product->images.'')}}" alt="..."></div>
-                
+
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
     <h2 class="h5 text-uppercase mb-4">Related products</h2>
     <div class="row">
       <!-- PRODUCT-->
-      <div class="col-lg-3 col-sm-6">
+      <div class="col-lg-3 col-sm-6" data-aos="fade-right">
         <div class="product text-center skel-loader">
           <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="{{URL::asset('img/product-1.jpg')}}" alt="..."></a>
             <div class="product-overlay">
