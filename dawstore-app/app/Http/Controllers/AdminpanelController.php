@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Image;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -24,15 +25,21 @@ class AdminpanelController extends Controller
         $productInsert->description = $request->desc;
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
-        if($request->hasFile("images")){
-            $imagen = $request->images;
-            $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
-            $ruta = public_path("img/products/");
-            $imagen->move($ruta,$nombreimagen); 
-            $productInsert->images = $nombreimagen;            
-        }
         $productInsert->save();
-        return back() -> with('mensaje', 'Producto creado exitosamente');
+
+        $i = 1;
+        foreach ($request->images as $image) 
+        {
+            $imagen = new Image();
+            $imagen->product_id = $productInsert->id; 
+            $name = strtr($request->name, " ", "-");
+            $imagen->image_name = $name."-".$i.".".$image->extension();
+            $ruta = public_path("img/products/".$name."-files");
+            $image->move($ruta,$imagen->image_name);
+            $imagen->save();           
+            $i++;
+        }
+        return back() -> with('mensaje', 'Producto creado exitosamente'.$request);
     }
 
     public function edit($id)
