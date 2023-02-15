@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
     <title>Tello Store | @yield('titulo')</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('/css/adminSelects.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     @notifyCss
@@ -48,7 +47,7 @@
             @yield('edit-category-section')
 
             @yield('edit-brand-section')
-
+            
             @yield('profile-admin-section')
 
             @yield('footer-admin')

@@ -20,6 +20,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
     <link rel="stylesheet" href="{{URL::asset('/css/cards.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/productUI.css')}}">
     <!-- data-aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
@@ -77,6 +78,7 @@
       <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
+      <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
       <script src="{{URL::asset('js/loads.js')}}"></script>
       <script src="{{URL::asset('js/custom.js')}}"></script>
       <script src="{{URL::asset('js/confirmForms.js')}}"></script>
@@ -85,6 +87,12 @@
       <script>
         AOS.init();
       </script>
+
+
+
+      <!---<script src="{{URL::asset('js/range.js')}}"></script>-->
+
+
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </div>
