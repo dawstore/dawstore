@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 
@@ -8,7 +10,7 @@ class ProductsController extends Controller
 {
     public function products()
     {
-        $products = Product::all(); // Nos saca todos los productos de la BBDD
+        $products = Product::orderBy('stock', 'desc')->take(8)->get(); // Nos saca todos los productos de la BBDD
         return view('index', @compact('products'));
     }
     public function productsGenre($genre,$filter = 4)
@@ -35,10 +37,12 @@ class ProductsController extends Controller
         
     }
 
-    public function detail($id = 1)
-    {
+    public function detail($id = 1,$id_brand = 1)
+    {   
+        $brand = Brand::findOrFail($id_brand);
         $product = Product::findOrFail($id);
-        return view('detail', @compact('product'));
+        $productRelated = Product::whereNot('id',$id)->Where('brand_id', $id_brand)->take(4)->get();
+        return view('detail', @compact('product','brand','productRelated'));
     }
 }
 

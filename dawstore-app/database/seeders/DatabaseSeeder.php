@@ -17,6 +17,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {   
+        $brands = ['Adidas', 'Nike', 'New Balance','Jordan'];
+
+        $tamaño = sizeof($brands);
+
+        for ($i = 0; $i < $tamaño; $i++) {
+            DB::table('brands')->insert([
+                'name' => $brands[$i]
+            ]);
+        }
 
         $sku = ['1','2','3','4','8','9','7','11','6','10','5'];
         $name = ['Adidas Forum','Adidas Yeezy Foam','Air Force 1','Nike Blazer','Nike Air Max 97 Premium','Nike Air Vapormax','New Balance 550','Adidas Yeezy','New Balance 530','Adidas Super Star','Jordan 4'];
@@ -24,6 +33,7 @@ class DatabaseSeeder extends Seeder
         $description = ['Description 1','Description 2','Description 3','Description 4','Description 5','Description 6','Description 7','Description 8','Description 9','Description 10','Description 11'];
         $stock = ['50','50','50','50','50','50','50','50','50','50','50'];
         $genre = ['Male','Unisex','Female','Male','Unisex','Female','Male','Unisex','Female','Male','Unisex'];
+        $brand = ['1','1','2','2','2        ','2','3','1','3','1','4'];
 
 
         $tamaño = sizeof($sku);
@@ -35,7 +45,8 @@ class DatabaseSeeder extends Seeder
                 'price' => $price[$i],
                 'description' => $description[$i],
                 'stock' => $stock[$i],
-                'genre' => $genre[$i]
+                'genre' => $genre[$i],
+                'brand_id' => $brand[$i]
             ]);
         }
 

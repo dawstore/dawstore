@@ -42,8 +42,14 @@
 
             @yield('product-manager-section')
 
+            @yield('category-manager-section')
+
+            @yield('brand-manager-section')
+
             @yield('edit-category-section')
 
+            @yield('edit-brand-section')
+            
             @yield('profile-admin-section')
 
             @yield('footer-admin')

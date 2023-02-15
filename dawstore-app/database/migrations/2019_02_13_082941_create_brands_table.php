@@ -13,18 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('brands', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('sku')->unique();
             $table->string('name');
-            $table->float('price');
-            $table->text('description');
-            $table->integer('stock');
-            $table->enum('genre', ['Male', 'Female', 'Unisex']);
-            $table->foreignId('brand_id')->references('id')->on('brands');
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -34,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('brands');
     }
 };
