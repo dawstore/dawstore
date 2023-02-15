@@ -10,29 +10,16 @@ active
 
 @section('admin-management-section')
 <main class="content">
-<div class="card" id="card1">
-    <div class="card-top"><img class="card-image" alt="" src=""/></div>
-    <div class="card-mid">
-      <h4 class="card-title">Titre</h4>
-      <label class="card-desc">Description</label>
-      <div class="card-blur-zone"></div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="/img/dashboard/admin.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This.</p>
+      </div>
     </div>
   </div>
-  <div class="card" id="card2">
-    <div class="card-top"><img class="card-image" alt="" src="" /></div>
-    <div class="card-mid">
-      <h4 class="card-title">Titre</h4>
-      <label class="card-desc">Description</label>
-      <div class="card-blur-zone"></div>
-    </div>
-  </div>
-  <div class="card" id="card3">
-    <div class="card-top"><img class="card-image" alt="" src="" /></div>
-    <div class="card-mid">
-      <h4 class="card-title">Titre</h4>
-      <label class="card-desc">Description</label>
-      <div class="card-blur-zone"></div>
-    </div>
-  </div>
+</div>
 </main>
 @endsection
