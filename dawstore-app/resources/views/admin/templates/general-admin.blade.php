@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
-    <title>@yield('titulo') - Tello Store</title>
-
-
+    <title>Tello Store | @yield('titulo')</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
