@@ -30,10 +30,9 @@ active
             </div>
         </div>
     </section>
-    <section class="py-5">
+    <section class="py-5 ">
         <!-- BILLING ADDRESS-->
-        <h2 class="h5 text-uppercase mb-4">Contact Us</h2>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-8">
                 <form name="contactForm" onsubmit="confirmForm" action="" >
                     <div class="row gy-3">
@@ -62,14 +61,6 @@ active
                         </div>
                     </div>
                 </form>
-            </div>
-            <!-- ORDER SUMMARY-->
-            <div class="col-lg-4">
-                <div class="card border-0 rounded-0 p-lg-4 bg-light">
-                    <div class="card-body">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12677.121598442693!2d-5.9299966!3d37.4068468!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1269414d8c133d%3A0x498ce95cde9f9931!2sILERNA%20Sevilla!5e0!3m2!1ses!2ses!4v1676367078909!5m2!1ses!2ses" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

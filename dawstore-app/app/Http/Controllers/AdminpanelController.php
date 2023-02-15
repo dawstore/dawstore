@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Image;
 use App\Models\Category;
@@ -16,8 +18,17 @@ class AdminpanelController extends Controller
         return view('admin/admin-panel', @compact('products'));
     }
 
+    public function products_detail()
+    {
+        $brands = Brand::all();
+        $categories = Category::all(); // Nos saca todos las categorias de la BBDD
+        return view('admin/product-manager', @compact('categories','brands'));
+    }
+
+
     public function insert(Request $request)
     {
+
         $productInsert = new Product;
         $productInsert->sku = $request->sku;
         $productInsert->name = $request->name;
@@ -25,21 +36,25 @@ class AdminpanelController extends Controller
         $productInsert->description = $request->desc;
         $productInsert->stock = $request->stock;
         $productInsert->genre = $request->genre;
+        $productInsert->brand_id = $request->brand;
         $productInsert->save();
 
         $i = 1;
-        foreach ($request->images as $image) 
+        foreach ($request->images as $image)
         {
             $imagen = new Image();
-            $imagen->product_id = $productInsert->id; 
+            $imagen->product_id = $productInsert->id;
             $imagen->image_name = $request->sku."-".$i.".".$image->extension();
             $ruta = public_path("img/products/".$request->sku."-files");
             $image->move($ruta,$imagen->image_name);
-            $imagen->save();           
+            $imagen->save();
             $i++;
         }
-        return back() -> with('mensaje', 'Producto creado exitosamente');
+        notify()->success('Product created successfully!');
+        return back();
     }
+
+
 
     public function edit($id)
     {
@@ -66,22 +81,13 @@ class AdminpanelController extends Controller
             $imagen = $request->images;
             $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
             $ruta = public_path("img/products/");
-            $imagen->move($ruta,$nombreimagen); 
-            $productUpdate->images = $nombreimagen;            
+            $imagen->move($ruta,$nombreimagen);
+            $productUpdate->images = $nombreimagen;
         }
         $productUpdate->update();
-
-        // $fileUpdate = Product::findOrFail($id);
-        // if($request->hasFile("images")){
-        //     $imagen = $request->images;
-        //     $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
-        //     $ruta = public_path("img/products/");
-        //     $imagen->move($ruta,$nombreimagen); 
-        //     $fileUpdate->images = $nombreimagen;            
-        // }
-        // $fileUpdate->save();
         return back()->with('mensaje', 'Producto editado exitosamente');
     }        
+
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
@@ -89,7 +95,9 @@ class AdminpanelController extends Controller
         $deleteImg->delete();
         $deleteProduct->delete();
 
-        return back()->with('message', '');
+        notify()->success('Product removed successfully!');
+        return back();
+
     }
 
 
@@ -98,7 +106,7 @@ class AdminpanelController extends Controller
 
     public function category()
     {
-        $categories = Category::all(); // Nos saca todos las categorias de la BBDD
+        $categories = Category::all(); // Nos saca todas las categorias de la BBDD
         return view('admin/category-manager', @compact('categories'));
     }
 
@@ -108,7 +116,8 @@ class AdminpanelController extends Controller
         $categoryInsert->name = $request->name;
         $categoryInsert->description = $request->desc;
         $categoryInsert->save();
-        return back() -> with('mensaje', 'Categoria creada exitosamente');
+        notify()->success('Product Category created Succefully!');
+        return back();
     }
     public function edit_category($id)
     {
@@ -121,15 +130,56 @@ class AdminpanelController extends Controller
         $categoryUpdate->name = $request->name;
         $categoryUpdate->description = $request->description;
         $categoryUpdate->update();
-        return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+        notify()->success('Product Edited successfully!');
+        return back();
+    }
 
     public function delete_category($id) {
         $deleteCategory = Category::findOrFail($id);
         $deleteCategory->delete();
-        return back()->with('message', '');
+
+        return notify()->success('Category deleted successfully!');
+
     }
+    
+    /* MARCAS */
+
+
+    public function brand()
+    {
+        $brands = Brand::all(); // Nos saca todas las marcas de la BBDD
+        return view('admin/brand-manager', @compact('brands'));
+    }
+
+    public function insert_brand(Request $request)
+    {
+        $drandInsert = new Brand;
+        $drandInsert->name = $request->name;
+        $drandInsert->save();
+        return back() -> with('mensaje', '');
+    }
+    public function edit_brand($id)
+    {
+        $brand = Brand::findOrFail($id);
+        return view('admin/edit-brand', compact('brand'));
+    }
+    public function update_brand(Request $request, $id)
+    {
+        $drandUpdate = Brand::findOrFail($id);
+        $drandUpdate->name = $request->name;
+        $drandUpdate->update();
+        return back()->with('mensaje', '');
+    }        
+
+    public function delete_brand($id) {
+        $deleteBrand = Brand::findOrFail($id);
+        $deleteBrand->delete();
+        return back()->with('message', '');
 }
+}
+
+
+
 
 
 

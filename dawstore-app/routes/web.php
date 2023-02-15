@@ -5,6 +5,7 @@ use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,12 +45,13 @@ Route::get('/detail', function () {
     return view('detail');
 })->name('detail');
 
-Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('detail');
+Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
 // No se si hace falta
 // Route::get('/test', function () {
 //     return view('test');
 // })->name('test');
+
 
 // Route::get('/login', function () {
 //     return view('auth.login');
@@ -59,11 +61,10 @@ Route::get('detail/{id?}', [ ProductsController::class, 'detail' ]) -> name('det
 //     return view('signup');
 // })->name('signup');
 
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-
-
 
 // INICIO SESIÓN Y REGISTRO
 
@@ -105,6 +106,10 @@ Route::get('/admin/product-manager', function () {
     return view('/admin/product-manager');
 })->name('product-manager');
 
+Route::get('/admin/edit-product', function () {
+    return view('/admin/edit-product');
+})->name('edit-product');
+
 Route::get('/admin/category-manager', function () {
     return view('/admin/category-manager');
 })->name('category-manager');
@@ -113,9 +118,13 @@ Route::get('/admin/edit-category', function () {
     return view('/admin/edit-category');
 })->name('edit-category');
 
-Route::get('/admin/edit-product', function () {
-    return view('/admin/edit-product');
-})->name('edit-product');
+Route::get('/admin/brand-manager', function () {
+    return view('/admin/brand-manager');
+})->name('brand-manager');
+
+Route::get('/admin/edit-brand', function () {
+    return view('/admin/edit-brand');
+})->name('edit-brand');
 
 Route::get('/admin/create-admin', function () {
     return view('/admin/create-admin');
@@ -129,9 +138,16 @@ Route::get('/admin/forgot-password', function () {
     return view('/admin/forgot-password');
 })->name('forgot-password');
 
-Route::post('/admin/product-manager', [ AdminpanelController::class, 'insert' ]) -> name('insert-product');
+
+//PRODUCTS
+
+
+
+Route::get('/admin/product-manager', [ AdminpanelController::class, 'products_detail' ]);
 
 Route::get('/admin/edit-product/{id}', [ AdminpanelController::class, 'edit' ]) -> name('edit-product');
+
+Route::post('/admin/product-manager', [ AdminpanelController::class, 'insert' ]) -> name('insert-product');
 
 Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product');
 
@@ -150,7 +166,17 @@ Route::put('/admin/edit-category/{id}', [ AdminpanelController::class, 'update_c
 Route::delete('/admin/category-manager/{id}', [ AdminpanelController::class, 'delete_category' ]) -> name('category-manager');
 
 
+//BRAND
 
+Route::get('/admin/brand-manager', [ AdminpanelController::class,'brand' ]);
+
+Route::get('/admin/edit-brand/{id}', [ AdminpanelController::class, 'edit_brand' ]) -> name('edit-brand');
+
+Route::post('/admin/brand-manager', [ AdminpanelController::class, 'insert_brand' ]) -> name('insert-brand');
+
+Route::put('/admin/edit-brand/{id}', [ AdminpanelController::class, 'update_brand' ]) -> name('update-brand');
+
+Route::delete('/admin/brand-manager/{id}', [ AdminpanelController::class, 'delete_brand' ]) -> name('brand-manager');
 
 
 
