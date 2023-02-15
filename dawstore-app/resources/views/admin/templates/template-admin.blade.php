@@ -14,18 +14,6 @@
                 </a>
             </li>
 
-            <li class="sidebar-item @yield('admin-management-active') ">
-                <a class="sidebar-link" href="{{url ('admin/admin-management')}}">
-                    <i class="align-middle" data-feather="tool"></i> <span class="align-middle">Admin Management</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="user"></i><span class="align-middle">Admin Users</span>
-                </a>
-            </li>
-
             <li class="sidebar-item @yield('product-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/product-manager')}}">
                     <i class="align-middle" data-feather="shopping-cart"></i> <span class="align-middle">Product Manager</span>
@@ -88,6 +76,47 @@
                                     <div class="text-dark">Update completed</div>
                                     <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
                                     <div class="text-muted small mt-1">30m ago</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                        <a href="#" class="text-muted">Show all notifications</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                    <div class="position-relative">
+                        <i class="align-middle" data-feather="tool"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                    <div class="dropdown-menu-header">
+                        Admin Management Panel
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-2">
+                                    <i class="text-danger" data-feather="plus"></i>
+                                </div>
+                                <div class="col-10">
+                                    <div class="text-dark">Add Admin User</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-2">
+                                    <i class="text-danger" data-feather="minus"></i>
+                                </div>
+                                <div class="col-10">
+                                    <div class="text-dark">Delete Admin User</div>
                                 </div>
                             </div>
                         </a>
