@@ -28,17 +28,18 @@ class AdminpanelController extends Controller
         $productInsert->save();
 
         $i = 1;
-        foreach ($request->images as $image) 
+        foreach ($request->images as $image)
         {
             $imagen = new Image();
-            $imagen->product_id = $productInsert->id; 
+            $imagen->product_id = $productInsert->id;
             $imagen->image_name = $request->sku."-".$i.".".$image->extension();
             $ruta = public_path("img/products/".$request->sku."-files");
             $image->move($ruta,$imagen->image_name);
-            $imagen->save();           
+            $imagen->save();
             $i++;
         }
-        return back() -> with('mensaje', 'Producto creado exitosamente');
+        notify()->success('Product created successfully!');
+        return back();
     }
 
     public function edit($id)
@@ -66,8 +67,8 @@ class AdminpanelController extends Controller
             $imagen = $request->images;
             $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
             $ruta = public_path("img/products/");
-            $imagen->move($ruta,$nombreimagen); 
-            $productUpdate->images = $nombreimagen;            
+            $imagen->move($ruta,$nombreimagen);
+            $productUpdate->images = $nombreimagen;
         }
         $productUpdate->update();
 
@@ -76,12 +77,13 @@ class AdminpanelController extends Controller
         //     $imagen = $request->images;
         //     $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
         //     $ruta = public_path("img/products/");
-        //     $imagen->move($ruta,$nombreimagen); 
-        //     $fileUpdate->images = $nombreimagen;            
+        //     $imagen->move($ruta,$nombreimagen);
+        //     $fileUpdate->images = $nombreimagen;
         // }
         // $fileUpdate->save();
-        return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+        notify()->success('Product edited successfully!');
+        return back();
+    }
 
     public function delete($id) {
         $deleteProduct = Product::findOrFail($id);
@@ -89,7 +91,9 @@ class AdminpanelController extends Controller
         $deleteImg->delete();
         $deleteProduct->delete();
 
-        return back()->with('message', '');
+        notify()->success('Product removed successfully!');
+        return back();
+
     }
 
 
@@ -108,7 +112,8 @@ class AdminpanelController extends Controller
         $categoryInsert->name = $request->name;
         $categoryInsert->description = $request->desc;
         $categoryInsert->save();
-        return back() -> with('mensaje', 'Categoria creada exitosamente');
+        notify()->success('Product Category created Succefully!');
+        return back();
     }
     public function edit_category($id)
     {
@@ -121,13 +126,16 @@ class AdminpanelController extends Controller
         $categoryUpdate->name = $request->name;
         $categoryUpdate->description = $request->description;
         $categoryUpdate->update();
-        return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+        notify()->success('Product Edited successfully!');
+        return back();
+    }
 
     public function delete_category($id) {
         $deleteCategory = Category::findOrFail($id);
         $deleteCategory->delete();
-        return back()->with('message', '');
+
+        return notify()->success('Category deleted successfully!');
+
     }
 }
 
