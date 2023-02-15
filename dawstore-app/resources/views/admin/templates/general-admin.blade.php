@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}"/>
-    <title>@yield('titulo') - Tello Store</title>
+    <title>Tello Store | @yield('titulo')</title>
     <link href="{{URL::asset('/css/app.css')}}" rel="stylesheet">
     <link href="{{URL::asset('/css/adminProfile.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">

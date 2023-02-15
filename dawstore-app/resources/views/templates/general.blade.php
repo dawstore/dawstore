@@ -16,7 +16,7 @@
     <!-- Swiper slider-->
     <link rel="stylesheet" href="{{URL::asset('/vendor/swiper/swiper-bundle.min.css')}}">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{{URL::asset('css/style.default.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/style.default.css')}}">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
     <link rel="stylesheet" href="{{URL::asset('/css/cards.css')}}">
