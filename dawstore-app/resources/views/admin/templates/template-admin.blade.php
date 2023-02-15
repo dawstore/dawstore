@@ -34,13 +34,13 @@
 
             <li class="sidebar-item @yield('category-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/category-manager')}}">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Category</span>
+                    <i class="align-middle" data-feather="tag"></i> <span class="align-middle">Category Manager</span>
                 </a>
             </li>
 
             <li class="sidebar-item @yield('brand-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/brand-manager')}}">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Brand</span>
+                    <i class="align-middle" data-feather="shopping-bag"></i> <span class="align-middle">Brand Manager</span>
                 </a>
             </li>
         </ul>

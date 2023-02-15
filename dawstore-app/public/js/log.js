@@ -1,9 +1,3 @@
-// Hello Everyone.
-// This Is A Simple App Login Sing Up From Validation.
-// I Hope You Like It And i tried To Make The JavaScript Code simple 
-// See You Guys In Next Project :)
-// Thanks.
-
 // - - - - -  Variables - - - - - //
 
 // Wrapper Area
@@ -13,7 +7,7 @@ const wrapper__Area = document.querySelector('#wrapper_Area');
 const loginForm = document.querySelector('#loginForm');
 const signUpForm = document.querySelector('#signUpForm');
 
-// All Login And Sing-Up Forms Inputs 
+// All Login And Sing-Up Forms Inputs
 const allLoginFormFields = Array.from(document.querySelectorAll('#loginForm .input__group .field input'));
 const allSignUpFormFields = Array.from(document.querySelectorAll('#signUpForm .input__group:not(.confirm__group) .field input'));
 
@@ -27,6 +21,8 @@ const signUpFormSubmitBtn = document.querySelector('#signUpSubmitBtn');
 
 // Show Hide Password Element
 const showHidePassDom = Array.from(document.querySelectorAll('.showHide__Icon i'));
+
+
 
 // Pattrens Regex
 const patterns = { // All This Regex Code Is For Demo You Can Add Your Own Regex Code :)

@@ -95,7 +95,7 @@
         <button type="submit" class="submit-button" id="loginSubmitBtn">Sign in</button>
         <!-- Alternate Login -->
       </form> <!-- End Login Form -->
-  
+
       <!-- Sign Up Form -->
       <form class="sign-up__form" id="signUpForm">
         <!-- Form Title -->
@@ -136,11 +136,11 @@
         <!-- Alternate Login -->
       </form> <!-- End Sign Up Form -->
     </div><!-- End Forms Area -->
-  
+
     <!-- Aside Area -->
     <div class="aside__area" id="aside_Area">
       <div class="login__aside-info">
-        
+
         <br>
         <img src="{{URL::asset('img/singin.png')}}" alt="Image">
         <p>Enter your personal details and start journey with us</p>
@@ -156,5 +156,5 @@
     </div>
   </div>
   <!-- End Wrapper Area -->
-  
+
 @endsection

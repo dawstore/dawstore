@@ -86,7 +86,7 @@ class AdminpanelController extends Controller
         }
         $productUpdate->update();
         return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+    }
 
 
     public function delete($id) {
@@ -141,7 +141,7 @@ class AdminpanelController extends Controller
         return notify()->success('Category deleted successfully!');
 
     }
-    
+
     /* MARCAS */
 
 
@@ -156,7 +156,8 @@ class AdminpanelController extends Controller
         $drandInsert = new Brand;
         $drandInsert->name = $request->name;
         $drandInsert->save();
-        return back() -> with('mensaje', '');
+        notify()->success('Brand Created Succesfully!');
+        return back();
     }
     public function edit_brand($id)
     {
@@ -168,13 +169,15 @@ class AdminpanelController extends Controller
         $drandUpdate = Brand::findOrFail($id);
         $drandUpdate->name = $request->name;
         $drandUpdate->update();
-        return back()->with('mensaje', '');
-    }        
+        notify()->success('Brand Update!');
+        return back();
+    }
 
     public function delete_brand($id) {
         $deleteBrand = Brand::findOrFail($id);
         $deleteBrand->delete();
-        return back()->with('message', '');
+        notify()->success('Brand Deleted Succesfully!');
+        return back();
 }
 }
 
