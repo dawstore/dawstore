@@ -32,7 +32,7 @@ active
     </section>
     <section class="py-5 ">
         <!-- BILLING ADDRESS-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5" >
             <div class="col-lg-8">
                 <form name="contactForm" onsubmit="confirmForm" action="" >
                     <div class="row gy-3">
