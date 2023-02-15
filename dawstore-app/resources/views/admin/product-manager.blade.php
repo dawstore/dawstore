@@ -98,6 +98,23 @@ active
 
                     <div class="card">
                         <div class="card-header">
+                            <h5 class="card-title mb-0">Brand</h5>
+                        </div>
+                        <div class="card-body">
+                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm" name="brand">
+                                <option selected disabled>Brand</option>
+                               
+                                @foreach ($brands as $brand)
+
+                                    <option value="{{$brand->id}}">{{$brand->name}}</option>
+                                    
+                                @endforeach
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
                             <h5 class="card-title mb-0">Edit Products</h5>
                         </div>
                         <div class="card-body">
@@ -110,12 +127,7 @@ active
                 </div>
             </div>
         </form>
-
-        @if (session('mensaje'))
-            <div class="alert alert-success" role="alert">
-                {{ session('mensaje') }}
-            </div>
-        @endif
-    </div>
+        </tbody>
+    </table>
 </main>
 @endsection

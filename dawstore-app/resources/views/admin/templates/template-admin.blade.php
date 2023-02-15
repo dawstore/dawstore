@@ -36,6 +36,12 @@
                     <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Category</span>
                 </a>
             </li>
+
+            <li class="sidebar-item @yield('brand-manager-active')">
+                <a class="sidebar-link" href="{{url ('admin/brand-manager')}}">
+                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Brand</span>
+                </a>
+            </li>
         </ul>
 
         <div class="sidebar-cta">
