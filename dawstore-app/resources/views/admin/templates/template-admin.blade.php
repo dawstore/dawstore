@@ -1,6 +1,7 @@
 @extends('admin.templates.general-admin')
 
 @section('navbar-admin')
+
 <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content js-simplebar" data-aos="fade-right" data-aos-duration="1500">
         <a class="sidebar-brand" href="{{url ('admin/admin-panel')}}">
@@ -21,7 +22,7 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="#">
-                    <i class="align-middle" data-feather="user"></i> <span class="align-middle">Admin Users</span>
+                    <i class="align-middle" data-feather="user"></i><span class="align-middle">Admin Users</span>
                 </a>
             </li>
 
@@ -124,4 +125,6 @@
         </div>
     </div>
 </footer>
+
+ @notifyJs
 @endsection
