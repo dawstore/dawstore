@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->references('id')->on('customers');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->float('ammount');
             $table->string('billing_address');
             $table->string('order_address');
