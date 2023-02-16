@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Styles -->
     {{-- @vite(['resources/js/app.js', 'resources/css/app.scss']) --}}
-    <link rel="stylesheet" href="{{URL::asset('/css/log.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/login.css')}}">
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -60,6 +61,6 @@
         </main>
     </div>
 
-    <script src="{{URL::asset('js/log.js')}}"></script>
+    <script src="{{URL::asset('js/login.js')}}"></script>
 </body>
 </html>
