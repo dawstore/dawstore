@@ -33,25 +33,25 @@ active
 
     <section class="hero-section" data-aos="zoom-in">
         <div class="card-grid">
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
                     <p class="card__category">Category</p>
                 </div>
             </a>
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
                 <div class="card__content">
                     <p class="card__category">Category</p>
                 </div>
             </a>
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
                     <p class="card__category">Category</p>
                 </div>
                 </li>
-                <a class="card" href="#">
+                <a class="cards" href="#">
                     <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
                         <p class="card__category">Category</p>
