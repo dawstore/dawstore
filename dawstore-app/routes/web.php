@@ -47,6 +47,7 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+
 // No se si hace falta
 // Route::get('/test', function () {
 //     return view('test');
