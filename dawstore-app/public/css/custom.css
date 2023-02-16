@@ -23,3 +23,126 @@
 .profile-cart{
     color: #0000;
 }
+
+
+
+.rounded-background-box {
+    margin: 100px auto;
+    width: 1200px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    -webkit-box-shadow: -1px 6px 80px 10px rgba(197, 197, 197, 0.8);
+    -moz-box-shadow: -1px 6px 80px 10px rgba(197, 197, 197, 0.8);
+    box-shadow: -1px 6px 80px 10px rgba(197, 197, 197, 0.6);
+    z-index:2;
+  }
+
+  .left-rounded-column {
+    position: relative;
+    float: left;
+    border-radius: 25px 0px 0px 25px;
+    width: 380px;
+    height: 100%;
+    background-image: linear-gradient(40deg, #f5576c 0%, #a642b2 100%);
+   }
+
+  .right-rounded-column{
+    position: relative;
+    float: right;
+
+    width: 818px;
+     border-radius: 0px 25px 25px 0px;
+  }
+
+  .link-active{
+    text-decoration: none;
+    color: #ea5476;
+  }
+
+  .link{
+    text-decoration: none;
+    color: #353535;
+  }
+
+  .products-info{
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .products-info p{
+    display: inline-block;
+    position: relative;
+    margin-right: 50px;
+  }
+
+  .products-info h1{
+    line-height: 40px;
+  }
+
+  .products-info h3{
+    display: block;
+    height: 30px;
+    line-height: 26px;
+    font-color: #7e7e7e;
+  }
+
+  .products{
+    position: relative;
+    width: 150px;
+    height: auto;
+    background-color: transparent;
+    z-index: 100;
+  }
+
+  .tablet{
+    position: absolute;
+    top: -50px;
+    left: calc(10%);
+    width: 410px;
+    height: auto;
+    background-color: transparent;
+
+    -webkit-filter: drop-shadow(rgba(58, 69, 108,0.5));
+    filter: drop-shadow(20px 35px 35px rgba(58, 69, 108,0.5));
+  }
+
+  .float{
+    animation-name: float;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: initial;
+      animation-iteration-count: infinite;
+      animation-direction: initial;
+      animation-fill-mode: initial;
+      animation-play-state: initial;
+  }
+
+  .feature-price{
+    display: inline-block;
+    position:absolute;
+    bottom: 30px;
+    left: 0;
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 80px;
+    width: 720px;
+  }
+
+
+  .feature-price h2{
+    display: inline-block;
+    position: relative;
+    float:right;
+    margin-right: 50px;
+    width: 100px;
+  }
+
+  @keyframes float{
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
+  }
