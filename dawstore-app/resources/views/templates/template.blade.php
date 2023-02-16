@@ -63,7 +63,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url ('preRegister')}}">
+                        <a class="nav-link" href="{{url ('register')}}">
                             <i class="fas fa-user me-1 text-gray fw-normal"></i>Sign up</a>
                     </li>
                 </ul>

@@ -27,7 +27,7 @@ active
     <section class="pt-5">
         <header class="text-center" data-aos="fade-up">
             <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
-            <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
+            <h2 class="h5 text-uppercase mb-4">Browse our Brands</h2>
         </header>
     </section>
 
@@ -36,25 +36,24 @@ active
             <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+
                 </div>
             </a>
             <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
                 </div>
             </a>
             <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+
                 </div>
                 </li>
                 <a class="cards" href="#">
                     <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
-                        <p class="card__category">Category</p>
+
                     </div>
                 </a>
                 <div>
