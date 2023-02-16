@@ -59,7 +59,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url ('login')}}">
-                            <i class="fas fa-user me-1 text-gray fw-normal"></i>Account</a>
+                            <i class="fa fa-user me-1 text-gray fw-normal"></i>Log in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url ('register')}}">
+                            <i class="fas fa-user me-1 text-gray fw-normal"></i>Sign up</a>
                     </li>
                 </ul>
             </div>
