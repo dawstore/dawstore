@@ -77,9 +77,7 @@
       <script src="{{URL::asset('vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
       <script src="{{URL::asset('js/front.js')}}"></script>
       <script src="{{URL::asset('js/icon-svg.js')}}"></script>
-      <script src="{{URL::asset('js/scrollReveal.js')}}"></script>
-      <script src="{{URL::asset('js/loads.js')}}"></script>
-      <script src="{{URL::asset('js/custom.js')}}"></script>
+      <script src="{{URL::asset('js/range.js')}}"></script>
       <script src="{{URL::asset('js/confirmForms.js')}}"></script>
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

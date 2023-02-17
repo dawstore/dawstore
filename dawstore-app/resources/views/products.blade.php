@@ -30,15 +30,14 @@
     <div class="row">
       <!-- FILTROS-->
       <div class="col-lg-3 order-2 order-lg-1">
-        <h5 class="text-uppercase mb-4">Categories</h5>
-        <div class="py-2 px-4 sneakers text-dark mb-3"><strong class="small text-uppercase fw-bold">Sneakers</strong></div>
+        <h5 class="text-uppercase mb-4">Sneakers</h5>
+        <div class="py-2 px-4  text-dark mb-3"><strong class="small text-uppercase fw-bold">Bra<span  class="text-warning">nds</span></strong></div>
         <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
           <li class="mb-2"><a class="reset-anchor" href="#!">Lifestyle</a></li>
           <li class="mb-2"><a class="reset-anchor" href="#!">Jordan</a></li>
           <li class="mb-2"><a class="reset-anchor" href="#!">Running</a></li>
           <li class="mb-2"><a class="reset-anchor" href="#!">Gym</a></li>
         </ul>
-
 
       </div>
       <!-- SHOP LISTING-->

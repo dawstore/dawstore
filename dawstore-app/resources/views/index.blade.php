@@ -139,7 +139,7 @@ active
         <div class="rounded-background-box">
             <div class="left-rounded-column">
                 <div class="products">
-                    <img class="tablet float" src="https://preview.ibb.co/cRRaiy/nike.png" "/>
+                    <img class="tablet float" src="{{URL ('img/banner/productUI.png')}}" "/>
                  </div>
             </div>
          <div class=" right-rounded-column">
@@ -158,7 +158,7 @@ active
     </section>
 
     <!-- SERVICES-->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" data-aos="fade-right">
         <div class="container">
             <div class="row text-center gy-3">
                 <div class="col-lg-4">
@@ -204,7 +204,7 @@ active
         </div>
     </section>
     <!-- NEWSLETTER-->
-    <section class="py-5">
+    <section class="py-5" data-aos="fade-left">
         <div class="container p-0">
             <div class="row gy-3">
                 <div class="col-lg-6">

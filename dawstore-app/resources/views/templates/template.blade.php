@@ -140,10 +140,10 @@
         <div class="border-top pt-4" style="border-color: #1d1d1d !important">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="small text-muted mb-0">&copy; 2021 All rights reserved.</p>
+                    <p class="small text-muted mb-0">&copy; 2023 All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="https://bootstrapious.com/p/boutique-bootstrap-e-commerce-template">Bootstrapious</a></p>
+                    <p class="small text-muted tet-black mb-0">Template designed by Mario, Oscar & Víctor</p>
                 </div>
             </div>
         </div>
