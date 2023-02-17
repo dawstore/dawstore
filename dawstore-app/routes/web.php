@@ -69,9 +69,9 @@ Route::get('/contact', function () {
 
 // INICIO SESIÓN Y REGISTRO
 
-Route::get('/', function () {
-    return view('dashboard');
-})->middleware('auth');
+Route::get('/admin/admin-panel', function () {
+    return view('admin.admin-panel');
+})->middleware('Auth');
 
 // Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
 // Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
