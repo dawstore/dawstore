@@ -65,14 +65,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url ('register')}}">
                                 <i class="fas fa-user me-1 text-gray fw-normal"></i>Sign up</a>
-                        </li>  
-                    @else 
+                        </li>
+                    @else
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
+                          <li>
+                            <a class="dropdown-item" href="{{ route('profile') }}" >Profile</a></a></li>
+                          <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
                         </ul>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
@@ -102,10 +105,10 @@
                         {{ csrf_field() }}
 
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="Current Name: @auth {{Auth::user()->full_name}} @endauth" required>
+                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="{{Auth::user()->name}}" required>
                             </div>
                             <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="Current Email @auth {{Auth::user()->email}} @endauth" required>
+                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="{{Auth::user()->email}} " required>
                             </div>
                             <div class="col-lg-12">
                                 <input class="btn btn-primary" type="submit" name="Send">
