@@ -47,6 +47,7 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+
 // No se si hace falta
 // Route::get('/test', function () {
 //     return view('test');
@@ -138,6 +139,9 @@ Route::get('/admin/forgot-password', function () {
     return view('/admin/forgot-password');
 })->name('forgot-password');
 
+Route::get('new-products', function () {
+    return view('new-products');
+})->name('new-products');
 
 //PRODUCTS
 

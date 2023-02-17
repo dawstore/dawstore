@@ -29,8 +29,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
   </head>
-  <body data-aos="fade-up">
-
+  <body data-aos="zoom-in">
       <div class="page-holder">
 
         @yield('navbar')
