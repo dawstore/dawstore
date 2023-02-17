@@ -59,7 +59,7 @@ Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) 
 // })->name('login');
 
 // Route::get('/signup', function () {
-//     return view('signup');
+//     return view('auth.register');
 // })->name('signup');
 
 

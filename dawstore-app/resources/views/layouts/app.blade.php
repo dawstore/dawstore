@@ -9,9 +9,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Styles -->
-    {{-- @vite(['resources/js/app.js', 'resources/css/app.scss', 'public/css/register.css', 'public/js/register.js']) --}}
+
+    {{-- @vite(['resources/js/app.js', 'resources/css/app.scss']) --}}
+    <link rel="stylesheet" href="{{URL::asset('/css/app.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/register.css')}}">
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
 
@@ -19,8 +20,13 @@
 </head>
 <body>
 
+    <div id="app">
+        <main class="pt-4">
+            @yield('content')
+        </main>
+    </div>
+
         @yield('content')
-    
 
     <script src="{{URL::asset('js/register.js')}}"></script>
 </body>
