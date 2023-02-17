@@ -33,10 +33,9 @@
         <h5 class="text-uppercase mb-4">Categories</h5>
         <div class="py-2 px-4 sneakers text-dark mb-3"><strong class="small text-uppercase fw-bold">Sneakers</strong></div>
         <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
-          <li class="mb-2"><a class="reset-anchor" href="#!">Lifestyle</a></li>
-          <li class="mb-2"><a class="reset-anchor" href="#!">Jordan</a></li>
-          <li class="mb-2"><a class="reset-anchor" href="#!">Running</a></li>
-          <li class="mb-2"><a class="reset-anchor" href="#!">Gym</a></li>
+          @foreach ($brands as $brand)
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products',$genre).'/'.request()->segment(count(request()->segments()))."/$brand->name"}}">{{$brand->name}}</a></li>
+          @endforeach
         </ul>
 
 
@@ -51,7 +50,7 @@
               <li class="list-inline-item">
                 <select class="selectpicker" onchange="location = this.value;" data-customclass="form-control form-control-sm">
                   <option value>Sort By</option>
-                  <option value="{{url('products',$genre)}}">Default sorting</option>
+                  <option value="{{url('products',$genre)."/4"}}">Default sorting</option>
                   <option value="{{url('products',$genre)."/1"}}">A-Z</option>
                   <option value="{{url('products',$genre)."/0"}}">Z-A</option>
                   <option value="{{url('products',$genre)."/2"}}">Price: Low to High </a></option>
