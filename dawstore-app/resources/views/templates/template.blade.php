@@ -54,7 +54,7 @@
                             <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url ('whitelist')}}">
+                        <a class="nav-link" href="{{url ('whishlist')}}">
                             <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">(0)</small></a>
                     </li>
                     @if (!Auth::user())
@@ -120,7 +120,7 @@
 @endsection
 
 @section('footer')
-<footer class="text-dark footer">
+<footer class="text-dark footer" data-aos="fade-right">
     <div class="container py-4">
         <div class="row py-5">
             <div class="col-md-4 mb-3 mb-md-0">
