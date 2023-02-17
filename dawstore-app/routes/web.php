@@ -70,8 +70,10 @@ Route::get('/contact', function () {
 // INICIO SESIÓN Y REGISTRO
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('index');
 })->middleware('auth');
+
+Route::get('/', [ ProductsController::class,'products']);
 
 // Route::post('/inicio-sesion', [LoginController::class, 'login'])->name('inicio-sesion');
 // Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
