@@ -144,14 +144,11 @@ active
             </div>
          <div class=" right-rounded-column">
                 <div class="products-info text-center">
-                    <h3>Men's shoe</h3>
-                    <h1> Nike Air Max 270 </h1>
-                    <p class="pt-5 text-center">The Nike Air Max 270 G offers a legendary look.<br>
-                        This shoe is a stitch-for-stitch reconstruction of the original Air icon, incorporating breathable mesh and innovative traction for maximum performance.</p>
+                    <h3>Nike SB Dunk Low</h3>
+                    <h1>Ben & Jerry's Chunky Dunky</h1>
+                    <p class="pt-5 text-center">The Nike SB Dunk Low Ben & Jerry's Chunky Dunky offers a legendary look.<br><br>
+                        With colors and textures that look like they came straight out of a jar of our Chunky Monkey, they're the most euphoric thing you can put on your feet. Blue skies, cows and green grasses appear all around the shoe, while colorful tie-dye patterns and bold graphics cover the insole and heel of the shoe.</p>
                     <button class="btn btn-warning">Shop Now</button>
-                    </div>
-                    <div class="feature-price">
-
                     </div>
                 </div>
             </div>
