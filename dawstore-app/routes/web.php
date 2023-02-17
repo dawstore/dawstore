@@ -69,7 +69,7 @@ Route::get('/contact', function () {
 
 // INICIO SESIÓN Y REGISTRO
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('dashboard');
 })->middleware('auth');
 
