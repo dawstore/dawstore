@@ -27,34 +27,33 @@ active
     <section class="pt-5">
         <header class="text-center" data-aos="fade-up">
             <p class="small text-muted small text-uppercase mb-1">Carefully created collections</p>
-            <h2 class="h5 text-uppercase mb-4">Browse our categories</h2>
+            <h2 class="h5 text-uppercase mb-4">Browse our Brands</h2>
         </header>
     </section>
 
     <section class="hero-section" data-aos="zoom-in">
         <div class="card-grid">
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+
                 </div>
             </a>
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
                 </div>
             </a>
-            <a class="card" href="#">
+            <a class="cards" href="#">
                 <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
-                    <p class="card__category">Category</p>
+
                 </div>
                 </li>
-                <a class="card" href="#">
+                <a class="cards" href="#">
                     <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
-                        <p class="card__category">Category</p>
+
                     </div>
                 </a>
                 <div>
@@ -85,6 +84,7 @@ active
                 </div>
 
             </div>
+
             <!--  Modal -->
             <div class="modal fade" id="productView{{$product->id}}" tabindex="-1">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -127,6 +127,34 @@ active
                 </div>
             </div>
             @endforeach
+    </section>
+
+    <!-- CATEGORIES SECTION-->
+    <section class="pt-5" data-aos="zoom-in">
+        <header class="text-center" data-aos="fade-up">
+            <p class="small text-muted small text-uppercase mb-1">Month Top Product</p>
+            <h2 class="h5 text-uppercase mb-4">Trending Products</h2>
+        </header>
+
+        <div class="rounded-background-box">
+            <div class="left-rounded-column">
+                <div class="products">
+                    <img class="tablet float" src="https://preview.ibb.co/cRRaiy/nike.png" "/>
+                 </div>
+            </div>
+         <div class=" right-rounded-column">
+                <div class="products-info text-center">
+                    <h3>Men's shoe</h3>
+                    <h1> Nike Air Max 270 </h1>
+                    <p class="pt-5 text-center">The Nike Air Max 270 G offers a legendary look.<br>
+                        This shoe is a stitch-for-stitch reconstruction of the original Air icon, incorporating breathable mesh and innovative traction for maximum performance.</p>
+                    <button class="btn btn-warning">Shop Now</button>
+                    </div>
+                    <div class="feature-price">
+
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- SERVICES-->

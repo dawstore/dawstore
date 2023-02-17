@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('titulo')
-Whitelist
+Whishlist
 @endsection
 
 @section('cart_section')

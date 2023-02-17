@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Tello Store | Login</title>
+    <title>Tello Store | Register</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
+
     {{-- @vite(['resources/js/app.js', 'resources/css/app.scss']) --}}
     <link rel="stylesheet" href="{{URL::asset('/css/app.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/register.css')}}">
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
+
+
 </head>
 <body>
+
     <div id="app">
         <main class="pt-4">
             @yield('content')
         </main>
     </div>
+
+        @yield('content')
+
+    <script src="{{URL::asset('js/register.js')}}"></script>
 </body>
 </html>
