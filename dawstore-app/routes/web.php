@@ -53,11 +53,6 @@ Route::get('/contact', function () {
 })->name('contact');
 
 // INICIO SESIÓN Y REGISTRO
-
-Route::get('/admin/admin-panel', function () {
-    return view('admin.admin-panel');
-})->middleware('Auth');
-
 Route::get('/whishlist', function () {
      return view('whishlist');
 })->name('whishlist');
