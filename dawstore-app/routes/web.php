@@ -39,7 +39,7 @@ Route::get('/products', function () {
     return view('products');
 })->name('products');
 
-Route::get('products/{genre}/{filter?}', [ ProductsController::class,'productsGenre']);
+Route::get('products/{genre}/{filter?}/{brand?}', [ ProductsController::class,'productsGenre']);
 
 Route::get('/detail', function () {
     return view('detail');
