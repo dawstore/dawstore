@@ -59,59 +59,55 @@ Route::get('/whishlist', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-})->middleware('')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
+})->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
 
 
 //RUTAS DASHBOARD
 
-Route::get('/admin/dashboard', function () {
-    return view('/admin/dashboard');
-})->name('dashboard');
-
 Route::get('/admin/admin-panel', function () {
-    return view('/admin/admin-panel');
-})->name('admin-panel');
+    return view('admin.admin-panel');
+})->middleware('auth')->name('admin-panel');
 
 Route::get('/admin/admin-panel', [ AdminpanelController::class,'products' ]);
 
 Route::get('/admin/admin-management', function () {
-    return view('/admin/admin-management');
+    return view('admin.admin-management');
 })->name('admin-management');
 
 Route::get('/admin/product-manager', function () {
-    return view('/admin/product-manager');
+    return view('admin.product-manager');
 })->name('product-manager');
 
 Route::get('/admin/edit-product', function () {
-    return view('/admin/edit-product');
+    return view('admin.edit-product');
 })->name('edit-product');
 
 Route::get('/admin/category-manager', function () {
-    return view('/admin/category-manager');
+    return view('admin.category-manager');
 })->name('category-manager');
 
 Route::get('/admin/edit-category', function () {
-    return view('/admin/edit-category');
+    return view('admin.edit-category');
 })->name('edit-category');
 
 Route::get('/admin/brand-manager', function () {
-    return view('/admin/brand-manager');
+    return view('admin.brand-manager');
 })->name('brand-manager');
 
 Route::get('/admin/edit-brand', function () {
-    return view('/admin/edit-brand');
+    return view('admin.edit-brand');
 })->name('edit-brand');
 
 Route::get('/admin/create-admin', function () {
-    return view('/admin/create-admin');
+    return view('admin.create-admin');
 })->name('create-admin');
 
 Route::get('/admin/profile-admin', function () {
-    return view('/admin/profile-admin');
+    return view('admin.profile-admin');
 })->name('profile-admin');
 
 Route::get('/admin/forgot-password', function () {
-    return view('/admin/forgot-password');
+    return view('admin.forgot-password');
 })->name('forgot-password');
 
 Route::get('new-products', function () {
