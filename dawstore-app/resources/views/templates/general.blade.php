@@ -39,6 +39,7 @@
         @yield('modal')
         @yield('contact-modal')
         @yield('profile-modal')
+        @yield('password-modal')
 
         @yield('hero_section')
         @yield('contact_section')

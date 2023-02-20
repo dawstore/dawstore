@@ -18,7 +18,7 @@ active
             <div class="row px-4 px-lg-5">
                 <div class="col-lg-6">
                     <p class="text-muted small text-uppercase mb-2">New Inspiration 2020</p>
-                    <h1 class="h2 text-uppercase mb-3">20% off on new season</h1><a class="btn btn-warning" href="shop.html">Browse collections</a>
+                    <h1 class="h2 text-uppercase mb-3">20% off on new season</h1><a class="btn btn-warning pageButtons" href="shop.html">Browse collections</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@ active
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="cart.html">Add to cart</a></div>
                                         </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
                                     </div>
                                 </div>
@@ -142,14 +142,14 @@ active
                     <img class="tablet float" src="{{URL ('img/banner/productUI.png')}}" "/>
                  </div>
             </div>
-         <div class=" right-rounded-column">
-                <div class="products-info text-center">
+         <div class="right-rounded-column text-center">
+                <div class="products-info">
                     <h3>Nike SB Dunk Low</h3>
                     <h1>Ben & Jerry's Chunky Dunky</h1>
                     <p class="pt-5 text-center">The Nike SB Dunk Low Ben & Jerry's Chunky Dunky offers a legendary look.<br><br>
                         With colors and textures that look like they came straight out of a jar of our Chunky Monkey, they're the most euphoric thing you can put on your feet. Blue skies, cows and green grasses appear all around the shoe, while colorful tie-dye patterns and bold graphics cover the insole and heel of the shoe.</p>
 
-                        <button class="btn btn-warning">Shop Now</button>
+                        <button class="btn btn-warning pageButtons text-center">Shop Now</button>
                     </div>
                 </div>
             </div>
