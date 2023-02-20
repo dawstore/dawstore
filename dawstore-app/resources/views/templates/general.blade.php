@@ -20,6 +20,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
     <link rel="stylesheet" href="{{URL::asset('/css/cards.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css/paymentMethod.css')}}">
     <!-- data-aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->

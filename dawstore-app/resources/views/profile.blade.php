@@ -45,6 +45,7 @@ Profile
                 <div class="card mb-4 mb-lg-0">
                     <div class="card-body p-0">
                     <p class="mb-4  text-center"><span class="text-primary text-center font-italic me-1">Add default</span> payment method
+                    
                     </div>
                 </div>
             </div>
