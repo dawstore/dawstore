@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         $description = ['Description 1','Description 2','Description 3','Description 4','Description 5','Description 6','Description 7','Description 8','Description 9','Description 10','Description 11'];
         $stock = ['50','50','50','50','50','50','50','50','50','50','50'];
         $genre = ['Male','Unisex','Female','Male','Unisex','Female','Male','Unisex','Female','Male','Unisex'];
-        $brand = ['1','1','2','2','2        ','2','3','1','3','1','4'];
+        $brand = ['1','1','2','2','2','2','3','1','3','1','4'];
 
 
         $tamaño = sizeof($sku);
