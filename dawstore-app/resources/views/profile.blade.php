@@ -33,11 +33,11 @@ Profile
                         <p class="text-muted mb-1">Full Stack Developer</p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <a href="{{route('logout')}}">
-                                <button type="button" class="btn btn-danger">Logout</button>
-                            </a>
                             <a href="#profile-modal" data-bs-toggle="modal">
                                 <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Profile</button>
+                            </a>
+                            <a href="#password-modal" data-bs-toggle="modal">
+                                <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Password</button>
                             </a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ Profile
                                     @if (Auth::user()->phone)
                                         {{Auth::user()->phone}}
                                     @else
-
+                                        Add your phone
                                     @endif
                                 </p>
                             </div>
@@ -132,7 +132,7 @@ Profile
                                     @if (Auth::user()->address)
                                         {{Auth::user()->address}}
                                     @else
-
+                                        Add your address
                                     @endif
                                 </p>
                             </div>
