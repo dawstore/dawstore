@@ -104,7 +104,7 @@
                     <div class="row align-items-stretch">
                         <div class="p-4 my-md-4">
                             <h2 class="h4">Profile Manager</h2>
-                            <form action="#">
+
                             {{ csrf_field() }}
 
                                 <div class="col-lg-12">
