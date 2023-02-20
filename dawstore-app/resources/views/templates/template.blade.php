@@ -116,16 +116,6 @@
                                 <div class="col-lg-12">
                                     <input class="form-control form-control-lg mb-4" type="email" id="profile-email" name="profile-email" placeholder="{{Auth::user()->email}} " required>
                                 </div>
-
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="phone" id="profile-phone" name="profile-phone" placeholder="Add phone" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="profile-country" name="profile-country" placeholder="{{Auth::user()->country}} " required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="profile-address" name="profile-address" placeholder="Add address " required>
-                                </div>
                                 <div class="col-lg-12">
                                     <select class="form-control form-control-lg mb-4" type="text" id="contact-country" name="contact-country" placeholder="{{Auth::user()->country}}" required>
                                         <option value="Afghanistan">Afghanistan</option>
@@ -375,7 +365,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-text" name="contact-text" placeholder="{{Auth::user()->phone}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-phone" name="contact-phone" placeholder="{{Auth::user()->phone}} " required>
                                 </div>
                                 <div class="col-lg-12">
                                     <input class="form-control form-control-lg mb-4" type="text" id="contact-address" name="contact-address" placeholder="{{Auth::user()->address}} " required>
