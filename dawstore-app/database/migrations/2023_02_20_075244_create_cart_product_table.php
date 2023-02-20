@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('cart_product', function (Blueprint $table) {
             $table->id();
+            $table->integer('amount')->nullable();
+            $table->boolean('status')->nullable();
+            $table->foreignId('product_id')->references('id')->on('products');
+            $table->foreignId('cart_id')->references('id')->on('carts');
             $table->timestamps();
         });
     }

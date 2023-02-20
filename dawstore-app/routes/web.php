@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminpanelController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
@@ -61,6 +62,13 @@ Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
 
+//CARRITO
+
+Route::get('addcart/{id?}', [ CartController::class, 'addProduct' ])->name('cart.addProduct');
+
+Route::get('/cart', [ CartController::class, 'showCart' ])->name('cart.products');
+
+Route::delete('/cart/{id}', [ CartController::class, 'delete' ]) -> name('cart');
 
 //RUTAS DASHBOARD
 
