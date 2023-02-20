@@ -69,7 +69,7 @@
                     @else
                     <div class="dropdown">
                         <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->username }}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li>
@@ -92,34 +92,38 @@
 @endsection
 
 @section('profile-modal')
-<!--  Contact Form Modal -->
-<div class="modal fade" id="profile-modal" tabindex="-1">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-        <div class="modal-content overflow-hidden border-0">
-            <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-            <div class="modal-body p-0">
-                <div class="row align-items-stretch">
-                    <div class="p-4 my-md-4">
-                        <h2 class="h4">Profile Manager</h2>
-                        <form action="/contact">
-                        {{ csrf_field() }}
+@if (!Auth::user())
+                        
+@else
+     <!--  Contact Form Modal -->
+    <div class="modal fade" id="profile-modal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content overflow-hidden border-0">
+                <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <div class="row align-items-stretch">
+                        <div class="p-4 my-md-4">
+                            <h2 class="h4">Profile Manager</h2>
+                            <form action="/contact">
+                            {{ csrf_field() }}
 
-                            <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="{{Auth::user()->name}}" required>
-                            </div>
-                            <div class="col-lg-12">
-                                <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="{{Auth::user()->email}} " required>
-                            </div>
-                            <div class="col-lg-12">
-                                <input class="btn btn-primary" type="submit" name="Send">
-                            </div>
-                        </form>
+                                <div class="col-lg-12">
+                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-name" name="contact-name" placeholder="{{Auth::user()->name}}" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="form-control form-control-lg mb-4" type="email" id="contact-email" name="contact-email" placeholder="{{Auth::user()->email}} " required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="btn btn-primary" type="submit" name="Send">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+@endif
 @endsection
 
 @section('footer')
