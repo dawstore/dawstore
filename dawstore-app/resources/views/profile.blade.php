@@ -30,7 +30,11 @@ Profile
                             {{ Auth::user()->name }}
                             @endauth
                         </h5>
-                        <p class="text-muted mb-1">Full Stack Developer</p>
+                        <p class="text-muted mb-1">
+                            @auth
+                            {{ Auth::user()->username }}
+                            @endauth
+                        </p>
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
                             <a href="#profile-modal" data-bs-toggle="modal">
