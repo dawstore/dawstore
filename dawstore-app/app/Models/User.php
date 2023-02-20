@@ -49,4 +49,8 @@ class User extends Authenticatable
         return $this->belongsTo('App\Models\User', 'id_user','id');
     }
 
+    public function cart(){
+        return $this->hasOne(Cart::class);
+    }
+
 }
