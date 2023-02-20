@@ -148,7 +148,8 @@ active
                     <h1>Ben & Jerry's Chunky Dunky</h1>
                     <p class="pt-5 text-center">The Nike SB Dunk Low Ben & Jerry's Chunky Dunky offers a legendary look.<br><br>
                         With colors and textures that look like they came straight out of a jar of our Chunky Monkey, they're the most euphoric thing you can put on your feet. Blue skies, cows and green grasses appear all around the shoe, while colorful tie-dye patterns and bold graphics cover the insole and heel of the shoe.</p>
-                    <button class="btn btn-warning">Shop Now</button>
+                        
+                        <button class="btn btn-warning">Shop Now</button>
                     </div>
                 </div>
             </div>
