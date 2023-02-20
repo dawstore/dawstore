@@ -83,6 +83,15 @@ Profile
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
+                                <p class="mb-0">Username</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{Auth::user()->username}}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
                                 <p class="mb-0">Email</p>
                             </div>
                             <div class="col-sm-9">
@@ -92,19 +101,25 @@ Profile
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Phone</p>
+                                <p class="mb-0">Country</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0"></p>
+                                <p class="text-muted mb-0">{{Auth::user()->country}}</p>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0">Mobile</p>
+                                <p class="mb-0">Phone</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">(098) 765-4321</p>
+                                <p class="text-muted mb-0">
+                                    @if (Auth::user()->phone)
+                                        {{Auth::user()->phone}}
+                                    @else
+
+                                    @endif
+                                </p>
                             </div>
                         </div>
                         <hr>
@@ -113,7 +128,13 @@ Profile
                                 <p class="mb-0">Address</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                                <p class="text-muted mb-0">
+                                    @if (Auth::user()->address)
+                                        {{Auth::user()->address}}
+                                    @else
+
+                                    @endif
+                                </p>
                             </div>
                         </div>
                     </div>
