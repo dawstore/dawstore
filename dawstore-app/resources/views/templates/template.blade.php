@@ -385,7 +385,7 @@
 
 @section('password-modal')
 @if (!Auth::user())
-                        
+
 @else
      <!--  Contact Form Modal -->
     <div class="modal fade" id="password-modal" tabindex="-1">

@@ -38,7 +38,7 @@ Profile
                         <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
                             <a href="#profile-modal" data-bs-toggle="modal">
-                                <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Profile</button>
+                                <button type="button" class="btn btn-outline-primary ms-1 text-dark ">Edit Profile</button>
                             </a>
                             <a href="#password-modal" data-bs-toggle="modal">
                                 <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Password</button>
@@ -130,7 +130,7 @@ Profile
                                 <p class="mb-4"><span class="text-primary font-italic me-1"> {{Auth::user()->username}}'s</span> Orders</p>
                                     <p>No order placed</p>
                                     <a href="{{url('/')}}">
-                                        <button type="button" class="btn btn-outline-primary ms-1 text-dark">Shop Now</button>
+                                        <button type="button" class="btn btn-outline-primary ms-1 text-dark pageButtons">Shop Now</button>
                                     </a>
                             </div>
                         </div>
