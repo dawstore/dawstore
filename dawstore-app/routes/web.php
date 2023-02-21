@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Landing
+Route::get('/landing', function () {
+    return view('landing');
+})->name('landing');
 
 //RUTAS ECOMMERCE
 Route::get('/', function () {

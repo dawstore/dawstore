@@ -137,7 +137,7 @@
   .feature-price h2{
     display: inline-block;
     position: relative;
-    float:right;
+    float: right;
     margin-right: 50px;
     width: 100px;
   }
@@ -149,7 +149,7 @@
   }
 
   .pageButtons:hover{
-    box-shadow: inset 180px 0 0 0 #b9b306;
+    box-shadow: inset 200px 0 0 0 #b9b306;
     transition: .4s ease-in-out;
 
   }
