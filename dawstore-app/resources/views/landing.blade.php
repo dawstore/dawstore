@@ -57,11 +57,10 @@
             <!-- Main menu -->
             <div class="menu-list" id="menu">
                <ul>
-                  <li><a href="index.html" class="cursor-item active">Home</a></li>
-                  <li><a href="about.html" class="cursor-item">About</a></li>
-                  <li><a href="portfolio.html" class="cursor-item">Portfolio</a></li>
-                  <li><a href="blog.html" class="cursor-item">Blog</a></li>
-                  <li><a href="contact.html" class="cursor-item">Contact</a></li>
+                  <li><a href="{{URL ('/')}}" class="cursor-item">Tienda</a></li>
+                  <li><a href="{{url ('products','Male')}}" class="cursor-item">Male Collection</a></li>
+                  <li><a href="{{url ('products','Female')}}" class="cursor-item">Female Collection</a></li>
+                  <li><a href="{{url ('products','Contact')}}" class="cursor-item">Contact</a></li>
                </ul>
             </div>
             <div class="menu-list-info">
@@ -101,7 +100,7 @@
                <div class="row text-center">
                   <div class="hero-gif cursor-item"></div>
                   <div class="main-title">
-                    
+                     <h1>We are <span>Creative</span> <br>Tello Shoes</h1>
                      <a class="btn-slice cursor-item" href="{{URL('/')}}">
                         <div class="top"><span>Tienda</span></div>
                         <div class="bottom"><span>Tienda</span></div>
