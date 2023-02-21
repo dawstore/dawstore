@@ -433,10 +433,10 @@ span.stroke-h {
   line-height: 80px;
   letter-spacing: 1px;
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  -webkit-text-stroke: .02em #fff;
+  -webkit-text-stroke: .02em #b68b23;
   color: transparent;
   z-index: 0;
 }
@@ -450,10 +450,10 @@ span.stroke-h {
     line-height: 80px;
     letter-spacing: 1px;
     position: relative;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    -webkit-text-stroke: .02em #fff;
+    -webkit-text-stroke: .02em #b68b23;
     color: transparent;
     z-index: 0;
   }
@@ -467,10 +467,10 @@ span.stroke-h {
   line-height: 80px;
   letter-spacing: 1px;
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  color: #fff;
+  color: #b68b23;
   z-index: 0;
 }
 
@@ -483,10 +483,10 @@ span.stroke-h {
     line-height: 80px;
     letter-spacing: 1px;
     position: relative;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    color: #b68b23;
     z-index: 0;
   }
 }
@@ -1245,7 +1245,7 @@ li.copyright p {
   transform: translate(-50%, -50%);
   width: 48vw;
   height: 46vh;
-  background: url(../img/home.gif) no-repeat 50% 50%;
+  background: url(../img/landing/heroIndex.png) no-repeat 50% 50%;
   background-size: cover;
   animation-delay: 2s;
   -webkit-animation: animateGIF 4s cubic-bezier(0, .58, 1, .58);
