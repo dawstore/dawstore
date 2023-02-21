@@ -16,8 +16,6 @@ class CartController extends Controller
         $products=$user->cart->products;
         return view('cart', @compact('products','total'));
     }
-   
-
 
     public function addProduct(Request $request,$id){
        
@@ -25,7 +23,6 @@ class CartController extends Controller
         $cart=$user->cart;
         $product = Product::find($request->product_id);
         $cart->products()->attach($id);
-       
         return back()->with('');
    
     }
@@ -34,9 +31,7 @@ class CartController extends Controller
         $user = User::find(Auth::id());
         $cart = $user->cart;
         $product = Product::find($request->product_id);
-
         $cart->products()->detach($id);
-
         notify()->success('');
         return back();
 
