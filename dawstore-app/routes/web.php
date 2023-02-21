@@ -125,8 +125,9 @@ Route::get('new-products', function () {
 })->name('new-products');
 
 //Contact form
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
 
 
