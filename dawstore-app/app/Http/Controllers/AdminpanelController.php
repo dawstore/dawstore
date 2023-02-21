@@ -89,7 +89,8 @@ class AdminpanelController extends Controller
     }        
 
 
-    public function delete($id) {
+    public function delete($id) 
+    {
         $deleteProduct = Product::findOrFail($id);
         $deleteImg = Image::where('product_id', $id);
         $deleteImg->delete();
@@ -144,7 +145,6 @@ class AdminpanelController extends Controller
     
     /* MARCAS */
 
-
     public function brand()
     {
         $brands = Brand::all(); // Nos saca todas las marcas de la BBDD
@@ -163,6 +163,7 @@ class AdminpanelController extends Controller
         $brand = Brand::findOrFail($id);
         return view('admin/edit-brand', compact('brand'));
     }
+
     public function update_brand(Request $request, $id)
     {
         $drandUpdate = Brand::findOrFail($id);
@@ -171,11 +172,12 @@ class AdminpanelController extends Controller
         return back()->with('mensaje', '');
     }        
 
-    public function delete_brand($id) {
+    public function delete_brand($id) 
+    {
         $deleteBrand = Brand::findOrFail($id);
         $deleteBrand->delete();
         return back()->with('message', '');
-}
+    }
 }
 
 
