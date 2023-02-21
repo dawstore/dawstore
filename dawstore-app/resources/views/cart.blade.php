@@ -95,7 +95,7 @@
                                     <i class="fas fa-long-arrow-alt-left me-2">
                                     </i>Continue shopping</a></div>
                             <div class="col-md-6 text-md-end">
-                                <a class="btn btn-outline-dark btn-sm" href="{{ url('checkout') }}">Procceed to
+                                <a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('checkout') }}">Procceed to
                                     checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
                             </div>
                         </div>
