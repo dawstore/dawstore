@@ -436,7 +436,7 @@ span.stroke-h {
   font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  -webkit-text-stroke: .02em #b68b23;
+  -webkit-text-stroke: .02em #ffde59;
   color: transparent;
   z-index: 0;
 }
@@ -453,7 +453,7 @@ span.stroke-h {
     font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    -webkit-text-stroke: .02em #b68b23;
+    -webkit-text-stroke: .02em #ffde59;
     color: transparent;
     z-index: 0;
   }
@@ -470,7 +470,7 @@ span.stroke-h {
   font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  color: #b68b23;
+  color: #ffde59;
   z-index: 0;
 }
 
@@ -486,7 +486,7 @@ span.stroke-h {
     font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    color: #b68b23;
+    color: #ffde59;
     z-index: 0;
   }
 }
@@ -1436,13 +1436,13 @@ li.copyright p {
 
 .menu-list li {
   padding: 12px 0;
-  color: #fff;
+  color: #ffde59;
   font-size: 36px;
   font-weight: 600;
 }
 
 .menu-list li a {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke: 1px #ffde59;
   color: transparent;
 }
 
