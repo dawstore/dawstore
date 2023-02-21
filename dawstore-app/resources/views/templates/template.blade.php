@@ -400,10 +400,13 @@
                             {{ csrf_field() }}
 
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="password" id="contact-password" name="contact-password" placeholder="{{Auth::user()->name}}" required>
+                                    <input class="form-control form-control-lg mb-4" type="password" id="contact-password" name="profile-change-password" placeholder="New Password" required>
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="password" id="contact-confirm-password" name="contact-confirm-password" placeholder="{{Auth::user()->email}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="password" id="contact-confirm-password" name="confirm-profile-password" placeholder="Confirm New Password" required>
+                                </div>
+                                <div class="col-lg-12">
+                                    <input class="btn btn-primary" type="submit" name="Send">
                                 </div>
                             </form>
                         </div>

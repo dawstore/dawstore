@@ -11,7 +11,7 @@ Whishlist
     <!-- WHITELIST-->
     <section class="py-5 text-center">
         <header>
-            <p class="small text-muted small text-uppercase mb-1">Whitelist</p>
+            <p class="small text-muted small text-uppercase mb-1">Whishlist</p>
             <h2 class="h5 text-uppercase mb-4">Favorites Products</h2>
         </header>
         <div class="row">

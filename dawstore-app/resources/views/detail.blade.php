@@ -54,8 +54,13 @@
               </div>
             </div>
           </div>
+          @if (Auth::user())
           <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
-        </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
+          </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
+          @else
+          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('login')}}">Add to cart</a></div>
+          </div><a class="text-dark p-0 mb-4 d-inline-block" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
+          @endif
         <ul class="list-unstyled small d-inline-block">
           <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ms-2 text-muted">{{$product->sku}}</span></li>
           <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" href="#!">Demo Products</a></li>
