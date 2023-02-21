@@ -73,7 +73,7 @@
                                             </div>
                                         </td>
                                         <td class="p-3 align-middle border-light">
-                                            <p class="mb-0 small">$250</p>
+                                            <p class="mb-0 small">${{$product->price * $product->price}}</p>
                                         </td>
                                         <td class="p-3 align-middle border-light"><a class="reset-anchor" href="#!">
                                             <form action="{{ route('cart', $product) }}" method="POST" class="d-inline">
@@ -90,14 +90,9 @@
                     <!-- CART NAV-->
                     <div class="bg-light px-4 py-3">
                         <div class="row align-items-center text-center">
-                            <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm"
-                                    href="{{ url('/') }}">
-                                    <i class="fas fa-long-arrow-alt-left me-2">
-                                    </i>Continue shopping</a></div>
-                            <div class="col-md-6 text-md-end">
-                                <a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('checkout') }}">Procceed to
-                                    checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
-                            </div>
+                            <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('/') }}">
+                                <i class="fas fa-long-arrow-alt-left ms-2"></i> Continue Shopping</a></div>
+                            
                         </div>
                     </div>
                 </div>
@@ -114,13 +109,10 @@
                                 <li class="d-flex align-items-center justify-content-between mb-4"><strong
                                         class="text-uppercase small font-weight-bold">Total</strong><span>${{$total}}</span></li>
                                 <li>
-                                    <form action="#">
-                                        <div class="input-group mb-0">
-                                            <input class="form-control" type="text" placeholder="Enter your coupon">
-                                            <button class="btn btn-dark btn-sm w-100 mt-2" type="submit"> <i
-                                                    class="fas fa-gift me-2"></i>Apply coupon</button>
-                                        </div>
-                                    </form>
+                                    <div class="input-group mb-0">
+                                        <a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('checkout') }}">Procceed to
+                                        checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
