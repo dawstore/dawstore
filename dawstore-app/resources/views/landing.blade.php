@@ -38,7 +38,7 @@
          <div class="hero-section">
             <div class="nav">
                <!-- Logo -->
-               <div class="artist">&Hopf;</div>
+               <div class="artist">&Topf;</div>
                <div class="menu menu-btn cursor-item"><a href="#"><span>Menu</span><i class="bi bi-list"></i></a></div>
             </div>
             <div id="menu-overlay">
@@ -99,11 +99,9 @@
             <div class="omega">Tello</div>
             <div class="container">
                <div class="row text-center">
-                  <div class="hero-gif cursor-item">
-                    <video src="../../public/img/landing/loading.mp4"></video>
-                  </div>
+                  <div class="hero-gif cursor-item"></div>
                   <div class="main-title">
-                     <h1>We are <span>Creative</span> <br>Tello Shoes</h1>
+                    
                      <a class="btn-slice cursor-item" href="{{URL('/')}}">
                         <div class="top"><span>Tienda</span></div>
                         <div class="bottom"><span>Tienda</span></div>
