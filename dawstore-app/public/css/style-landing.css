@@ -433,10 +433,10 @@ span.stroke-h {
   line-height: 80px;
   letter-spacing: 1px;
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  -webkit-text-stroke: .02em #fff;
+  -webkit-text-stroke: .02em #ffde59;
   color: transparent;
   z-index: 0;
 }
@@ -450,10 +450,10 @@ span.stroke-h {
     line-height: 80px;
     letter-spacing: 1px;
     position: relative;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    -webkit-text-stroke: .02em #fff;
+    -webkit-text-stroke: .02em #ffde59;
     color: transparent;
     z-index: 0;
   }
@@ -467,10 +467,10 @@ span.stroke-h {
   line-height: 80px;
   letter-spacing: 1px;
   position: relative;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   text-decoration: none;
-  color: #fff;
+  color: #ffde59;
   z-index: 0;
 }
 
@@ -483,10 +483,10 @@ span.stroke-h {
     line-height: 80px;
     letter-spacing: 1px;
     position: relative;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     text-decoration: none;
-    color: #fff;
+    color: #ffde59;
     z-index: 0;
   }
 }
@@ -589,14 +589,14 @@ span.stroke-h {
 /*--Button Styles--*/
 
 .btn-slice {
-  padding: 1.2rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0rem;
   color: #ffffff;
   font-size: 12px;
   position: absolute;
   font-weight: 600;
-  margin-top: 20px;
+  margin-top: 10px;
   right: 50%;
   margin-right: 34px;
   -webkit-transition: all 1000ms cubic-bezier(0.890, 0, 0.140, 1);
@@ -1245,7 +1245,7 @@ li.copyright p {
   transform: translate(-50%, -50%);
   width: 48vw;
   height: 46vh;
-  background: url(../img/home.gif) no-repeat 50% 50%;
+  background: url(../img/landing/heroIndex.png) no-repeat 50% 50%;
   background-size: cover;
   animation-delay: 2s;
   -webkit-animation: animateGIF 4s cubic-bezier(0, .58, 1, .58);
@@ -1436,13 +1436,13 @@ li.copyright p {
 
 .menu-list li {
   padding: 12px 0;
-  color: #fff;
+  color: #ffde59;
   font-size: 36px;
   font-weight: 600;
 }
 
 .menu-list li a {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke: 1px #ffde59;
   color: transparent;
 }
 
