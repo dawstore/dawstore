@@ -1245,7 +1245,7 @@ li.copyright p {
   transform: translate(-50%, -50%);
   width: 48vw;
   height: 46vh;
-  background: url(../img/home.gif) no-repeat 50% 50%;
+  background: url(../img/landing/loader.gif) no-repeat 50% 50%;
   background-size: cover;
   animation-delay: 2s;
   -webkit-animation: animateGIF 4s cubic-bezier(0, .58, 1, .58);
