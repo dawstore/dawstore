@@ -6,7 +6,7 @@ use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
-use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\WhishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,6 +73,14 @@ Route::get('addcart/{id?}', [ CartController::class, 'addProduct' ])->name('cart
 Route::get('/cart', [ CartController::class, 'showCart' ])->name('cart.products');
 
 Route::delete('/cart/{id}', [ CartController::class, 'delete' ]) -> name('cart');
+
+//WHITELIST
+
+Route::get('addwhishlist/{id?}', [ WhishlistController::class, 'addProduct' ])->name('whishlist.addProduct');
+
+Route::get('/whishlist', [ WhishlistController::class, 'showwhishlist' ])->name('whishlist.products');
+
+Route::delete('/whishlist/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist');
 
 //RUTAS DASHBOARD
 

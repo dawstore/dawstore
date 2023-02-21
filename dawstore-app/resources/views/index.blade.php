@@ -73,8 +73,9 @@ active
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}/{{$product->brand_id}}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." loading="lazy"></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
+
                                 @if (Auth::user())
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
+                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart"></i></a></li>
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
                                 @else
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('login')}}"><i class="far fa-heart"></i></a></li>
