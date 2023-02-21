@@ -32,5 +32,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Cart::class, 'cart_product')->withTimestamps();
     }
+    public function whishlists()
+    {
+        return $this->belongsToMany(Whishlist::class, 'whishlist_product')->withTimestamps();
+    }
     
 }
