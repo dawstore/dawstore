@@ -143,32 +143,6 @@ active
             @endforeach
     </section>
 
-    <!-- CATEGORIES SECTION-->
-    <section class="pt-5" data-aos="zoom-in">
-        <header class="text-center" data-aos="fade-up">
-            <p class="small text-muted small text-uppercase mb-1">Month Top Product</p>
-            <h2 class="h5 text-uppercase mb-4">Trending Products</h2>
-        </header>
-
-        <div class="rounded-background-box">
-            <div class="left-rounded-column">
-                <div class="products">
-                    <img class="tablet float" src="{{URL ('img/banner/productUI.png')}}" "/>
-                 </div>
-            </div>
-         <div class="right-rounded-column text-center">
-                <div class="products-info">
-                    <h3>Nike SB Dunk Low</h3>
-                    <h1>Ben & Jerry's Chunky Dunky</h1>
-                    <p class="pt-5 text-center">The Nike SB Dunk Low Ben & Jerry's Chunky Dunky offers a legendary look.<br><br>
-                        With colors and textures that look like they came straight out of a jar of our Chunky Monkey, they're the most euphoric thing you can put on your feet. Blue skies, cows and green grasses appear all around the shoe, while colorful tie-dye patterns and bold graphics cover the insole and heel of the shoe.</p>
-
-                        <button class="btn btn-warning pageButtons text-center">Shop Now</button>
-                    </div>
-                </div>
-            </div>
-    </section>
-
     <!-- SERVICES-->
     <section class="py-5 bg-light" data-aos="fade-right">
         <div class="container">

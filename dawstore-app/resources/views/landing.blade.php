@@ -19,12 +19,12 @@
       <link rel="stylesheet" href="{{URL::asset('/css/bootstrap.min.css')}}">
       <!-- Aos Css-->
       <link rel="stylesheet" href="{{URL::asset('/css/aos-landing.css')}}"/>
-      <!-- font awesome -->
-      <link rel="stylesheet" href="{{URL::asset('/css/font-awesome.min.css')}}">
       <!-- Themify icon -->
       <link rel="stylesheet" href="{{URL::asset('/css/themify-icons-landing.css')}}"/>
       <!-- main css -->
       <link rel="stylesheet" href="{{URL::asset('/css/style-landing.css')}}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
    </head>
    <body>
 
@@ -38,8 +38,8 @@
          <div class="hero-section">
             <div class="nav">
                <!-- Logo -->
-               <div class="artist">&Hopf;</div>
-               <div class="menu menu-btn cursor-item"><a href="#"><span>Menu</span><i class="fa fa-bars"></i></a></div>
+               <div class="artist">&Topf;</div>
+               <div class="menu menu-btn cursor-item"><a href="#"><span>Menu</span><i class="bi bi-list"></i></a></div>
             </div>
             <div id="menu-overlay">
                <div class="block b1"></div>
@@ -68,19 +68,19 @@
                <ul>
                   <li>
                      Phone<br>
-                     <p>+1 (234) 56-789<p>
+                     <p>+34 691386745<p>
                   </li>
                   <li>
                      Email<br>
-                     <p>helion@example.com</p>
+                     <p>telloInfo@store.com</p>
                   </li>
                   <li>
                      Address<br>
-                     <p>4903 Mayo Street<br>Cincinnati, 45202 USA</p>
+                     <p>41500 Mayo Street<br>Alcala de Guadaíra</p>
                   </li>
                   <!-- Copyright -->
                   <li class="copyright">
-                     <p>&copy;Copyright 2020. All rights reserved</p>
+                     <p>&copy;Copyright 2023. All rights reserved</p>
                   </li>
                </ul>
             </div>
@@ -96,15 +96,15 @@
              <!-- Main menu end -->
 
 
-            <div class="omega">ΩMEG</div>
+            <div class="omega">Tello</div>
             <div class="container">
                <div class="row text-center">
                   <div class="hero-gif cursor-item"></div>
                   <div class="main-title">
-                     <h1>We are <span>Creative</span> <br>Tello Shoes</h1>
-                     <a class="btn-slice cursor-item" href="contact.html">
-                        <div class="top"><span>Contact Us</span></div>
-                        <div class="bottom"><span>Contact Us</span></div>
+                    
+                     <a class="btn-slice cursor-item" href="{{URL('/')}}">
+                        <div class="top"><span>Tienda</span></div>
+                        <div class="bottom"><span>Tienda</span></div>
                      </a>
                   </div>
                   <div class="ellipse-container">
@@ -129,7 +129,6 @@
                      </div>
                   </div>
                </div>
-               <div class="button-text"><span data-on="Sound On" data-off="Sound Off">Sound On</span></div>
             </div>
          </div>
          <div class="gif-overlay"></div>
