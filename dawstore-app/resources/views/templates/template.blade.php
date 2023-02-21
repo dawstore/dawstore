@@ -65,7 +65,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url ('whishlist')}}">
-                            <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">(0)</small></a>
+                            <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">({{count(Auth::user()->whishlist->products)}})</small></a>
                     </li>
                     <div class="dropdown">
                         <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
