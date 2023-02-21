@@ -73,8 +73,13 @@ active
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}/{{$product->brand_id}}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." loading="lazy"></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
+                                @if (Auth::user())
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
+                                @else
+                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('login')}}"><i class="far fa-heart"></i></a></li>
+                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('login')}}">Add to cart</a></li>
+                                @endif
                                 <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                             </ul>
                         </div>
@@ -117,8 +122,17 @@ active
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="cart.html">Add to cart</a></div>
-                                        </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                            @if (Auth::user())
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+                                            @else
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('login')}}">Add to cart</a></div>
+                                            @endif
+                                        </div>
+                                        @if (Auth::user())
+                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                        @else
+                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
