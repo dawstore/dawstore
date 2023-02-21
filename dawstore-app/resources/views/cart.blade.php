@@ -109,10 +109,10 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="d-flex align-items-center justify-content-between"><strong
                                         class="text-uppercase small font-weight-bold">Subtotal</strong><span
-                                        class="text-muted small">$250</span></li>
+                                        class="text-muted small">${{$total - ($total * 0.21)}}</span></li>
                                 <li class="border-bottom my-2"></li>
                                 <li class="d-flex align-items-center justify-content-between mb-4"><strong
-                                        class="text-uppercase small font-weight-bold">Total</strong><span>$250</span></li>
+                                        class="text-uppercase small font-weight-bold">Total</strong><span>${{$total}}</span></li>
                                 <li>
                                     <form action="#">
                                         <div class="input-group mb-0">

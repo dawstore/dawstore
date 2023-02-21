@@ -49,14 +49,6 @@
 
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url ('cart')}}">
-                            <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(2)</small></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url ('whishlist')}}">
-                            <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">(0)</small></a>
-                    </li>
                     @if (!Auth::user())
                         <li class="nav-item">
                             <a class="nav-link" href="{{url ('login')}}">
@@ -67,6 +59,14 @@
                                 <i class="fas fa-user me-1 text-gray fw-normal"></i>Sign up</a>
                         </li>
                     @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url ('cart')}}">
+                            <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">(0)</small></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url ('whishlist')}}">
+                            <i class="far fa-heart me-1"></i><small class="text-gray fw-normal">(0)</small></a>
+                    </li>
                     <div class="dropdown">
                         <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->username }}
@@ -82,7 +82,6 @@
                         </form>
                     </div>
                     @endif
-
                 </ul>
             </div>
         </nav>
