@@ -34,7 +34,8 @@ active
         <!-- BILLING ADDRESS-->
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <form name="contactForm" onsubmit="confirmForm" action="" >
+                <form action="{{route ('contact.store')}}" method="POST" >
+                    @csrf
                     <div class="row gy-3">
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="firstName">First name </label>

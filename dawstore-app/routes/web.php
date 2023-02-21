@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\AdminpanelController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\WhishlistController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,10 +54,6 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
 
 // INICIO SESIÓN Y REGISTRO
 Route::get('/whishlist', function () {
@@ -134,9 +132,13 @@ Route::get('new-products', function () {
     return view('new-products');
 })->name('new-products');
 
+//Contact form
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+
+
 //PRODUCTS
-
-
 
 Route::get('/admin/product-manager', [ AdminpanelController::class, 'products_detail' ]);
 
