@@ -34,7 +34,7 @@ class CartController extends Controller
         $user = User::find(Auth::id());
         $cart = $user->cart;
         $product = Product::find($request->product_id);
-        
+
         $cart->products()->detach($id);
 
         notify()->success('');
