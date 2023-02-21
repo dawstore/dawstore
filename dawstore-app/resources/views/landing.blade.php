@@ -60,7 +60,7 @@
                   <li><a href="{{URL ('/')}}" class="cursor-item">Tienda</a></li>
                   <li><a href="{{url ('products','Male')}}" class="cursor-item">Male Collection</a></li>
                   <li><a href="{{url ('products','Female')}}" class="cursor-item">Female Collection</a></li>
-                  <li><a href="contact.html" class="cursor-item">Contact</a></li>
+                  <li><a href="{{url ('products','Contact')}}" class="cursor-item">Contact</a></li>
                </ul>
             </div>
             <div class="menu-list-info">
