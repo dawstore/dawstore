@@ -33,9 +33,11 @@
         <h5 class="text-uppercase mb-4">Sneakers</h5>
         <div class="py-2 px-4  text-dark mb-3"><strong class="small text-uppercase fw-bold">Bra<span  class="text-warning">nds</span></strong></div>
         <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
-          @foreach ($brands as $brand)
-            <li class="mb-2"><a class="reset-anchor" href="{{url('products',$genre).'/'.request()->segment(count(request()->segments()))."/$brand->name"}}">{{$brand->name}}</a></li>
-          @endforeach
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Adidas')."/5"}}">Adidas</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Nike')."/6"}}">Nike</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','New Balance')."/7"}}">New Balance</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Jordan')."/8"}}">Jordan</a></li>
+
         </ul>
 
       </div>
@@ -68,7 +70,7 @@
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}/{{$product->brand_id}}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." loading="lazy"></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
+                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart"></i></a></li>
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
                                 <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                             </ul>
@@ -111,8 +113,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
-                                        </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+                                        </div><a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
                                     </div>
                                 </div>
                             </div>

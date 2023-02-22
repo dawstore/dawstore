@@ -13,7 +13,7 @@ active
 @section('hero_section')
 <!-- HERO SECTION-->
 <div class="container" data-aos="fade-left">
-    <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/banner/bannerHero.gif)">
+    <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/banner/banner2.gif)">
         <div class="container py-5">
             <div class="row px-4 px-lg-5">
                 <div class="col-lg-6">
@@ -33,24 +33,24 @@ active
 
     <section class="hero-section" data-aos="zoom-in">
         <div class="card-grid">
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','Adidas')."/5"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
 
                 </div>
             </a>
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','Nike')."/6"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
                 <div class="card__content">
                 </div>
             </a>
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','New Balance')."/7"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
 
                 </div>
                 </li>
-                <a class="cards" href="#">
+                <a class="cards" href="{{url('products','Jordan')."/8"}}">
                     <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
 
@@ -132,7 +132,7 @@ active
                                             @endif
                                         </div>
                                         @if (Auth::user())
-                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
                                         @else
                                         <a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
                                         @endif
