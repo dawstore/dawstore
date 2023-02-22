@@ -18,7 +18,7 @@ class CartController extends Controller
     }
 
     public function addProduct(Request $request,$id){
-       
+
         $user = User::find(Auth::id());
         $cart=$user->cart;
         $product = Product::find($request->product_id);
@@ -31,7 +31,7 @@ class CartController extends Controller
         $cart = $user->cart;
         $product = Product::find($request->product_id);
         $cart->products()->detach($id);
-        notify()->success('');
+        notify()->success('Product removed Succesfully');
         return back();
 
     }

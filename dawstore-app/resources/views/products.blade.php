@@ -33,6 +33,7 @@
         <h5 class="text-uppercase mb-4">Sneakers</h5>
         <div class="py-2 px-4  text-dark mb-3"><strong class="small text-uppercase fw-bold">Bra<span  class="text-warning">nds</span></strong></div>
         <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','All Products')."/9"}}">All</a></li>
             <li class="mb-2"><a class="reset-anchor" href="{{url('products','Adidas')."/5"}}">Adidas</a></li>
             <li class="mb-2"><a class="reset-anchor" href="{{url('products','Nike')."/6"}}">Nike</a></li>
             <li class="mb-2"><a class="reset-anchor" href="{{url('products','New Balance')."/7"}}">New Balance</a></li>
