@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('home')" href="{{url ('/')}}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('products','all products')."/9"}}">All Products</a>
+                    </li>
                     {{-- {{$genre=="Female"?'active':''}} --}}
                     <li class="nav-item dropdown">
 
@@ -52,11 +55,11 @@
                     @if (!Auth::user())
                         <li class="nav-item">
                             <a class="nav-link" href="{{url ('login')}}">
-                                <i class="fa fa-user me-1 text-gray fw-normal"></i>Log in</a>
+                                <i class="bi bi-box-arrow-in-right"></i> Log in</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url ('register')}}">
-                                <i class="fas fa-user me-1 text-gray fw-normal"></i>Sign up</a>
+                                <i class="bi bi-person"></i> Sign up</a>
                         </li>
                     @else
                     <li class="nav-item">

@@ -55,15 +55,14 @@
             </div>
           </div>
           @if (Auth::user())
-          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
-          </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
+          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+          </div><a class="text-dark p-0 mb-4 d-inline-block" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
           @else
-          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('login')}}">Add to cart</a></div>
+          <div class="col-sm-3 pl-sm-0"><a class="btn btn-warning pageButtons btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0  ld ld-heartbeat" href="{{route ('login')}}">Add to cart</a></div>
           </div><a class="text-dark p-0 mb-4 d-inline-block" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
           @endif
         <ul class="list-unstyled small d-inline-block">
           <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ms-2 text-muted">{{$product->sku}}</span></li>
-          <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" href="#!">Demo Products</a></li>
           <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Genre:</strong><a class="reset-anchor ms-2 " href="#!">{{$product->genre}}</a></li>
           <li class="px-3 py-2 mb-1 bg-white text-muted"><strong class="text-uppercase text-dark">Brand:</strong><a class="reset-anchor ms-2 " href="#!">{{$brand->name}}</a></li>
         </ul>
@@ -150,8 +149,8 @@
                   <div class="modal-body p-0">
                       <div class="row align-items-stretch">
                           <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
-                              <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
-                              <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[3]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
+                            <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
+                            <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox=""></a></div>
                           <div class="col-lg-6">
                               <div class="p-4 my-md-4">
                                   <ul class="list-inline mb-2">
@@ -174,8 +173,8 @@
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
-                                  </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                      <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+                                  </div><a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
                               </div>
                           </div>
                       </div>

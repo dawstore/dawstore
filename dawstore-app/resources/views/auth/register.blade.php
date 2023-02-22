@@ -9,7 +9,7 @@ Register
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header card-header justify-content-center d-flex h1 ">{{ __('Create an Account') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -321,7 +321,7 @@ Register
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary  justify-content-center1 align-items-center d-flex ">
                                     {{ __('Register') }}
                                 </button>
                             </div>
