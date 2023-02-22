@@ -26,7 +26,6 @@ class CartController extends Controller
         return back()->with('');
     }
 
-
     public function delete(Request $request,$id) {
         $user = User::find(Auth::id());
         $cart = $user->cart;

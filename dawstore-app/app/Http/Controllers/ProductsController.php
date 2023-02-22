@@ -13,7 +13,7 @@ class ProductsController extends Controller
         $products = Product::orderBy('stock', 'desc')->take(8)->get(); // Nos saca todos los productos de la BBDD
         return view('index', @compact('products'));
     }
-    public function productsGenre($genre,$filter = 4,$brand = "")
+    public function productsGenre($genre,$filter = 4,)
     {
         $brands = Brand::all();
         
@@ -32,6 +32,18 @@ class ProductsController extends Controller
                 break;
             case ('4'):
                 $products = Product::where('genre', $genre)->orWhere('genre', 'unisex')->get();
+                break;
+            case ('5'):
+                $products = Product::where('brand_id', 1)->get();
+                break;
+            case ('6'):
+                $products = Product::where('brand_id', 2)->get();
+                break;
+            case ('7'):
+                $products = Product::where('brand_id', 3)->get();
+                break;
+            case ('8'):
+                $products = Product::where('brand_id', 4)->get();
                 break;
         }
             

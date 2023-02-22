@@ -33,24 +33,24 @@ active
 
     <section class="hero-section" data-aos="zoom-in">
         <div class="card-grid">
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','Adidas')."/5"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-1.jpg)"></div>
                 <div class="card__content">
 
                 </div>
             </a>
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','Nike')."/6"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-2.jpg)"></div>
                 <div class="card__content">
                 </div>
             </a>
-            <a class="cards" href="#">
+            <a class="cards" href="{{url('products','New Balance')."/7"}}">
                 <div class="card__background" style="background-image: url(img/cat-img-3.jpg)"></div>
                 <div class="card__content">
 
                 </div>
                 </li>
-                <a class="cards" href="#">
+                <a class="cards" href="{{url('products','Jordan')."/8"}}">
                     <div class="card__background" style="background-image: url(img/cat-img-4.jpg)"></div>
                     <div class="card__content">
 

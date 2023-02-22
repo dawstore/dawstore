@@ -33,9 +33,11 @@
         <h5 class="text-uppercase mb-4">Sneakers</h5>
         <div class="py-2 px-4  text-dark mb-3"><strong class="small text-uppercase fw-bold">Bra<span  class="text-warning">nds</span></strong></div>
         <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
-          @foreach ($brands as $brand)
-            <li class="mb-2"><a class="reset-anchor" href="{{url('products',$genre).'/'.request()->segment(count(request()->segments()))."/$brand->name"}}">{{$brand->name}}</a></li>
-          @endforeach
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Adidas')."/5"}}">Adidas</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Nike')."/6"}}">Nike</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','New Balance')."/7"}}">New Balance</a></li>
+            <li class="mb-2"><a class="reset-anchor" href="{{url('products','Jordan')."/8"}}">Jordan</a></li>
+
         </ul>
 
       </div>
