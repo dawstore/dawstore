@@ -55,10 +55,10 @@
             </div>
           </div>
           @if (Auth::user())
-          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
           </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
           @else
-          <div class="col-sm-3 pl-sm-0"><a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('login')}}">Add to cart</a></div>
+          <div class="col-sm-3 pl-sm-0"><a class="btn btn-warning pageButtons btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0  ld ld-heartbeat" href="{{route ('login')}}">Add to cart</a></div>
           </div><a class="text-dark p-0 mb-4 d-inline-block" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a><br>
           @endif
         <ul class="list-unstyled small d-inline-block">

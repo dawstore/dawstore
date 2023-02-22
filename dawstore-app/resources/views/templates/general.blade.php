@@ -20,16 +20,21 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="{{URL::asset('/css/custom.css')}}">
     <link rel="stylesheet" href="{{URL::asset('/css/cards.css')}}">
-    <link rel="stylesheet" href="{{URL::asset('/css/paymentMethod.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.min.css">
     <!-- data-aos-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
+    @notifyCss
     <!-- Google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    @notifyJs
   </head>
   <body >
+
+  <x:notify-messages />
       <div class="page-holder">
 
         @yield('navbar')
