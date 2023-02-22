@@ -23,13 +23,12 @@ Whishlist
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!">
-                                    <form action="{{ route('cart', $product) }}" method="POST" class="d-inline">
+                                    <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                                     @method('DELETE')
                                     @csrf
                                     <button class="fas fa-trash-alt small text-muted" type="submit"><i class="bi bi-trash"></i></button>
                                     </form>
-                                </li>
+
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
                             </ul>
                         </div>
