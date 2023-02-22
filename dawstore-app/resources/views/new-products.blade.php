@@ -42,20 +42,20 @@
 	<div class="content content--fixed">
 		<div class="page-header">
 			<h1 class="page-header__title">
-				<span class="page-header__title-inner">LikeNuShus</span>
+				<span class="page-header__title-inner">Tello Store</span>
 				<span class="page-header__title-sub">man &amp; woman</span>
 			</h1>
 			<ul class="social">
 				<li class="social__item">
-					<a class="social__item-link" href="https://codepen.io/DivineBlow" target="_blank">
-						<svg class="icon icon--social icon--codepen">
-							<use xlink:href="#icon-codepen"></use>
+					<a class="social__item-link" href="{{url('/')}}">
+						<svg class="icon icon--social icon--home">
+							<h2>Back to Store</h2>
 						</svg>
 					</a>
 				</li>
 			</ul>
 		</div>
-		<p class="tagline">Lightly Used Shoes, Cheap!</p>
+		<p class="tagline">New Products, Tello Store!</p>
 	</div>
 	<div class="slideshow">
 		<div class="slide">

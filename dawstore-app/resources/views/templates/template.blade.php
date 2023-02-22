@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('home')" href="{{url ('/')}}">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('products','all products')."/9"}}">All Products</a>
+                    </li>
                     {{-- {{$genre=="Female"?'active':''}} --}}
                     <li class="nav-item dropdown">
 
