@@ -92,7 +92,7 @@
                         <div class="row align-items-center text-center">
                             <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('/') }}">
                                 <i class="fas fa-long-arrow-alt-left ms-2"></i> Continue Shopping</a></div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                                         class="text-uppercase small font-weight-bold">Total</strong><span>${{$total}}</span></li>
                                 <li>
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-outline-warning pageButtons text-dark btn-sm" href="{{ url('checkout') }}">Procceed to
+                                        <a class="btn btn-outline-warning pageButtons text-dark btn-sm ld ld-heartbeat" href="{{ url('checkout') }}">Procceed to
                                         checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
                                     </div>
                                 </li>
