@@ -71,14 +71,29 @@
                         <div class="badge text-white bg-"></div><a class="d-block" href="{{ route('detail', $product) }}/{{$product->brand_id}}"><img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." loading="lazy"></a>
                         <div class="product-overlay">
                             <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart"></i></a></li>
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
+                              @if (Auth::user())
+                              @if (!Auth::user()->whishlist->product)
+                              <li class="list-inline-item m-0 p-0">
+                                  <a class="btn btn-sm btn-outline-dark" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart"></i></a>
+                              </li>
+                              <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
+                              @else
+                              <li class="list-inline-item m-0 p-0">
+                                  <a class="btn btn-sm btn-outline-dark" href="{{route ('whishlist',$product->id)}}"><i class="far fa-trash"></i></a>
+                              </li>
+                              <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
+                              @endif
+                              @else
+                              <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="{{route ('login')}}"><i class="far fa-heart"></i></a></li>
+                              <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('login')}}">Add to cart</a></li>
+                              @endif
                                 <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView{{$product->id}}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{ $product->name }}</a></h6>
                     <p class="small text-muted">${{ $product->price }}</p>
+                    <br>
                 </div>
             </div>
 
@@ -89,7 +104,7 @@
                         <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="modal-body p-0">
                             <div class="row align-items-stretch">
-                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[1]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
+                                <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
                                     <img class="img-fluid w-100" src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..."></a><a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch">
                                     <a class="glightbox d-none" href="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[2]->image_name)}}" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
                                 <div class="col-lg-6">
@@ -114,8 +129,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
-                                        </div><a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                            @if (Auth::user())
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></div>
+                                            @else
+                                            <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 " href="{{route ('login')}}">Add to cart</a></div>
+                                            @endif
+                                        </div>
+                                        @if (Auth::user() && !Auth::user()->whishlist->product)
+                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('whishlist.addProduct',$product->id)}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                        @elseif (Auth::user() && Auth::user()->whishlist->product)
+
+                                        @else
+                                        <a class="btn btn-link text-dark text-decoration-none p-0" href="{{route ('login')}}"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -26,7 +26,7 @@ Whishlist
                                     <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="fas fa-trash-alt small text-muted" type="submit"><i class="bi bi-trash"></i></button>
+                                    <button class="fas fa-trash-alt small text-muted" type="submit"></button>
                                     </form>
 
                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning" href="{{route ('cart.addProduct',$product->id)}}">Add to cart</a></li>
