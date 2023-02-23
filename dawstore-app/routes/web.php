@@ -54,6 +54,13 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+Route::delete('/index/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist');
+
+Route::delete('/products/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist.products');
+
+Route::delete('/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist.index');
+
+
 
 // INICIO SESIÓN Y REGISTRO
 Route::get('/whishlist', function () {
