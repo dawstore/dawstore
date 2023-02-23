@@ -50,7 +50,7 @@ class AdminpanelController extends Controller
             $imagen->save();
             $i++;
         }
-        notify()->success('Product created successfully!');
+        smilify('success', 'Product created successfully!');
         return back();
     }
 
@@ -85,23 +85,23 @@ class AdminpanelController extends Controller
             $productUpdate->images = $nombreimagen;
         }
         $productUpdate->update();
-        notify()->success('Product updated successfully!');
-        return back()->with('mensaje', '');
-    }        
+        smilify('success', 'Product edit successfully!');
+        return back();
+    }
 
 
-    public function delete($id) 
+
+    public function delete($id)
     {
         $deleteProduct = Product::findOrFail($id);
         $deleteImg = Image::where('product_id', $id);
         $deleteImg->delete();
         $deleteProduct->delete();
-
-        notify()->success('Product removed successfully!');
+        smilify('success', 'Product removed successfully!');
         return back();
 
     }
-    
+
     /* MARCAS */
 
     public function brand()
@@ -115,8 +115,8 @@ class AdminpanelController extends Controller
         $drandInsert = new Brand;
         $drandInsert->name = $request->name;
         $drandInsert->save();
-        notify()->success('Brand created successfully!');
-        return back() -> with('mensaje', '');
+        smilify('success', 'Brand add successfully!');
+        return back();
     }
     public function edit_brand($id)
     {
@@ -129,19 +129,19 @@ class AdminpanelController extends Controller
         $drandUpdate = Brand::findOrFail($id);
         $drandUpdate->name = $request->name;
         $drandUpdate->update();
-        notify()->success('Brand updated successfully!');
-        return back()->with('mensaje', '');
-    }        
+        smilify('success', 'Brand update successfully!');
+        return back();
+    }
 
     public function delete_brand($id) 
     {   
         if (Product::where('brand_id', $id)->exists()) {
-            notify()->error('The brand cannot be removed until all products of that brand are deleted!');
+            smilify('error','The brand cannot be removed until all products of that brand are deleted!');
             return back()->with('message', '');
         } else {
             $deleteBrand = Brand::findOrFail($id);
             $deleteBrand->delete();
-            notify()->success('Brand removed successfully!');
+            smilify('success', 'Brand removed successfully!');
             return back()->with('message', '');
         }
     }
