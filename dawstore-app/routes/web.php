@@ -128,9 +128,9 @@ Route::get('/admin/forgot-password', function () {
     return view('admin.forgot-password');
 })->name('forgot-password');
 
-Route::get('new-products', function () {
-    return view('new-products');
-})->name('new-products');
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
 
 //Contact form
 Route::get('/contact', function () {

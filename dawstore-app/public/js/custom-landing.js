@@ -352,3 +352,4 @@ function Cursor() {
 	link.forEach(b => b.addEventListener('mouseleave', animateit));
 	window.addEventListener('mousemove', editCursor);
 }
+

@@ -90,6 +90,7 @@
                         class="reset-anchor ms-2 " href="#!">{{ $brand->name }}</a></li>
             </ul>
         </div>
+
         </div>
         <!-- DETAILS TABS-->
         <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
