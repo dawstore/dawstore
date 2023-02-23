@@ -50,7 +50,7 @@ class AdminpanelController extends Controller
             $imagen->save();
             $i++;
         }
-        notify()->success('Product created successfully!');
+        smilify('success', 'Product created successfully!');
         return back();
     }
 
@@ -85,18 +85,18 @@ class AdminpanelController extends Controller
             $productUpdate->images = $nombreimagen;
         }
         $productUpdate->update();
-        return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+        smilify('success', 'Product edit successfully!');
+        return back();
+    }
 
 
-    public function delete($id) 
+    public function delete($id)
     {
         $deleteProduct = Product::findOrFail($id);
         $deleteImg = Image::where('product_id', $id);
         $deleteImg->delete();
         $deleteProduct->delete();
-
-        notify()->success('Product removed successfully!');
+        smilify('success', 'Product removed successfully!');
         return back();
 
     }
@@ -117,7 +117,7 @@ class AdminpanelController extends Controller
         $categoryInsert->name = $request->name;
         $categoryInsert->description = $request->desc;
         $categoryInsert->save();
-        notify()->success('Product Category created Succefully!');
+        smilify('success', 'Product Category created Succefully!');
         return back();
     }
     public function edit_category($id)
@@ -131,18 +131,18 @@ class AdminpanelController extends Controller
         $categoryUpdate->name = $request->name;
         $categoryUpdate->description = $request->description;
         $categoryUpdate->update();
-        notify()->success('Product Edited successfully!');
+        smilify('success', 'Product Edited successfully!');
         return back();
     }
 
     public function delete_category($id) {
         $deleteCategory = Category::findOrFail($id);
         $deleteCategory->delete();
-
-        return notify()->success('Category deleted successfully!');
+        smilify('success', 'Category deleted successfully!');
+        return back();
 
     }
-    
+
     /* MARCAS */
 
     public function brand()
@@ -156,7 +156,9 @@ class AdminpanelController extends Controller
         $drandInsert = new Brand;
         $drandInsert->name = $request->name;
         $drandInsert->save();
-        return back() -> with('mensaje', '');
+        smilify('success', 'Brand add successfully!');
+        return back();
+
     }
     public function edit_brand($id)
     {
@@ -169,14 +171,16 @@ class AdminpanelController extends Controller
         $drandUpdate = Brand::findOrFail($id);
         $drandUpdate->name = $request->name;
         $drandUpdate->update();
-        return back()->with('mensaje', '');
-    }        
+        smilify('success', 'Brand update successfully!');
+        return back();
+    }
 
-    public function delete_brand($id) 
+    public function delete_brand($id)
     {
         $deleteBrand = Brand::findOrFail($id);
         $deleteBrand->delete();
-        return back()->with('message', '');
+        smilify('success', 'Brand removed successfully!');
+        return back();
     }
 }
 
