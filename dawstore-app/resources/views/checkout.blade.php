@@ -71,6 +71,7 @@ Checkout
                         <div class="col-lg-12 form-group">
                         <h2 class="h5 text-uppercase mb-4">Payment Method</h2>
                          <button class="btn btn-primary" type="submit">Paypal</button>
+                         <!--Añadir el payment-->
                          <button class="btn btn-dark" type="submit">Credit or Debit Card</button>
                         </div>
                     </div>

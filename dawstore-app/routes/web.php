@@ -128,6 +128,10 @@ Route::get('/admin/forgot-password', function () {
     return view('admin.forgot-password');
 })->name('forgot-password');
 
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
+
 //Contact form
 Route::get('/contact', function () {
     return view('contact');
