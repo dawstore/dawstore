@@ -63,17 +63,18 @@
                                             <div class="border d-flex align-items-center justify-content-between px-3"><span
                                                     class="small text-uppercase text-gray headings-font-family">Quantity</span>
                                                 <div class="quantity">
-                                                    <a class="dec-btn p-0" href="{{route ('cart.removeAmount', $product)}}">
+                                                    <a class="dec-btn p-0" href="{{route ('cart.amount',$product) .'/remove'}}">
                                                         <i class="fas fa-caret-left"></i></a>
                                                     <input class="form-control form-control-sm border-0 shadow-0 p-0"
-                                                        type="text" disabled value="{{$product->pivot->amount}}" />
-                                                    <a class="inc-btn p-0" href="{{route ('cart.addAmount', $product)}}">
+
+                                                        type="text" value="{{$product->pivot->amount}}" />
+                                                    <a class="inc-btn p-0" href="{{route ('cart.amount',$product) .'/add'}}">
                                                         <i class="fas fa-caret-right"></i></a>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="p-3 align-middle border-light">
-                                            <p class="mb-0 small">${{$totalp}}</p>
+                                            <p class="mb-0 small">${{$product->price * $product->pivot->amount}}</p>
                                         </td>
                                         <td class="p-3 align-middle border-light"><a class="reset-anchor" href="#!">
                                             <form action="{{ route('cart', $product) }}" method="POST" class="d-inline">

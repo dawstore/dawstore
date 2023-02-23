@@ -13,9 +13,8 @@ class CartController extends Controller
     {
         $user = User::find(Auth::id());
         $total = $this->total();
-        $totalp = $this->totalp();//precio total
         $products=$user->cart->products;
-        return view('cart', @compact('products','total','totalp'));
+        return view('cart', @compact('products','total'));
     }
 
     public function addProduct(Request $request,$id){
@@ -38,46 +37,24 @@ class CartController extends Controller
 
     }
 
-    public function addAmount ($id) {
+    public function amount ($id, $option) {
         $user = User::find(Auth::id());
         $products=$user->cart->products;
         foreach($products as $product){
             if ($product->id == $id) {
                 $amount = $product->pivot;
-                $amount->amount++;
+                if ($option == 'add') {
+                    $amount->amount++;
+                } else {
+                    $amount->amount--;
+                }
                 $amount->update();
             }
         }
         return back();
-
-    }
-
-    public function removeAmount ($id) {
-        $user = User::find(Auth::id());
-        $products=$user->cart->products;
-        foreach($products as $product){
-            if ($product->id == $id) {
-                $amount = $product->pivot;
-                $amount->amount--;
-                $amount->update();
-            }
-        }
-        return back();
-
     }
 
     private function total(){//funcion privada por que solo se va a utilizar aca
-        $user = User::find(Auth::id());
-        $products=$user->cart->products;
-        $total = 0;
-        foreach($products as $product){
-            //TODO: * por la cantidad withPivot ()
-            $total += $product->price;
-        }
-        return $total;
-    }
-
-    private function totalp() {
         $user = User::find(Auth::id());
         $products=$user->cart->products;
         $totalProducto = 0;
@@ -86,7 +63,5 @@ class CartController extends Controller
         }
         return $totalProducto;
     }
-
-
 
 }
