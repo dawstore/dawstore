@@ -260,16 +260,21 @@
                 <div class="row gy-3">
                     <div class="col-lg-6">
                         <h5 class="text-uppercase">Let's be friends!</h5>
-                        <p class="text-sm text-muted mb-0">Nisi nisi tempor consequat laboris nisi.</p>
+                        <p class="text-sm text-muted mb-0">Be part of our crew.</p>
                     </div>
                     <div class="col-lg-6">
-                        <form action="#">
+                        <form action="{{ route('subscribers.store') }}" method="POST">
+                            @csrf
                             <div class="input-group">
-                                <input class="form-control form-control-lg" type="email"
-                                    placeholder="Enter your email address" aria-describedby="button-addon2">
+                                <input class="form-control form-control-lg" name="newsletterEmail" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
                                 <button class="btn btn-warning" id="button-addon2" type="submit">Subscribe</button>
                             </div>
                         </form>
+                            @if (session('subscribed'))
+                                <div class="alert alert-success">
+                                    {{ session('subscribed') }}
+                                </div>
+                            @endif
                     </div>
                 </div>
             </div>
