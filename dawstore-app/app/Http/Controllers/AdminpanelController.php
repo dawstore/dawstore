@@ -29,19 +29,27 @@ class AdminpanelController extends Controller
     public function insert(Request $request)
     {
 
-        $productInsert = new Product;
-        $productInsert->sku = $request->sku;
-        $productInsert->name = $request->name;
-        $productInsert->price = $request->price;
-        $productInsert->description = $request->desc;
-        $productInsert->stock = $request->stock;
-        $productInsert->genre = $request->genre;
-        $productInsert->brand_id = $request->brand;
-        $productInsert->save();
+        $productsImages = count($request->images);
 
-        $i = 1;
-        foreach ($request->images as $image)
-        {
+        if ($productsImages < 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else if ($productsImages > 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else {
+            $productInsert = new Product;
+            $productInsert->sku = $request->sku;
+            $productInsert->name = $request->name;
+            $productInsert->price = $request->price;
+            $productInsert->description = $request->desc;
+            $productInsert->stock = $request->stock;
+            $productInsert->genre = $request->genre;
+            $productInsert->brand_id = $request->brand;
+            $productInsert->save();
+            $i = 1;
+            foreach ($request->images as $image)
+            {
             $imagen = new Image();
             $imagen->product_id = $productInsert->id;
             $imagen->image_name = $request->sku."-".$i.".".$image->extension();
@@ -52,6 +60,8 @@ class AdminpanelController extends Controller
         }
         smilify('success', 'Product created successfully!');
         return back();
+        }
+        
     }
 
 
@@ -64,29 +74,43 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
-        $file_path = Product::findOrFail($id);
 
-        if (File::exists(public_path("img/products/" . $file_path->images))) {
-            File::delete(public_path("img/products/" . $file_path->images));
-        }
+        $productsImages = count($request->images);
 
-        $productUpdate = Product::findOrFail($id);
-        $productUpdate->sku = $request->sku;
-        $productUpdate->name = $request->name;
-        $productUpdate->price = $request->price;
-        $productUpdate->description = $request->description;
-        $productUpdate->stock = $request->stock;
-        $productUpdate->genre = $request->genre;
-        if($request->hasFile("images")){
-            $imagen = $request->images;
-            $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
-            $ruta = public_path("img/products/");
-            $imagen->move($ruta,$nombreimagen);
-            $productUpdate->images = $nombreimagen;
+        if ($productsImages < 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else if ($productsImages > 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else {
+            $productUpdate = Product::findOrFail($id);
+            $productUpdate->sku = $request->sku;
+            $productUpdate->name = $request->name;
+            $productUpdate->price = $request->price;
+            $productUpdate->description = $request->description;
+            $productUpdate->stock = $request->stock;
+            $productUpdate->genre = $request->genre;
+            if($request->hasFile("images")){
+                $file_path = Product::findOrFail($id);
+                if (File::exists(public_path("img/products/" . $file_path->images))) {
+                    File::delete(public_path("img/products/" . $file_path->images));
+                }
+                $i = 1;
+                foreach ($request->images as $image) {
+                $imagen = new Image();
+                $imagen->product_id = $productUpdate->id;
+                $imagen->image_name = $request->sku."-".$i.".".$image->extension();
+                $ruta = public_path("img/products/".$request->sku."-files");
+                $image->move($ruta,$imagen->image_name);
+                $imagen->save();
+                $i++;
+                }
+            }
+            $productUpdate->update();
+            smilify('success', 'Product edit successfully!');
+            return back();
         }
-        $productUpdate->update();
-        smilify('success', 'Product edit successfully!');
-        return back();
     }
 
 

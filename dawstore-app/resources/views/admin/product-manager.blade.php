@@ -92,6 +92,8 @@ active
                             <h5 class="card-title mb-0">Images</h5>
                         </div>
                         <div class="card-body">
+                            <p>You have to upload 4 images to create the product.</p>
+                            <br>
                             <input class="form-control form-control-sm" id="formFileSm" name="images[]" type="file" multiple>
                         </div>
                     </div>
