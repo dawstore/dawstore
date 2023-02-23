@@ -32,10 +32,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
     @notifyJs
   </head>
-  <body >
-
   <x:notify-messages />
-      <div class="page-holder">
+  <body>
+    <div class="page-holder">
 
         @yield('navbar')
 

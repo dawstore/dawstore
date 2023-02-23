@@ -409,7 +409,6 @@
 @endsection
 
 @section('footer')
-
 <footer class="text-dark footer" data-aos="fade-right">
     <div class="container py-4">
         <div class="row py-5">

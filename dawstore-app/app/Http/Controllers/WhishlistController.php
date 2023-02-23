@@ -23,8 +23,9 @@ class WhishlistController extends Controller
         $whishlist=$user->whishlist;
         $product = Product::find($request->product_id);
         $whishlist->products()->attach($id);
+        smilify('success', 'Product added to the Wishlist!');
 
-        return back()->with('');
+        return back();
 
     }
 

@@ -33,7 +33,7 @@ Whishlist
                             </ul>
                         </div>
                     </div>
-                    <h6> <a class="reset-anchor" href="{{ route('detail', $product) }}">{{$product->name}}</a></h6>
+                    
                 </div>
             </div>
             @endforeach

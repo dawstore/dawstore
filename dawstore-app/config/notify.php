@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'timeout'   => 9999999999999999,
+    'timeout'   => 1000,
 
     /*
     |--------------------------------------------------------------------------
@@ -50,11 +50,12 @@ return [
 
     'preset-messages' => [
         // An example preset 'user updated' Connectify notification.
-        'user-updated' => [
-            'message' => 'The user has been updated successfully.',
+        'add-whishlist' => [
+            'message' => 'Product added to the Wishlist!.',
             'type'    => 'success',
-            'model'   => 'connect',
-            'title'   => 'User Updated',
+            'model'   => 'toast',
+            'title'   => 'Success',
+
         ],
     ],
 
