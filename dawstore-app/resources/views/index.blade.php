@@ -179,101 +179,102 @@
                                                                 class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
                                                                 href="{{ route('cart.addProduct', $product->id) }}">Add to
                                                                 cart</a></div>
-                                                    @else
-                                                        <div class="col-sm-5"><a
-                                                                class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
-                                                                href="{{ route('login') }}">Add to cart</a></div>
-                                                    @endif
                                                 </div>
                                                 @if (Auth::user()->whishlist->products->contains($product->id))
                                                     <a class="btn btn-link text-dark text-decoration-none p-0"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                             class="bi bi-heart-fill"></i> Add to wish list</a>
-                                                @elseif (!Auth::user()->whishlist->products->contains($product->id))
+                                                @else
                                                     <a class="btn btn-link text-dark text-decoration-none p-0"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                             class="bi bi-heart"></i> Add to wish list</a>
-                                                @elseif (!Auth::user())
-                                                    <a class="btn btn-link text-dark text-decoration-none p-0"
-                                                        href="{{ route('login') }}"><i class="bi bi-heart"></i> Add
-                                                        to wish list</a>
                                                 @endif
+                                            @else
+                                                <div class="col-sm-5"><a
+                                                        class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
+                                                        href="{{ route('login') }}">Add to cart</a></div>
+
                                             </div>
+                                            <a class="btn btn-link text-dark text-decoration-none p-0"
+                                                href="{{ route('login') }}"><i class="bi bi-heart"></i> Add
+                                                to wish list</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
-        </section>
+            </div>
+    @endforeach
+    </section>
 
-        <!-- SERVICES-->
-        <section class="py-5 bg-light" data-aos="fade-right">
-            <div class="container">
-                <div class="row text-center gy-3">
-                    <div class="col-lg-4">
-                        <div class="d-inline-block">
-                            <div class="d-flex align-items-end">
-                                <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#delivery-time-1"> </use>
-                                </svg>
-                                <div class="text-start ms-3">
-                                    <h6 class="text-uppercase mb-1">Free shipping</h6>
-                                    <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                </div>
+    <!-- SERVICES-->
+    <section class="py-5 bg-light" data-aos="fade-right">
+        <div class="container">
+            <div class="row text-center gy-3">
+                <div class="col-lg-4">
+                    <div class="d-inline-block">
+                        <div class="d-flex align-items-end">
+                            <svg class="svg-icon svg-icon-big svg-icon-light">
+                                <use xlink:href="#delivery-time-1"> </use>
+                            </svg>
+                            <div class="text-start ms-3">
+                                <h6 class="text-uppercase mb-1">Free shipping</h6>
+                                <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="d-inline-block">
-                            <div class="d-flex align-items-end">
-                                <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#helpline-24h-1"> </use>
-                                </svg>
-                                <div class="text-start ms-3">
-                                    <h6 class="text-uppercase mb-1">24 x 7 service</h6>
-                                    <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-inline-block">
+                        <div class="d-flex align-items-end">
+                            <svg class="svg-icon svg-icon-big svg-icon-light">
+                                <use xlink:href="#helpline-24h-1"> </use>
+                            </svg>
+                            <div class="text-start ms-3">
+                                <h6 class="text-uppercase mb-1">24 x 7 service</h6>
+                                <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="d-inline-block">
-                            <div class="d-flex align-items-end">
-                                <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#label-tag-1"> </use>
-                                </svg>
-                                <div class="text-start ms-3">
-                                    <h6 class="text-uppercase mb-1">Festivaloffers</h6>
-                                    <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
-                                </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-inline-block">
+                        <div class="d-flex align-items-end">
+                            <svg class="svg-icon svg-icon-big svg-icon-light">
+                                <use xlink:href="#label-tag-1"> </use>
+                            </svg>
+                            <div class="text-start ms-3">
+                                <h6 class="text-uppercase mb-1">Festivaloffers</h6>
+                                <p class="text-sm mb-0 text-muted">Free shipping worldwide</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- NEWSLETTER-->
-        <section class="py-5" data-aos="fade-left">
-            <div class="container p-0">
-                <div class="row gy-3">
-                    <div class="col-lg-6">
-                        <h5 class="text-uppercase">Let's be friends!</h5>
-                        <p class="text-sm text-muted mb-0">Nisi nisi tempor consequat laboris nisi.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="#">
-                            <div class="input-group">
-                                <input class="form-control form-control-lg" type="email"
-                                    placeholder="Enter your email address" aria-describedby="button-addon2">
-                                <button class="btn btn-warning" id="button-addon2" type="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+    </section>
+    <!-- NEWSLETTER-->
+    <section class="py-5" data-aos="fade-left">
+        <div class="container p-0">
+            <div class="row gy-3">
+                <div class="col-lg-6">
+                    <h5 class="text-uppercase">Let's be friends!</h5>
+                    <p class="text-sm text-muted mb-0">Nisi nisi tempor consequat laboris nisi.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form action="#">
+                        <div class="input-group">
+                            <input class="form-control form-control-lg" type="email"
+                                placeholder="Enter your email address" aria-describedby="button-addon2">
+                            <button class="btn btn-warning" id="button-addon2" type="submit">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </div>
     </div>
 @endsection
