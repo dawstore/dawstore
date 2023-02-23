@@ -74,6 +74,29 @@ class AdminpanelController extends Controller
 
     public function update(Request $request, $id)
     {
+        // $file_path = Product::findOrFail($id);
+
+        // if (File::exists(public_path("img/products/" . $file_path->images))) {
+        //     File::delete(public_path("img/products/" . $file_path->images));
+        // }
+
+        // $productUpdate = Product::findOrFail($id);
+        // $productUpdate->sku = $request->sku;
+        // $productUpdate->name = $request->name;
+        // $productUpdate->price = $request->price;
+        // $productUpdate->description = $request->description;
+        // $productUpdate->stock = $request->stock;
+        // $productUpdate->genre = $request->genre;
+        // if($request->hasFile("images")){
+        //     $imagen = $request->images;
+        //     $nombreimagen = Str::slug($request->name).".".$imagen->guessExtension();
+        //     $ruta = public_path("img/products/");
+        //     $imagen->move($ruta,$nombreimagen);
+        //     $productUpdate->images = $nombreimagen;
+        // }
+        // $productUpdate->update();
+        // smilify('success', 'Product edit successfully!');
+        // return back();
 
         $productsImages = count($request->images);
 
