@@ -267,7 +267,7 @@
                             @csrf
                             <div class="input-group">
                                 <input class="form-control form-control-lg" name="newsletterEmail" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
-                                <button class="btn btn-warning" id="button-addon2" type="submit">Subscribe</button>
+                                <button class="btn btn-warning" id="button-addon2" type="submit">Subcribe!</button>
                             </div>
                         </form>
                             @if (session('subscribed'))
