@@ -134,8 +134,8 @@ class AdminpanelController extends Controller
     }
 
 
-    public function delete_brand($id) 
-    {   
+    public function delete_brand($id)
+    {
         if (Product::where('brand_id', $id)->exists()) {
             smilify('error','The brand cannot be removed until all products of that brand are deleted!');
             return back()->with('message', '');
@@ -144,8 +144,7 @@ class AdminpanelController extends Controller
             $deleteBrand = Brand::findOrFail($id);
             $deleteBrand->delete();
             smilify('success', 'Brand removed successfully!');
-
-            return back()->with('message', '');
+            return back();
         }
     }
 }
