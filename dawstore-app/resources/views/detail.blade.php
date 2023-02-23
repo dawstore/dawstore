@@ -47,8 +47,9 @@
                     </ul>
                     <h1>{{ $product->name }}</h1>
                     <p class="text-muted lead">${{ $product->price }}</p>
+                    <br>
                     <div class="row align-items-stretch mb-4">
-                        <div class="col-sm-5 pr-sm-0">
+                        {{-- <div class="col-sm-5 pr-sm-0">
                             <div
                                 class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white">
                                 <span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
@@ -58,13 +59,20 @@
                                     <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         @if (Auth::user())
                             @if (Auth::user()->whishlist->products->contains($product->id))
-                                <div class="col-sm-3 pl-sm-0"><a
-                                        class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
-                                        href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a></div>
-                    </div>
+                                                @if (Auth::user()->cart->products->contains($product->id))
+                                                <div class="col-sm-3 pl-sm-0"><a
+                                                    class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
+                                                    href="{{ route('cart.amount',$product) .'/add'}}">Add to cart</a></div>
+                                                </div>
+                                                @else
+                                                <div class="col-sm-3 pl-sm-0"><a
+                                                    class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
+                                                    href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a></div>
+                                                </div>
+                                                @endif
                     <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                         @method('DELETE')
                         @csrf
@@ -73,11 +81,17 @@
                         <br>
                         <br>
                 @else
-                    <div class="col-sm-3 pl-sm-0"><a
-                            class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
-                            href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a></div>
-
+                @if (Auth::user()->cart->products->contains($product->id))
+                <div class="col-sm-3 pl-sm-0"><a
+                    class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
+                    href="{{ route('cart.amount',$product) .'/add'}}">Add to cart</a></div>
                 </div>
+                @else
+                <div class="col-sm-3 pl-sm-0"><a
+                    class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0 "
+                    href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a></div>
+                </div>
+                @endif
                 <a class="text-dark p-0 mb-4 d-inline-block" href="{{ route('whishlist.addProduct', $product->id) }}"><i
                         class="bi bi-heart"></i> Add to wish list</a><br>
                 @endif

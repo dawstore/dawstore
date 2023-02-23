@@ -86,18 +86,30 @@
                                                         <button class="bi bi-heart-fill small text-muted btn btn-sm btn-outline-dark" type="submit"></button>
                                                         </form>
                                                 </li>
+                                                @if (Auth::user()->cart->products->contains($product->id))
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
-                                                        href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a>
+                                                        href="{{ route('cart.amount',$product) .'/add'}}">Add to cart</a>
                                                 </li>
+                                                @else
+                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
+                                                    href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a>
+                                                </li>
+                                                @endif
                                             @else
                                                 <li class="list-inline-item m-0 p-0">
                                                     <a class="btn btn-sm btn-outline-dark"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                             class="bi bi-heart"></i></a>
                                                 </li>
+                                                @if (Auth::user()->cart->products->contains($product->id))
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
-                                                        href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a>
+                                                        href="{{ route('cart.amount',$product) .'/add'}}">Add to cart</a>
                                                 </li>
+                                                @else
+                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
+                                                    href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a>
+                                                </li>
+                                                @endif
                                             @endif
                                         @else
                                             <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
@@ -177,11 +189,19 @@
                                                         </div>
                                                     </div>
                                                     @if (Auth::user())
-                                                        <div class="col-sm-5"><a
-                                                                class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
-                                                                href="{{ route('cart.addProduct', $product->id) }}">Add to
-                                                                cart</a></div>
+                                                    @if (Auth::user()->cart->products->contains($product->id))
+                                                    <div class="col-sm-5"><a
+                                                        class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
+                                                        href="{{ route('cart.amount',$product) .'/add'}}">Add to
+                                                        cart</a></div>
+                                                    </div>
+                                                @else
+                                                <div class="col-sm-5"><a
+                                                    class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
+                                                    href="{{ route('cart.addProduct', $product->id) }}">Add to
+                                                    cart</a></div>
                                                 </div>
+                                                @endif
                                                 @if (Auth::user()->whishlist->products->contains($product->id))
                                                 <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                                                     @method('DELETE')
