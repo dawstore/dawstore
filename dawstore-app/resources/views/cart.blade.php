@@ -73,13 +73,13 @@
                                             </div>
                                         </td>
                                         <td class="p-3 align-middle border-light">
-                                            <p class="mb-0 small">${{$product->price * $product->price}}</p>
+                                            <p class="mb-0 small">${{$product->price}}</p>
                                         </td>
                                         <td class="p-3 align-middle border-light"><a class="reset-anchor" href="#!">
                                             <form action="{{ route('cart', $product) }}" method="POST" class="d-inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="fas fa-trash-alt small text-muted" type="submit"><i class="bi bi-trash"></i></button>
+                                                <button class="fas fa-trash-alt small text-muted" type="submit"></button>
                                             </form>
                                     </tr>
                                 @endforeach
@@ -110,8 +110,10 @@
                                         class="text-uppercase small font-weight-bold">Total</strong><span>${{$total}}</span></li>
                                 <li>
                                     <div class="input-group mb-0">
+                                        @if (count(Auth::user()->cart->products) > 0) 
                                         <a class="btn btn-outline-warning pageButtons text-dark btn-sm ld ld-heartbeat" href="{{ url('checkout') }}">Procceed to
                                         checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+                                        @endif
                                     </div>
                                 </li>
                             </ul>

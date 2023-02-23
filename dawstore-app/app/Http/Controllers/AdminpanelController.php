@@ -100,48 +100,6 @@ class AdminpanelController extends Controller
         return back();
 
     }
-
-
-/* CATEGORIAS */
-
-
-    public function category()
-    {
-        $categories = Category::all(); // Nos saca todas las categorias de la BBDD
-        return view('admin/category-manager', @compact('categories'));
-    }
-
-    public function insert_category(Request $request)
-    {
-        $categoryInsert = new Category;
-        $categoryInsert->name = $request->name;
-        $categoryInsert->description = $request->desc;
-        $categoryInsert->save();
-        notify()->success('Product Category created Succefully!');
-        return back();
-    }
-    public function edit_category($id)
-    {
-        $category = Category::findOrFail($id);
-        return view('admin/edit-category', compact('category'));
-    }
-    public function update_category(Request $request, $id)
-    {
-        $categoryUpdate = Category::findOrFail($id);
-        $categoryUpdate->name = $request->name;
-        $categoryUpdate->description = $request->description;
-        $categoryUpdate->update();
-        notify()->success('Product Edited successfully!');
-        return back();
-    }
-
-    public function delete_category($id) {
-        $deleteCategory = Category::findOrFail($id);
-        $deleteCategory->delete();
-
-        return notify()->success('Category deleted successfully!');
-
-    }
     
     /* MARCAS */
 
@@ -173,10 +131,15 @@ class AdminpanelController extends Controller
     }        
 
     public function delete_brand($id) 
-    {
-        $deleteBrand = Brand::findOrFail($id);
-        $deleteBrand->delete();
-        return back()->with('message', '');
+    {   
+
+        if (Product::where('brand_id', $id)->exists()) {
+            return back()->with('message', 'No se puede eliminar una marca hasta que no se hayan eliminado sus productos');
+        } else {
+            $deleteBrand = Brand::findOrFail($id);
+            $deleteBrand->delete();
+            return back()->with('message', '');
+        }
     }
 }
 
