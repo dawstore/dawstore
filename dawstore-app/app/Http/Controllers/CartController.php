@@ -18,7 +18,8 @@ class CartController extends Controller
     }
 
     public function addProduct(Request $request,$id){
-
+        //TODO: Si ya existe sumarle una unidad
+        
         $user = User::find(Auth::id());
         $cart=$user->cart;
         $product = Product::find($request->product_id);
@@ -41,6 +42,7 @@ class CartController extends Controller
         $products=$user->cart->products;
         $total = 0;
         foreach($products as $product){
+            //TODO: * por la cantidad withPivot ()
             $total += $product->price;
         }
         return $total;
