@@ -16,31 +16,16 @@ Profile Admin
                     <div class="card-header">
                         <h5 class="card-title mb-0">Profile Details</h5>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body text-center justify-content-center d-flex">
                         <img src="{{URL::asset('/img/dashboard/user-default.png')}}" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
-                        <h5 class="card-title mb-0">nombre admin</h5>
-                        <div class=" mb-2"><span class="badge bg-danger">ADMIN</span></div>
-
-                        <div>
-                            <p>Poner aqui el estado</p>
-                        </div>
                     </div>
                     <hr class="my-0" />
-                    <div class="card-body">
-                        <label for="bio" class="form-label">Bio</label>
-                        <input type="text" id="bio" class="form-control" aria-describedby="passwordHelpBlock">
-                        <div id="passwordHelpBlock" class="form-text">
-                            Bio must be 8-20 characters long, contain letters and numbers.
-                        </div>
-                    </div>
                     <hr class="my-0" />
                     <div class="card-body">
                         <h5 class="h6 card-title">About</h5>
                         <ul class="list-unstyled mb-0">
-                            <li class="mb-1"><span data-feather="home" class="feather-sm me-1"></span> Lives in <a href="#">San Francisco, SA</a></li>
-
-                            <li class="mb-1"><span data-feather="briefcase" class="feather-sm me-1"></span> Works at <a href="#">GitHub</a></li>
-                            <li class="mb-1"><span data-feather="map-pin" class="feather-sm me-1"></span> From <a href="#">Boston</a></li>
+                            <li class="mb-1"><span data-feather="user" class="feather-sm me-1"></span>{{ Auth::user()->username }} <a href="#"></a></li>
+                            <li class="mb-1"><span data-feather="tag" class="feather-sm me-1"></span><span class="badge bg-danger">ADMIN</span></li>
                         </ul>
                     </div>
                 </div>
@@ -159,12 +144,6 @@ Profile Admin
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-
-                            <hr />
-                            <div class="d-grid">
-                                <a href="#" class="btn btn-primary">Load more</a>
                             </div>
                         </div>
                     </div>

@@ -20,12 +20,6 @@
                 </a>
             </li>
 
-            <li class="sidebar-item @yield('category-manager-active')">
-                <a class="sidebar-link" href="{{url ('admin/category-manager')}}">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Category</span>
-                </a>
-            </li>
-
             <li class="sidebar-item @yield('brand-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/brand-manager')}}">
                     <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Brand</span>
@@ -133,16 +127,16 @@
                 </a>
 
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                    <i class="align-middle" data-feather="user"></i> <span class="text-dark">Charles Hall</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="text-dark">{{ Auth::user()->username }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{url ('admin/profile-admin')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                     <a class="dropdown-item" href="{{url ('admin/admin-panel')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Dashboard</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{url ('/')}}">Log out</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>
