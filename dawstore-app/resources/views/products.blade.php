@@ -46,25 +46,28 @@
 
                     </ul>
 
-                </div>
-                <!-- SHOP LISTING-->
-                <div class="col-lg-9 order-1 order-lg-2 mb-5 mb-lg-0">
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-lg-6 mb-2 mb-lg-0">
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
-                                <li class="list-inline-item">
-                                    <select class="selectpicker" onchange="location = this.value;"
-                                        data-customclass="form-control form-control-sm">
-                                        <option value>Sort By</option>
-                                        <option value="{{ url('products', $genre) . '/4' }}">Default sorting</option>
-                                        <option value="{{ url('products', $genre) . '/1' }}">A-Z</option>
-                                        <option value="{{ url('products', $genre) . '/0' }}">Z-A</option>
-                                        <option value="{{ url('products', $genre) . '/2' }}">Price: Low to High </a></option>
-                                        <option value="{{ url('products', $genre) . '/3' }}">Price: High to Low </a></option>
-                                    </select>
-                                </li>
+      </div>
+      <!-- SHOP LISTING-->
+      <div class="col-lg-9 order-1 order-lg-2 mb-5 mb-lg-0">
+        <div class="row mb-3 align-items-center">
+          <div class="col-lg-6 mb-2 mb-lg-0">
+          </div>
+          <div class="col-lg-6">
+            <ul class="list-inline d-flex align-items-center justify-content-lg-end mb-0">
+              <li class="list-inline-item">
+                @if ($genre == 'Male' || $genre == 'Female')
+                  <select class="selectpicker" onchange="location = this.value;" data-customclass="form-control form-control-sm">
+                  <option value>Sort By</option>
+                  <option value="{{url('products',$genre)."/4"}}">Default sorting</option>
+                  <option value="{{url('products',$genre)."/1"}}">A-Z</option>
+                  <option value="{{url('products',$genre)."/0"}}">Z-A</option>
+                  <option value="{{url('products',$genre)."/2"}}">Price: Low to High </a></option>
+                  <option value="{{url('products',$genre)."/3"}}">Price: High to Low </a></option>
+                </select>
+                @endif
+                
+              </li>
+
                             </ul>
                         </div>
                     </div>

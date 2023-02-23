@@ -133,6 +133,7 @@ Route::get('/payment', function () {
 })->name('payment');
 
 //Contact form
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -150,18 +151,6 @@ Route::post('/admin/product-manager', [ AdminpanelController::class, 'insert' ])
 Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product');
 
 Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
-
-//CATEGORIAS
-
-Route::get('/admin/category-manager', [ AdminpanelController::class,'category' ]);
-
-Route::get('/admin/edit-category/{id}', [ AdminpanelController::class, 'edit_category' ]) -> name('edit-category');
-
-Route::post('/admin/category-manager', [ AdminpanelController::class, 'insert_category' ]) -> name('insert-category');
-
-Route::put('/admin/edit-category/{id}', [ AdminpanelController::class, 'update_category' ]) -> name('update-category');
-
-Route::delete('/admin/category-manager/{id}', [ AdminpanelController::class, 'delete_category' ]) -> name('category-manager');
 
 
 //BRAND
