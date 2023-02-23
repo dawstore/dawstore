@@ -80,9 +80,11 @@
                                         @if (Auth::user())
                                             @if (Auth::user()->whishlist->products->contains($product->id))
                                                 <li class="list-inline-item m-0 p-0">
-                                                    <a class="btn btn-sm btn-outline-dark"
-                                                        href="{{ route('whishlist', $product->id) }}"><i
-                                                            class="bi bi-heart-fill"></i></a>
+                                                    <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
+                                                        @method('DELETE')
+                                                        @csrf
+                                                        <button class="bi bi-heart-fill small text-muted btn btn-sm btn-outline-dark" type="submit"></button>
+                                                        </form>
                                                 </li>
                                                 <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
                                                         href="{{ route('cart.addProduct', $product->id) }}">Add to cart</a>
@@ -181,9 +183,11 @@
                                                                 cart</a></div>
                                                 </div>
                                                 @if (Auth::user()->whishlist->products->contains($product->id))
-                                                    <a class="btn btn-link text-dark text-decoration-none p-0"
-                                                        href="{{ route('whishlist.addProduct', $product->id) }}"><i
-                                                            class="bi bi-heart-fill"></i> Add to wish list</a>
+                                                <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                    <button class="bi bi-heart-fill medium text-muted " type="submit"> Remove to wish list</button>    
+                                                    </form>
                                                 @else
                                                     <a class="btn btn-link text-dark text-decoration-none p-0"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
