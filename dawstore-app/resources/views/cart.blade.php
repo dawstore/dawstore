@@ -66,7 +66,7 @@
                                                     <a class="dec-btn p-0" href="{{route ('cart.removeAmount', $product)}}">
                                                         <i class="fas fa-caret-left"></i></a>
                                                     <input class="form-control form-control-sm border-0 shadow-0 p-0"
-                                                        type="number" value="{{$product->pivot->amount}}" />
+                                                        type="text" disabled value="{{$product->pivot->amount}}" />
                                                     <a class="inc-btn p-0" href="{{route ('cart.addAmount', $product)}}">
                                                         <i class="fas fa-caret-right"></i></a>
                                                 </div>

@@ -79,9 +79,11 @@ Route::get('/cart', [ CartController::class, 'showCart' ])->name('cart.products'
 
 Route::delete('/cart/{id}', [ CartController::class, 'delete' ]) -> name('cart');
 
+Route::get('/cart/{id}', [ CartController::class, 'removeAmount' ]) -> name('cart.removeAmount');
+
 Route::get('/cart/{id}', [ CartController::class, 'addAmount' ]) -> name('cart.addAmount');
 
-Route::get('/cart/{id}', [ CartController::class, 'removeAmount' ]) -> name('cart.removeAmount');
+
 
 //WHITELIST
 
