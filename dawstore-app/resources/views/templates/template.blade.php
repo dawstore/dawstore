@@ -459,7 +459,7 @@
                     <p class="small text-muted mb-0">&copy; 2023 All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="small text-muted tet-black mb-0">Template designed by Mario, Oscar & Víctor</p>
+                    <p class="small text-muted tet-black mb-0">TelloSheoes designed by Mario, Oscar & Víctor</p>
                 </div>
             </div>
         </div>

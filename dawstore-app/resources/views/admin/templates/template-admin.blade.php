@@ -34,8 +34,11 @@
                     Log Out and go to Store
                 </div>
                 <div class="d-grid">
-                    <a href="{{url ('/')}}" class="btn btn-danger">Log Out</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">{{ __('Logout') }}</a>
                 </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>
