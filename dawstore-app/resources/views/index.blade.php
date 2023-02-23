@@ -179,34 +179,35 @@
                                                                 class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
                                                                 href="{{ route('cart.addProduct', $product->id) }}">Add to
                                                                 cart</a></div>
-                                                    @else
-                                                        <div class="col-sm-5"><a
-                                                                class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
-                                                                href="{{ route('login') }}">Add to cart</a></div>
-                                                    @endif
                                                 </div>
                                                 @if (Auth::user()->whishlist->products->contains($product->id))
                                                     <a class="btn btn-link text-dark text-decoration-none p-0"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                             class="bi bi-heart-fill"></i> Add to wish list</a>
-                                                @elseif (!Auth::user()->whishlist->products->contains($product->id))
+                                                @else
                                                     <a class="btn btn-link text-dark text-decoration-none p-0"
                                                         href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                             class="bi bi-heart"></i> Add to wish list</a>
-                                                @elseif (!Auth::user())
-                                                    <a class="btn btn-link text-dark text-decoration-none p-0"
-                                                        href="{{ route('login') }}"><i class="bi bi-heart"></i> Add
-                                                        to wish list</a>
                                                 @endif
+                                            @else
+                                                <div class="col-sm-5"><a
+                                                        class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0 "
+                                                        href="{{ route('login') }}">Add to cart</a></div>
+
                                             </div>
+                                            <a class="btn btn-link text-dark text-decoration-none p-0"
+                                                href="{{ route('login') }}"><i class="bi bi-heart"></i> Add
+                                                to wish list</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
-        </section>
+            </div>
+    @endforeach
+    </section>
 
         <!-- SERVICES-->
         <section class="py-5 bg-light" data-aos="fade-right">
