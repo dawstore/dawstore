@@ -16,7 +16,26 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {  
+        
+        $name = ['Mario Ariza', 'Víctor Torres', 'Óscar Povea'];
+        $username = ['marioariza_admin', 'victortorres_admin', 'oscarpovea_admin'];
+        $email = ['marioarizaadmin@admintello.com', 'victortorresadmin@admintello.com', 'oscarpoveaadmin@admintello.com'];
+        $password = ['marioadmin', 'victoradmin', 'oscaradmin'];
+        $status = ['Admin', 'Admin', 'Admin'];
+
+        $tamaño = sizeof($name);
+
+        for ($i = 0; $i < $tamaño; $i++) {
+            DB::table('users')->insert([
+                'name' => $name[$i],
+                'username' => $username[$i],
+                'email' => $email[$i],
+                'password' => $password[$i],
+                'status' => $status[$i]
+            ]);
+        }
+
         $brands = ['Adidas', 'Nike', 'New Balance','Jordan'];
 
         $tamaño = sizeof($brands);
