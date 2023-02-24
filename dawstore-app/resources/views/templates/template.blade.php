@@ -2,13 +2,6 @@
 
 @section('navbar')
 
-<!--Cookies-->
-<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-  <strong>Tello Store</strong> uses cookies to personalise content and ads
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<!---->
-
 <!-- navbar-->
 <header class="header bg-white">
 

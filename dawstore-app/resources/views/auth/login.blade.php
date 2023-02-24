@@ -10,7 +10,7 @@ Login
         <form method="POST" action="{{ route('login') }}">
             @csrf
 			<h1>Login</h1>
-			<label for="email" class="col-md-4 col-form-label text-md-right"></label>     
+			<label for="email" class="col-md-4 col-form-label text-md-right"></label>
             <input id="email" type="email" placeholder="Email Address" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -24,18 +24,11 @@ Login
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            <label class="form-check-label" for="remember">
-                {{ __('Remember Me') }}
+
             </label>
-            @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                </a>
-            @endif
             <button type="submit">
                 {{ __('Login') }}
-            </button>     
+            </button>
 		</form>
 	</div>
 	<div class="overlay-container">

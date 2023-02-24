@@ -15,17 +15,18 @@ class WhishlistController extends Controller
         $products=$user->whishlist->products;
         return view('whishlist', @compact('products'));
     }
-   
+
 
     public function addProduct(Request $request,$id){
-       
+
         $user = User::find(Auth::id());
         $whishlist=$user->whishlist;
         $product = Product::find($request->product_id);
         $whishlist->products()->attach($id);
-       
-        return back()->with('');
-   
+        smilify('success', 'Product added to the Wishlist!');
+
+        return back();
+
     }
 
     public function delete(Request $request,$id) {
@@ -34,8 +35,7 @@ class WhishlistController extends Controller
         $product = Product::find($request->product_id);
 
         $whishlist->products()->detach($id);
-
-        notify()->success('');
+        smilify('success', 'Product removed!');
         return back();
 
     }
