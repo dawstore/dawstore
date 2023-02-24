@@ -179,22 +179,7 @@
                                                     <h2 class="h4">{{ $product->name }}</h2>
                                                     <p class="text-muted">${{ $product->price }}</p>
                                                     <p class="text-sm mb-4">{{ $product->description }}</p>
-                                                    <div class="row align-items-stretch mb-4 gx-0">
-                                                        <div class="col-sm-7">
-                                                            <div
-                                                                class="border d-flex align-items-center justify-content-between py-1 px-3">
-                                                                <span
-                                                                    class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
-                                                                <div class="quantity">
-                                                                    <button class="dec-btn p-0"><i
-                                                                            class="fas fa-caret-left"></i></button>
-                                                                    <input class="form-control border-0 shadow-0 p-0"
-                                                                        type="text" value="1">
-                                                                    <button class="inc-btn p-0"><i
-                                                                            class="fas fa-caret-right"></i></button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="row align-items-stretch mb-4 gx-0 d-flex align-items-center justify-content-center">
                                                         @if (Auth::user())
                                                         @if (Auth::user()->cart->products->contains($product->id))
                                                         <div class="col-sm-5"><a
@@ -213,10 +198,10 @@
                                                     <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                                                         @method('DELETE')
                                                         @csrf
-                                                        <button class="bi bi-heart-fill medium text-muted " type="submit"> Remove to wish list</button>    
+                                                        <button class="bi bi-heart-fill medium text-muted d-flex align-items-center justify-content-center" type="submit"> Remove to wish list</button>    
                                                         </form>
                                                     @else
-                                                        <a class="btn btn-link text-dark text-decoration-none p-0"
+                                                        <a class="btn btn-link text-dark text-decoration-none p-0 d-flex align-items-center justify-content-center"
                                                             href="{{ route('whishlist.addProduct', $product->id) }}"><i
                                                                 class="bi bi-heart"></i> Add to wish list</a>
                                                     @endif
@@ -226,7 +211,7 @@
                                                             href="{{ route('login') }}">Add to cart</a></div>
     
                                                 </div>
-                                                <a class="btn btn-link text-dark text-decoration-none p-0"
+                                                <a class="btn btn-link text-dark text-decoration-none p-0 d-flex align-items-center justify-content-center"
                                                     href="{{ route('login') }}"><i class="bi bi-heart"></i> Add
                                                     to wish list</a>
                                                 @endif

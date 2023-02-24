@@ -50,10 +50,10 @@
                                     <tr>
                                         <th class="ps-0 py-3 border-light" scope="row">
                                             <div class="d-flex align-items-center">
-                                                <a class="reset-anchor d-block animsition-link" href="detail.html">
+                                                <a class="reset-anchor d-block animsition-link" href="{{ route('detail', $product) }}/{{ $product->brand_id }}">
                                                     <img src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." width="70" /></a>
                                                 <div class="ms-3"><strong class="h6">
-                                                        <a class="reset-anchor animsition-link" href="detail.html">{{$product->name}}</a></strong></div>
+                                                        <a class="reset-anchor animsition-link" href="{{ route('detail', $product) }}/{{ $product->brand_id }}">{{$product->name}}</a></strong></div>
                                             </div>
                                         </th>
                                         <td class="p-3 align-middle border-light">
