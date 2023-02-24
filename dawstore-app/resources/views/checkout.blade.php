@@ -70,8 +70,8 @@ Checkout
                         </div>
                         <div class="col-lg-12 form-group">
                             <!--Añadir el payment-->
-                            <button class="btn btn-dark" type="submit">Pay with Credit or Debit card<i class="bi bi-credit-card"></i></button>
-                            <button class="btn  btn-warning" type="submit">Pay with Paypal<i class="bi bi-paypal"></i></button>
+                            <button class="btn btn-dark" type="submit">Pay with Credit or Debit card <i class="bi bi-credit-card"></i></button>
+                            <button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button>
                         </div>
                     </div>
                 </form>

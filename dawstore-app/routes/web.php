@@ -79,6 +79,8 @@ Route::get('/cart', [ CartController::class, 'showCart' ])->name('cart.products'
 
 Route::delete('/cart/{id}', [ CartController::class, 'delete' ]) -> name('cart');
 
+Route::get('/cart/{id}/{option?}', [ CartController::class, 'amount' ]) -> name('cart.amount');
+
 //WHITELIST
 
 Route::get('addwhishlist/{id?}', [ WhishlistController::class, 'addProduct' ])->name('whishlist.addProduct');

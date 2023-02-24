@@ -51,7 +51,7 @@
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{url ('cart')}}">
-                            <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal">({{count(Auth::user()->cart->products)}})</small></a>
+                            <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small class="text-gray fw-normal"> ({{count(Auth::user()->cart->products)}})</small></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url ('whishlist')}}">
@@ -446,7 +446,7 @@
                     <p class="small text-muted mb-0">&copy; 2023 All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="small text-muted tet-black mb-0">TelloSheoes designed by Mario, Oscar & Víctor</p>
+                    <p class="small text-muted tet-black mb-0">Tello Store make by Mario, Óscar & Víctor</p>
                 </div>
             </div>
         </div>
