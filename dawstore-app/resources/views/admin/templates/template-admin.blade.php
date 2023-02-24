@@ -63,6 +63,7 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{url ('admin/profile-admin')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                     <a class="dropdown-item" href="{{url ('admin/admin-panel')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Dashboard</a>
+                    <a class="dropdown-item" href="{{url ('/')}}"><i class="align-middle me-1" data-feather="home"></i> Tello Shoes Home</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
