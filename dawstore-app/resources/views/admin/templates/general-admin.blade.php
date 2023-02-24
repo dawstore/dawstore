@@ -22,6 +22,7 @@
 
 </head>
 <body>
+@if (Auth::user()->status == 'Admin')
 <x:notify-messages />
 
     <div class="wrapper pageLoader">
@@ -54,6 +55,7 @@
 
         </div>
     </div>
+@endif
 </body>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
