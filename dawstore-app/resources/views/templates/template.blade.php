@@ -96,7 +96,7 @@
                               <li>
                                 <a class="dropdown-item" href="{{ route('profile') }}" >Profile</a></a></li>
                             <li>
-                                <a class="dropdown-item" href="{{ route('admin-panel') }}" >Profile</a></a></li>
+                                <a class="dropdown-item" href="{{ url('/admin/admin-panel') }}" >Admin Panel</a></a></li>
                               <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
                             </ul>

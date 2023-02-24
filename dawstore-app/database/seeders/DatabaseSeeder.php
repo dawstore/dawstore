@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\Image;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,7 +32,7 @@ class DatabaseSeeder extends Seeder
                 'name' => $name[$i],
                 'username' => $username[$i],
                 'email' => $email[$i],
-                'password' => $password[$i],
+                'password' => Hash::make($password[$i]),
                 'status' => $status[$i]
             ]);
         }
