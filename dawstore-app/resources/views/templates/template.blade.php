@@ -120,23 +120,23 @@
                     <div class="row align-items-stretch">
                         <div class="p-4 my-md-4">
                             <h2 class="h4">Profile Manager</h2>
-
-                            {{ csrf_field() }}
-
+                            <form action="{{ route('edit-profile') }}" method="POST" enctype="multipart/form-data"> 
+                                @method('PUT')
+                                @csrf 
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="profile-name" name="profile-name" placeholder="{{Auth::user()->name}}" required>
+                                    <input class="form-control form-control-lg mb-4" type="text" id="name" name="name" placeholder="{{Auth::user()->name}}">
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="profile-username" name="profile-username" placeholder="{{Auth::user()->username}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="text" id="username" name="username" placeholder="{{Auth::user()->username}} ">
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="email" id="profile-email" name="profile-email" placeholder="{{Auth::user()->email}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="email" id="email" name="email" placeholder="{{Auth::user()->email}} ">
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-phone" name="contact-phone" placeholder="{{Auth::user()->phone}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="text" id="phone" name="phone" placeholder="{{Auth::user()->phone}} ">
                                 </div>
                                 <div class="col-lg-12">
-                                    <input class="form-control form-control-lg mb-4" type="text" id="contact-address" name="contact-address" placeholder="{{Auth::user()->address}} " required>
+                                    <input class="form-control form-control-lg mb-4" type="text" id="address" name="address" placeholder="{{Auth::user()->address}} ">
                                 </div>
                                 <div class="col-lg-12">
                                     <input class="btn btn-primary" type="submit" name="Send">

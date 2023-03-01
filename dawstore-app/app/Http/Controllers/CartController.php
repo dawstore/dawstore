@@ -74,4 +74,26 @@ class CartController extends Controller
         return $totalProducto;
     }
 
+
+    // PROFILE
+
+    public function updateUser(Request $request)
+    {
+        $userUpdate = User::find(Auth::id());
+        if ($request->name != null) {
+            $userUpdate->name = $request->name;
+        }
+        if ($request->username != null) {
+            $userUpdate->username = $request->username;
+        }
+        if ($request->email != null) {
+            $userUpdate->email = $request->email;
+        }
+        $userUpdate->phone = $request->phone;
+        $userUpdate->address = $request->address;
+        $userUpdate->update();
+        smilify('success', 'User edit successfully!');
+        return back();
+    }
+
 }
