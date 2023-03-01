@@ -17,9 +17,7 @@ class CartController extends Controller
         return view('cart', @compact('products','total'));
     }
 
-    public function addProduct(Request $request,$id){
-        //TODO: Si ya existe sumarle una unidad
-        
+    public function addProduct(Request $request,$id) {
         $user = User::find(Auth::id());
         $cart=$user->cart;
         $product = Product::find($request->product_id);
@@ -44,17 +42,25 @@ class CartController extends Controller
             if ($product->id == $id) {
                 $amount = $product->pivot;
                 if ($option == 'add') {
-                    $amount->amount++;
-                } else {
-                    $amount->amount--;
-                }
+                    if ($amount->amount >= 0) {
+                        $amount->amount++;
+                    } else {
+                        $amount->amount;
+                    }
+                } else if ($option == 'remove'){
+                    if ($amount->amount > 0) {
+                        $amount->amount--;
+                    } else {
+                        $amount->amount;
+                    }
+                } 
                 $amount->update();
             }
         }
         return back();
     }
 
-    private function total(){//funcion privada por que solo se va a utilizar aca
+    private function total() {
         $user = User::find(Auth::id());
         $products=$user->cart->products;
         $totalProducto = 0;
