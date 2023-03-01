@@ -28,13 +28,13 @@
                             <div class="textInput" id="login_emaildiv">
                                 <div class="fieldWrapper">
                                     <label for="email" class="fieldLabel">Email</label>
-                                    <input id="email" name="login_email" type="email" class="hasHelp  validateEmpty " required="required" aria-required="true" value="" autocomplete="off" placeholder="Email">
+                                    <input id="email" name="login_email" type="email" class="hasHelp  validateEmpty " required="required" aria-required="true" value="" autocomplete="off" placeholder="Email" required>
                                </div>
                             </div>
                             
                          <div class="textInput lastInputField" id="login_passworddiv">
                              <div class="fieldWrapper"><label for="password" class="fieldLabel">Password</label>
-                                <input id="password" name="login_password" type="password" class="hasHelp  validateEmpty " required="required" aria-required="true" value="" placeholder="Password">
+                                <input id="password" name="login_password" type="password" class="hasHelp  validateEmpty " required="required" aria-required="true" value="" placeholder="Password" required>
                            </div>
                          </div>
                        </div>

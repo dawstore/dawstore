@@ -43,7 +43,11 @@ class CartController extends Controller
                 $amount = $product->pivot;
                 if ($option == 'add') {
                     if ($amount->amount >= 0) {
-                        $amount->amount++;
+                        if ($amount->amount < $product->stock) {
+                            $amount->amount++;
+                        } else {
+                            $amount->amount;
+                        }
                     } else {
                         $amount->amount;
                     }
