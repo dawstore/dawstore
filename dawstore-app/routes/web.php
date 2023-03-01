@@ -76,6 +76,8 @@ Route::get('/profile', function () {
 
 Route::get('/checkout', [ CheckoutController::class, 'showCheck']);
 
+Route::post('/checkout', [ CheckoutController::class, 'createOrder'])->name('create-order');
+
 Route::get('/payment/{total}', [ CheckoutController::class, 'showPay']);
 
 //CARRITO
