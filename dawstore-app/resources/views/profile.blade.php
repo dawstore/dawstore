@@ -30,12 +30,11 @@ Profile
                             {{ Auth::user()->name }}
                             @endauth
                         </h5>
-                        <p class="text-muted mb-1">
+                        <p class="text-muted mb-3">
                             @auth
                             {{ Auth::user()->username }}
                             @endauth
                         </p>
-                        <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
                         <div class="d-flex justify-content-center mb-2">
                             <a href="#profile-modal" data-bs-toggle="modal">
                                 <button type="button" class="btn btn-outline-primary ms-1 text-dark ">Edit Profile</button>
@@ -44,12 +43,6 @@ Profile
                                 <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Password</button>
                             </a>
                         </div>
-                    </div>
-                </div>
-                <div class="card mb-4 mb-lg-0">
-                    <div class="card-body p-0">
-                        <p class="mb-4  text-center"><span class="text-primary text-center font-italic me-1">Add default</span> payment method
-
                     </div>
                 </div>
             </div>

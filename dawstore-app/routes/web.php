@@ -158,7 +158,9 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+// PROFILE
 
+Route::put('/profile/edit-profile', [ CartController::class, 'updateUser' ]) -> name('edit-profile');
 
 //PRODUCTS
 
