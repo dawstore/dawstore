@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->references('id')->on('orders');
             $table->foreignId('product_id')->references('id')->on('products');
-            $table->float('price');
-            $table->integer('sku');
+            $table->float('price_quantity');
             $table->integer('quantity');
             $table->timestamps();
         });

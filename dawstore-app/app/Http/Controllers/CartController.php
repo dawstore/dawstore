@@ -47,6 +47,7 @@ class CartController extends Controller
                             $amount->amount++;
                         } else {
                             $amount->amount;
+                            smilify('error', 'You have reached the maximum stock!');
                         }
                     } else {
                         $amount->amount;

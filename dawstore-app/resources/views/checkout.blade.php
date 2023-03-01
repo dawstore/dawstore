@@ -30,7 +30,8 @@ Checkout
         <h2 class="h5 text-uppercase mb-4">Billing details</h2>
         <div class="row">
             <div class="col-lg-8">
-                <form action="#">
+                <form action="{{ route('create-order') }}" method="POST" enctype="multipart/form-data"> 
+                    @csrf
                     <div class="row gy-3">
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="firstName">First name </label>
@@ -42,7 +43,7 @@ Checkout
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="checkout-email">Email address </label>
-                            <input class="form-control form-control-lg" type="email" id="checkout-email" name="checkout-email" placeholder="e.g. Jason@example.com" required>
+                            <input class="form-control form-control-lg" type="email" id="checkout-email" name="checkout_email" placeholder="e.g. Jason@example.com" required>
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="phone">Phone number </label>
@@ -51,7 +52,6 @@ Checkout
                         <div class="col-lg-6">
                             <label class="form-label text-sm text-uppercase" for="country">Country </label>
                             <select id="country" name="country" class="form-control form-control-lg" required>
-                                <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
         <optgroup id="country-optgroup-Africa" label="Africa">
             <option value="DZ" label="Algeria">Algeria</option>
             <option value="AO" label="Angola">Angola</option>
@@ -268,7 +268,7 @@ Checkout
             <option value="CS" label="Serbia and Montenegro">Serbia and Montenegro</option>
             <option value="SK" label="Slovakia">Slovakia</option>
             <option value="SI" label="Slovenia">Slovenia</option>
-            <option value="ES" label="Spain">Spain</option>
+            <option value="ES" label="Spain" selected>Spain</option>
             <option value="SJ" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
             <option value="SE" label="Sweden">Sweden</option>
             <option value="CH" label="Switzerland">Switzerland</option>
@@ -321,27 +321,27 @@ Checkout
                             <input class="form-control form-control-lg" type="text" id="city" name="city" placeholder="Your town/city name"required>
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address">Billing Address line 1 </label>
-                            <input class="form-control form-control-lg" type="text" id="address" name="address" placeholder="House number and street name" required>
+                            <label class="form-label text-sm text-uppercase" for="b_address">Billing Address line 1 </label>
+                            <input class="form-control form-control-lg" type="text" id="address" name="b_address" placeholder="House number and street name" required>
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address2">Billing Address line 2 (Optional)</label>
-                            <input class="form-control form-control-lg" type="text" id="address2" name="address2" placeholder="Apartment, Suite, Unit, etc (optional)">
+                            <label class="form-label text-sm text-uppercase" for="b_address2">Billing Address line 2 (Optional)</label>
+                            <input class="form-control form-control-lg" type="text" id="address2" name="b_address2" placeholder="Apartment, Suite, Unit, etc (optional)">
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address">Order Address line 1 </label>
-                            <input class="form-control form-control-lg" type="text" id="address" name="address" placeholder="House number and street name" required>
+                            <label class="form-label text-sm text-uppercase" for="o_address">Order Address line 1 </label>
+                            <input class="form-control form-control-lg" type="text" id="address" name="o_address" placeholder="House number and street name" required>
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address2">Order Address line 2 (Optional)</label>
-                            <input class="form-control form-control-lg" type="text" id="address2" name="address2" placeholder="Apartment, Suite, Unit, etc (optional)">
+                            <label class="form-label text-sm text-uppercase" for="o_address2">Order Address line 2 (Optional)</label>
+                            <input class="form-control form-control-lg" type="text" id="address2" name="o_address2" placeholder="Apartment, Suite, Unit, etc (optional)">
                         </div>
                     </div>
                     <br>
                     <div class="col-lg-12 form-group">
                         <!--Añadir el payment-->
-                        <a href="{{ url('payment', $total) }}"><button class="btn btn-dark" type="submit">Pay with Credit or Debit Card <i class="bi bi-credit-card"></i></button></a>
-                        <a href="{{ url('paypal') }}"><button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button></a>
+                        <button class="btn btn-dark" type="submit">Pay with Credit or Debit Card <i class="bi bi-credit-card"></i></button>
+                        <button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button>
                     </div>
                 </form>
             </div>
@@ -359,12 +359,12 @@ Checkout
                         </ul>
                     </div>
                 </div>
-                <br>
+                {{-- <br>
                     <div class="col-lg-12 form-group">
                         <!--Añadir el payment-->
                         <a href="{{ url('payment', $total) }}"><button class="btn btn-dark" type="submit">Pay with Credit or Debit Card <i class="bi bi-credit-card"></i></button></a>
                         <a href="{{ url('paypal') }}"><button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button></a>
-                    </div>
+                    </div> --}}
             </div>
         </div>
     </section>
