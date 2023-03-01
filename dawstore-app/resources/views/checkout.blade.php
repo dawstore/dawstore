@@ -52,26 +52,25 @@ Checkout
                             <label class="form-label text-sm text-uppercase" for="country">Country </label>
                             <input class="form-control form-control-lg" type="text" id="country" name="country" placeholder="Your country name" required>
                         </div>
+                        <div class="col-lg-6">
+                            <label class="form-label text-sm text-uppercase" for="city">Town/City </label>
+                            <input class="form-control form-control-lg" type="text" id="city" name="city" placeholder="Your town/city name"required>
+                        </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address">Address line 1 </label>
+                            <label class="form-label text-sm text-uppercase" for="address">Billing Address line 1 </label>
                             <input class="form-control form-control-lg" type="text" id="address" name="address" placeholder="House number and street name" required>
                         </div>
                         <div class="col-lg-12">
-                            <label class="form-label text-sm text-uppercase" for="address2">Address line 2 (Optional)</label>
+                            <label class="form-label text-sm text-uppercase" for="address2">Billing Address line 2 (Optional)</label>
                             <input class="form-control form-control-lg" type="text" id="address2" name="address2" placeholder="Apartment, Suite, Unit, etc (optional)">
                         </div>
-                        <div class="col-lg-6">
-                            <label class="form-label text-sm text-uppercase" for="city">Town/City </label>
-                            <input class="form-control form-control-lg" type="text" id="city" name="city" required>
+                        <div class="col-lg-12">
+                            <label class="form-label text-sm text-uppercase" for="address">Order Address line 1 </label>
+                            <input class="form-control form-control-lg" type="text" id="address" name="address" placeholder="House number and street name" required>
                         </div>
-                        <div class="col-lg-6">
-                            <label class="form-label text-sm text-uppercase" for="zip-code">Zip Code </label>
-                            <input class="form-control form-control-lg" type="text" id="zip-code" name="zip-code" required>
-                        </div>
-                        <div class="col-lg-12 form-group">
-                            <!--Añadir el payment-->
-                            <button class="btn btn-dark" type="submit">Pay with Credit or Debit card <i class="bi bi-credit-card"></i></button>
-                            <button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button>
+                        <div class="col-lg-12">
+                            <label class="form-label text-sm text-uppercase" for="address2">Order Address line 2 (Optional)</label>
+                            <input class="form-control form-control-lg" type="text" id="address2" name="address2" placeholder="Apartment, Suite, Unit, etc (optional)">
                         </div>
                     </div>
                 </form>
@@ -82,13 +81,19 @@ Checkout
                     <div class="card-body">
                         <h5 class="text-uppercase mb-4">Your order</h5>
                         <ul class="list-unstyled mb-0">
-                            <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Red digital smartwatch</strong><span class="text-muted small">$250</span></li>
+                            @foreach ($products as $product)
+                            <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">{{$product->name}} (x{{$product->pivot->amount}})</strong><span class="text-muted small">${{$product->price}} (${{$product->price * $product->pivot->amount}})</span></li>
                             <li class="border-bottom my-2"></li>
-                            <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Gray Nike running shoes</strong><span class="text-muted small">$351</span></li>
-                            <li class="border-bottom my-2"></li>
-                            <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small fw-bold">Total</strong><span>$601</span></li>
+                            @endforeach
+                            <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small fw-bold">Total</strong><span>${{$total}}</span></li>
                         </ul>
                     </div>
+                </div>
+                <br>
+                <div class="col-lg-12 form-group">
+                    <!--Añadir el payment-->
+                    <a href="{{ url('payment', $total) }}"><button class="btn btn-dark" type="submit">Pay with Credit or Debit Card <i class="bi bi-credit-card"></i></button></a>
+                    <a href="{{ url('paypal') }}"><button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button></a>
                 </div>
             </div>
         </div>

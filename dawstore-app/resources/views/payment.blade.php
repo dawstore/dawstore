@@ -5,7 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Payment - Tello Store</title>
+    <title>Tello Store | Card</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{URL::asset('img/logos/logoTello.png')}}">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{URL::asset('/css/payment.css')}}">
@@ -16,7 +18,7 @@
 <body>
 <div class="container">
     <div class="price">
-        <h1>Awesome, that's PRECIO DEL CARRITO !</h1>
+        <h1>Awesome, that's ${{$total}}!</h1>
     </div>
     <div class="card__container">
         <div class="card">
@@ -86,9 +88,7 @@
         <button type="submit"><i class="bi bi-lock"></i> Secure pay</button>
     </div>
 </div>
-
-
-<script src="{{URL::asset('/js/payment.css')}}"></script>
+<script src="{{URL::asset('/js/payment.js')}}"></script>
 </body>
 
 </html>

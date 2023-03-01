@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminpanelController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
@@ -70,6 +71,12 @@ Route::get('/whishlist', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
+
+// CHECKOUT
+
+Route::get('/checkout', [ CheckoutController::class, 'showCheck']);
+
+Route::get('/payment/{total}', [ CheckoutController::class, 'showPay']);
 
 //CARRITO
 
@@ -140,6 +147,10 @@ Route::get('/admin/forgot-password', function () {
 Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
+
+Route::get('/paypal', function () {
+    return view('paypal');
+})->name('paypal');
 
 //Contact form
 
