@@ -10,7 +10,7 @@ class ProductsController extends Controller
 {
     public function products()
     {
-        $products = Product::orderBy('stock', 'asc')->take(8)->get(); // Nos saca todos los productos de la BBDD
+        $products = Product::where('stock', '>', 0)->orderBy('stock', 'asc')->take(8)->get(); // Nos saca todos los productos de la BBDD
         return view('index', @compact('products'));
     }
     public function productsGenre($genre,$filter = 4,)
