@@ -12,13 +12,14 @@ class CartController extends Controller
     public function showCart()
     {
         $user = User::find(Auth::id());
-        $total = $this->total();//precio total
+        $total = $this->total();
         $products=$user->cart->products;
         return view('cart', @compact('products','total'));
     }
 
     public function addProduct(Request $request,$id){
-
+        //TODO: Si ya existe sumarle una unidad
+        
         $user = User::find(Auth::id());
         $cart=$user->cart;
         $product = Product::find($request->product_id);
@@ -36,14 +37,31 @@ class CartController extends Controller
 
     }
 
-     private function total(){//funcion privada por que solo se va a utilizar aca
+    public function amount ($id, $option) {
         $user = User::find(Auth::id());
         $products=$user->cart->products;
-        $total = 0;
         foreach($products as $product){
-            $total += $product->price;
+            if ($product->id == $id) {
+                $amount = $product->pivot;
+                if ($option == 'add') {
+                    $amount->amount++;
+                } else {
+                    $amount->amount--;
+                }
+                $amount->update();
+            }
         }
-        return $total;
+        return back();
+    }
+
+    private function total(){//funcion privada por que solo se va a utilizar aca
+        $user = User::find(Auth::id());
+        $products=$user->cart->products;
+        $totalProducto = 0;
+        foreach($products as $product){
+            $totalProducto += $product->price * $product->pivot->amount;
+        }
+        return $totalProducto;
     }
 
 }

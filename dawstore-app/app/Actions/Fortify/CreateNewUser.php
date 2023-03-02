@@ -27,10 +27,11 @@ class CreateNewUser implements CreatesNewUsers
                 'string',
                 'email',
                 'max:255',
+                'regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix',
                 Rule::unique(User::class),
             ],
             'password' => $this->passwordRules(),
-            'country' => ['required', 'string', 'max:255'],
+            // 'country' => ['required', 'string', 'max:255'],
         ])->validate();
 
         return User::create([
@@ -38,7 +39,7 @@ class CreateNewUser implements CreatesNewUsers
             'username' => $input['username'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'country' => $input['country'],
+            // 'country' => $input['country'],
         ]);
     }
 }

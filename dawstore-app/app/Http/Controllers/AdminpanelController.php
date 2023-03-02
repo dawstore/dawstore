@@ -29,19 +29,27 @@ class AdminpanelController extends Controller
     public function insert(Request $request)
     {
 
-        $productInsert = new Product;
-        $productInsert->sku = $request->sku;
-        $productInsert->name = $request->name;
-        $productInsert->price = $request->price;
-        $productInsert->description = $request->desc;
-        $productInsert->stock = $request->stock;
-        $productInsert->genre = $request->genre;
-        $productInsert->brand_id = $request->brand;
-        $productInsert->save();
+        $productsImages = count($request->images);
 
-        $i = 1;
-        foreach ($request->images as $image)
-        {
+        if ($productsImages < 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else if ($productsImages > 4) {
+            smilify('error', 'You have to upload 4 images to create the product!');
+            return back();
+        } else {
+            $productInsert = new Product;
+            $productInsert->sku = $request->sku;
+            $productInsert->name = $request->name;
+            $productInsert->price = $request->price;
+            $productInsert->description = $request->desc;
+            $productInsert->stock = $request->stock;
+            $productInsert->genre = $request->genre;
+            $productInsert->brand_id = $request->brand;
+            $productInsert->save();
+            $i = 1;
+            foreach ($request->images as $image)
+            {
             $imagen = new Image();
             $imagen->product_id = $productInsert->id;
             $imagen->image_name = $request->sku."-".$i.".".$image->extension();
@@ -50,8 +58,10 @@ class AdminpanelController extends Controller
             $imagen->save();
             $i++;
         }
-        notify()->success('Product created successfully!');
+        smilify('success', 'Product created successfully!');
         return back();
+        }
+        
     }
 
 
@@ -85,64 +95,60 @@ class AdminpanelController extends Controller
             $productUpdate->images = $nombreimagen;
         }
         $productUpdate->update();
-        return back()->with('mensaje', 'Producto editado exitosamente');
-    }        
+        smilify('success', 'Product edit successfully!');
+        return back();
+
+        // $productsImages = count($request->images);
+
+        // if ($productsImages < 4) {
+        //     smilify('error', 'You have to upload 4 images to create the product!');
+        //     return back();
+        // } else if ($productsImages > 4) {
+        //     smilify('error', 'You have to upload 4 images to create the product!');
+        //     return back();
+        // } else {
+        //     $productUpdate = Product::findOrFail($id);
+        //     $productUpdate->sku = $request->sku;
+        //     $productUpdate->name = $request->name;
+        //     $productUpdate->price = $request->price;
+        //     $productUpdate->description = $request->description;
+        //     $productUpdate->stock = $request->stock;
+        //     $productUpdate->genre = $request->genre;
+        //     if($request->hasFile("images")){
+        //         $file_path = Product::findOrFail($id);
+        //         if (File::exists(public_path("img/products/" . $file_path->images))) {
+        //             File::delete(public_path("img/products/" . $file_path->images));
+        //         }
+        //         $i = 1;
+        //         foreach ($request->images as $image) {
+        //         $imagen = new Image();
+        //         $imagen->product_id = $productUpdate->id;
+        //         $imagen->image_name = $request->sku."-".$i.".".$image->extension();
+        //         $ruta = public_path("img/products/".$request->sku."-files");
+        //         $image->move($ruta,$imagen->image_name);
+        //         $imagen->save();
+        //         $i++;
+        //         }
+        //     }
+        //     $productUpdate->update();
+        //     smilify('success', 'Product edit successfully!');
+        //     return back();
+        // }
+    }
 
 
-    public function delete($id) 
+
+    public function delete($id)
     {
         $deleteProduct = Product::findOrFail($id);
         $deleteImg = Image::where('product_id', $id);
         $deleteImg->delete();
         $deleteProduct->delete();
-
-        notify()->success('Product removed successfully!');
+        smilify('success', 'Product removed successfully!');
         return back();
 
     }
 
-
-/* CATEGORIAS */
-
-
-    public function category()
-    {
-        $categories = Category::all(); // Nos saca todas las categorias de la BBDD
-        return view('admin/category-manager', @compact('categories'));
-    }
-
-    public function insert_category(Request $request)
-    {
-        $categoryInsert = new Category;
-        $categoryInsert->name = $request->name;
-        $categoryInsert->description = $request->desc;
-        $categoryInsert->save();
-        notify()->success('Product Category created Succefully!');
-        return back();
-    }
-    public function edit_category($id)
-    {
-        $category = Category::findOrFail($id);
-        return view('admin/edit-category', compact('category'));
-    }
-    public function update_category(Request $request, $id)
-    {
-        $categoryUpdate = Category::findOrFail($id);
-        $categoryUpdate->name = $request->name;
-        $categoryUpdate->description = $request->description;
-        $categoryUpdate->update();
-        notify()->success('Product Edited successfully!');
-        return back();
-    }
-
-    public function delete_category($id) {
-        $deleteCategory = Category::findOrFail($id);
-        $deleteCategory->delete();
-
-        return notify()->success('Category deleted successfully!');
-
-    }
-    
     /* MARCAS */
 
     public function brand()
@@ -156,7 +162,8 @@ class AdminpanelController extends Controller
         $drandInsert = new Brand;
         $drandInsert->name = $request->name;
         $drandInsert->save();
-        return back() -> with('mensaje', '');
+        smilify('success', 'Brand add successfully!');
+        return back();
     }
     public function edit_brand($id)
     {
@@ -169,14 +176,23 @@ class AdminpanelController extends Controller
         $drandUpdate = Brand::findOrFail($id);
         $drandUpdate->name = $request->name;
         $drandUpdate->update();
-        return back()->with('mensaje', '');
-    }        
+        smilify('success', 'Brand update successfully!');
+        return back();
+    }
 
-    public function delete_brand($id) 
+
+    public function delete_brand($id)
     {
-        $deleteBrand = Brand::findOrFail($id);
-        $deleteBrand->delete();
-        return back()->with('message', '');
+        if (Product::where('brand_id', $id)->exists()) {
+            smilify('error','The brand cannot be removed until all products of that brand are deleted!');
+            return back()->with('message', '');
+
+        } else {
+            $deleteBrand = Brand::findOrFail($id);
+            $deleteBrand->delete();
+            smilify('success', 'Brand removed successfully!');
+            return back();
+        }
     }
 }
 

@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\Image;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +17,26 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
+    {  
+        
+        $name = ['Mario Ariza', 'Víctor Torres', 'Óscar Povea'];
+        $username = ['marioariza_admin', 'victortorres_admin', 'oscarpovea_admin'];
+        $email = ['marioarizaadmin@admintello.com', 'victortorresadmin@admintello.com', 'oscarpoveaadmin@admintello.com'];
+        $password = ['marioadmin', 'victoradmin', 'oscaradmin'];
+        $status = ['Admin', 'Admin', 'Admin'];
+
+        $tamaño = sizeof($name);
+
+        for ($i = 0; $i < $tamaño; $i++) {
+            DB::table('users')->insert([
+                'name' => $name[$i],
+                'username' => $username[$i],
+                'email' => $email[$i],
+                'password' => Hash::make($password[$i]),
+                'status' => $status[$i]
+            ]);
+        }
+
         $brands = ['Adidas', 'Nike', 'New Balance','Jordan'];
 
         $tamaño = sizeof($brands);
@@ -29,9 +49,9 @@ class DatabaseSeeder extends Seeder
 
         $sku = ['1','2','3','4','8','9','7','11','6','10','5'];
         $name = ['Adidas Forum','Adidas Yeezy Foam','Air Force 1','Nike Blazer','Nike Air Max 97 Premium','Nike Air Vapormax','New Balance 550','Adidas Yeezy','New Balance 530','Adidas Super Star','Jordan 4'];
-        $price = ['100','100','100','100','100','100','100','100','100','100','100'];
+        $price = ['200','250','70','80','120','90','150','140','70','100','170'];
         $description = ['Description 1','Description 2','Description 3','Description 4','Description 5','Description 6','Description 7','Description 8','Description 9','Description 10','Description 11'];
-        $stock = ['50','50','50','50','50','50','50','50','50','50','50'];
+        $stock = ['25','55','10','20','53','34','15','60','50','45','70'];
         $genre = ['Male','Unisex','Female','Male','Unisex','Female','Male','Unisex','Female','Male','Unisex'];
         $brand = ['1','1','2','2','2','2','3','1','3','1','4'];
 

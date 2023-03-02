@@ -69,9 +69,11 @@ Checkout
                             <input class="form-control form-control-lg" type="text" id="zip-code" name="zip-code" required>
                         </div>
                         <div class="col-lg-12 form-group">
-                        <h2 class="h5 text-uppercase mb-4">Payment Method</h2>
-                         <button class="btn btn-primary" type="submit">Paypal</button>
-                         <button class="btn btn-dark" type="submit">Credit or Debit Card</button>
+                            <!--Añadir el payment-->
+                            <button class="btn btn-dark" type="submit">Pay with Credit or Debit card <i class="bi bi-credit-card"></i></button>
+                            <a href="https://paypal.com">
+                                <button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button>
+                            </a>
                         </div>
                     </div>
                 </form>

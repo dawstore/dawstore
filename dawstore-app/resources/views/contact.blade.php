@@ -34,7 +34,7 @@ active
         <!-- BILLING ADDRESS-->
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <form action="{{route ('contact.store')}}" method="POST" >
+                <form action="#" method="POST" >
                     @csrf
                     <div class="row gy-3">
                         <div class="col-lg-6">

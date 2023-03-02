@@ -50,10 +50,10 @@
                                     <tr>
                                         <th class="ps-0 py-3 border-light" scope="row">
                                             <div class="d-flex align-items-center">
-                                                <a class="reset-anchor d-block animsition-link" href="detail.html">
+                                                <a class="reset-anchor d-block animsition-link" href="{{ route('detail', $product) }}/{{ $product->brand_id }}">
                                                     <img src="{{URL::asset('img/products/'.$product->sku.'-files/'. $product->images[0]->image_name)}}" alt="..." width="70" /></a>
                                                 <div class="ms-3"><strong class="h6">
-                                                        <a class="reset-anchor animsition-link" href="detail.html">{{$product->name}}</a></strong></div>
+                                                        <a class="reset-anchor animsition-link" href="{{ route('detail', $product) }}/{{ $product->brand_id }}">{{$product->name}}</a></strong></div>
                                             </div>
                                         </th>
                                         <td class="p-3 align-middle border-light">
@@ -63,23 +63,22 @@
                                             <div class="border d-flex align-items-center justify-content-between px-3"><span
                                                     class="small text-uppercase text-gray headings-font-family">Quantity</span>
                                                 <div class="quantity">
-                                                    <button class="dec-btn p-0">
-                                                        <i class="fas fa-caret-left"></i></button>
-                                                    <input class="form-control form-control-sm border-0 shadow-0 p-0"
-                                                        type="text" value="1" />
-                                                    <button class="inc-btn p-0">
-                                                        <i class="fas fa-caret-right"></i></button>
+                                                    <a class="dec-btn p-0" href="{{route ('cart.amount',$product) .'/remove'}}">
+                                                        <i class="fas fa-caret-left"></i></a>
+                                                        <p>&nbsp&nbsp{{$product->pivot->amount}}&nbsp&nbsp</p>
+                                                    <a class="inc-btn p-0" href="{{route ('cart.amount',$product) .'/add'}}">
+                                                        <i class="fas fa-caret-right"></i></a>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="p-3 align-middle border-light">
-                                            <p class="mb-0 small">${{$product->price * $product->price}}</p>
+                                            <p class="mb-0 small">${{$product->price * $product->pivot->amount}}</p>
                                         </td>
                                         <td class="p-3 align-middle border-light"><a class="reset-anchor" href="#!">
                                             <form action="{{ route('cart', $product) }}" method="POST" class="d-inline">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="fas fa-trash-alt small text-muted" type="submit"><i class="bi bi-trash"></i></button>
+                                                <button class="fas fa-trash-alt small text-muted" type="submit"></button>
                                             </form>
                                     </tr>
                                 @endforeach
@@ -110,8 +109,10 @@
                                         class="text-uppercase small font-weight-bold">Total</strong><span>${{$total}}</span></li>
                                 <li>
                                     <div class="input-group mb-0">
+                                        @if (count(Auth::user()->cart->products) > 0) 
                                         <a class="btn btn-outline-warning pageButtons text-dark btn-sm ld ld-heartbeat" href="{{ url('checkout') }}">Procceed to
                                         checkout<i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+                                        @endif
                                     </div>
                                 </li>
                             </ul>

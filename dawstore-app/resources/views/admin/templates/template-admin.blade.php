@@ -20,12 +20,6 @@
                 </a>
             </li>
 
-            <li class="sidebar-item @yield('category-manager-active')">
-                <a class="sidebar-link" href="{{url ('admin/category-manager')}}">
-                    <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Category</span>
-                </a>
-            </li>
-
             <li class="sidebar-item @yield('brand-manager-active')">
                 <a class="sidebar-link" href="{{url ('admin/brand-manager')}}">
                     <i class="align-middle" data-feather="list"></i> <span class="align-middle">Add Brand</span>
@@ -40,8 +34,11 @@
                     Log Out and go to Store
                 </div>
                 <div class="d-grid">
-                    <a href="{{url ('/')}}" class="btn btn-danger">Log Out</a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">{{ __('Logout') }}</a>
                 </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>
@@ -56,93 +53,21 @@
     <div class="navbar-collapse collapse">
         <ul class="navbar-nav navbar-align">
             <li class="nav-item dropdown">
-                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
-                    <div class="position-relative">
-                        <i class="align-middle" data-feather="bell"></i>
-                        <span class="indicator">1</span>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-                    <div class="dropdown-menu-header">
-                        1 New Notifications
-                    </div>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-2">
-                                    <i class="text-danger" data-feather="alert-circle"></i>
-                                </div>
-                                <div class="col-10">
-                                    <div class="text-dark">Update completed</div>
-                                    <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                                    <div class="text-muted small mt-1">30m ago</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="dropdown-menu-footer">
-                        <a href="#" class="text-muted">Show all notifications</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
-                    <div class="position-relative">
-                        <i class="align-middle" data-feather="tool"></i>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-                    <div class="dropdown-menu-header">
-                        Admin Management Panel
-                    </div>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-2">
-                                    <i class="text-danger" data-feather="plus"></i>
-                                </div>
-                                <div class="col-10">
-                                    <div class="text-dark">Add Admin User</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-2">
-                                    <i class="text-danger" data-feather="minus"></i>
-                                </div>
-                                <div class="col-10">
-                                    <div class="text-dark">Delete Admin User</div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="dropdown-menu-footer">
-                        <a href="#" class="text-muted">Show all notifications</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
                 <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
                     <i class="align-middle" data-feather="settings"></i>
                 </a>
 
                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                    <i class="align-middle" data-feather="user"></i> <span class="text-dark">Charles Hall</span>
+                    <i class="align-middle" data-feather="user"></i> <span class="text-dark">{{ Auth::user()->username }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="{{url ('admin/profile-admin')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
                     <a class="dropdown-item" href="{{url ('admin/admin-panel')}}"><i class="align-middle me-1" data-feather="pie-chart"></i> Dashboard</a>
+                    <a class="dropdown-item" href="{{url ('/')}}"><i class="align-middle me-1" data-feather="home"></i> Tello Shoes Home</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{url ('/')}}">Log out</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>

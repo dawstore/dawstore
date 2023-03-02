@@ -54,6 +54,13 @@ Route::get('/detail', function () {
 
 Route::get('detail/{id?}/{id_brand?}', [ ProductsController::class, 'detail' ]) -> name('detail');
 
+Route::delete('/index/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist');
+
+Route::delete('/products/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist.products');
+
+Route::delete('/{id}', [ WhishlistController::class, 'delete' ]) -> name('whishlist.index');
+
+
 
 // INICIO SESIÓN Y REGISTRO
 Route::get('/whishlist', function () {
@@ -71,6 +78,8 @@ Route::get('addcart/{id?}', [ CartController::class, 'addProduct' ])->name('cart
 Route::get('/cart', [ CartController::class, 'showCart' ])->name('cart.products');
 
 Route::delete('/cart/{id}', [ CartController::class, 'delete' ]) -> name('cart');
+
+Route::get('/cart/{id}/{option?}', [ CartController::class, 'amount' ]) -> name('cart.amount');
 
 //WHITELIST
 
@@ -120,19 +129,16 @@ Route::get('/admin/create-admin', function () {
     return view('admin.create-admin');
 })->name('create-admin');
 
-Route::get('/admin/profile-admin', function () {
-    return view('admin.profile-admin');
-})->name('profile-admin');
-
 Route::get('/admin/forgot-password', function () {
     return view('admin.forgot-password');
 })->name('forgot-password');
 
-Route::get('new-products', function () {
-    return view('new-products');
-})->name('new-products');
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
 
 //Contact form
+
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
@@ -150,18 +156,6 @@ Route::post('/admin/product-manager', [ AdminpanelController::class, 'insert' ])
 Route::put('/admin/edit-product/{id}', [ AdminpanelController::class, 'update' ]) -> name('update-product');
 
 Route::delete('/admin/admin-panel/{id}', [ AdminpanelController::class, 'delete' ]) -> name('admin-panel');
-
-//CATEGORIAS
-
-Route::get('/admin/category-manager', [ AdminpanelController::class,'category' ]);
-
-Route::get('/admin/edit-category/{id}', [ AdminpanelController::class, 'edit_category' ]) -> name('edit-category');
-
-Route::post('/admin/category-manager', [ AdminpanelController::class, 'insert_category' ]) -> name('insert-category');
-
-Route::put('/admin/edit-category/{id}', [ AdminpanelController::class, 'update_category' ]) -> name('update-category');
-
-Route::delete('/admin/category-manager/{id}', [ AdminpanelController::class, 'delete_category' ]) -> name('category-manager');
 
 
 //BRAND

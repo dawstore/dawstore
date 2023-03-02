@@ -2049,6 +2049,65 @@
             "time": "2023-02-06T13:44:46+00:00"
         },
         {
+            "name": "mydnic/laravel-subscribers",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mydnic/laravel-subscribers.git",
+                "reference": "d390e98c14577aec083838c8ae3e9a1380c527b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mydnic/laravel-subscribers/zipball/d390e98c14577aec083838c8ae3e9a1380c527b6",
+                "reference": "d390e98c14577aec083838c8ae3e9a1380c527b6",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=8.40.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "orchestra/testbench": "^6.17.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mydnic\\Subscribers\\SubscribersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mydnic\\Subscribers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clément Rigo",
+                    "email": "rigoclement@mydnic.be"
+                }
+            ],
+            "description": "Easily Manage Internal Newsletter Subscribers in Laravel",
+            "homepage": "https://github.com/mydnic/laravel-subscribers",
+            "keywords": [
+                "customer",
+                "feedback",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/mydnic/laravel-subscribers/issues",
+                "source": "https://github.com/mydnic/laravel-subscribers/tree/v1.8.0"
+            },
+            "time": "2022-05-18T12:06:41+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.66.0",
             "source": {
