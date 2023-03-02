@@ -79,6 +79,12 @@ class CheckoutController extends Controller
             $this->showCheck();
         }
     }
+
+    public function orders()
+    {
+        
+        return view('profile');
+    } 
         
 }
 
