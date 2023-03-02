@@ -332,9 +332,11 @@ Checkout
                             <label class="form-label text-sm text-uppercase" for="o_address">Order Address line 1 </label>
                             <input class="form-control form-control-lg" type="text" id="address" name="o_address" placeholder="House number and street name" required>
                         </div>
+
                         <div class="col-lg-12">
                             <label class="form-label text-sm text-uppercase" for="o_address2">Order Address line 2 (Optional)</label>
                             <input class="form-control form-control-lg" type="text" id="address2" name="o_address2" placeholder="Apartment, Suite, Unit, etc (optional)">
+
                         </div>
                     </div>
                     <br>

@@ -39,14 +39,15 @@ Profile
                         </p>
                         <div class="d-flex justify-content-center mb-2">
                             <a href="#profile-modal" data-bs-toggle="modal">
-                                <button type="button" class="btn btn-outline-primary ms-1 text-dark ">Edit Profile</button>
+                                <button type="button" class="btn btn-outline-primary ms-1 text-dark pageButtons ">Edit Profile</button>
                             </a>
                             <a href="#password-modal" data-bs-toggle="modal">
-                                <button type="button" class="btn btn-outline-primary ms-1 text-dark">Edit Password</button>
+                                <button type="button" class="btn btn-outline-primary ms-1 text-dark pageButtons">Edit Password</button>
                             </a>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-lg-8">
                 <div class="card mb-4">
@@ -109,19 +110,7 @@ Profile
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="card mb-4 mb-md-0">
-                            <div class="card-body">
-                                <p class="mb-4"><span class="text-primary font-italic me-1"> {{Auth::user()->username}}'s</span> Orders</p>
-                                    <p>No order placed</p>
-                                    <a href="{{url('/')}}">
-                                        <button type="button" class="btn btn-outline-primary ms-1 text-dark pageButtons">Shop Now</button>
-                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

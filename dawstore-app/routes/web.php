@@ -138,10 +138,6 @@ Route::get('/admin/create-admin', function () {
     return view('admin.create-admin');
 })->name('create-admin');
 
-Route::get('/admin/profile-admin', function () {
-    return view('admin.profile-admin');
-})->name('profile-admin');
-
 Route::get('/admin/forgot-password', function () {
     return view('admin.forgot-password');
 })->name('forgot-password');

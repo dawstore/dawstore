@@ -92,7 +92,7 @@
                                                 </li>
                                                 @else
                                                 @if (Auth::user()->cart->products->contains($product->id))
-                                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-warning"
+                                                <li class="list-inline-item m-0 p-0 "><a class="btn btn-sm btn-warning"
                                                         href="{{ route('cart.amount',$product) .'/add'}}">Add to cart</a>
                                                 </li>
                                                 @else
@@ -211,7 +211,7 @@ cart</a></div>
                                                 <form action="{{ route('whishlist', $product) }}" method="POST" class="d-inline">
                                                     @method('DELETE')
                                                     @csrf
-                                                    <button class="bi bi-heart-fill medium text-muted d-flex align-items-center justify-content-center" type="submit"> Remove to wish list</button>    
+                                                    <button class="bi bi-heart-fill medium text-muted d-flex align-items-center justify-content-center" type="submit"> Remove to wish list</button>
                                                     </form>
                                                 @else
                                                     <a class="btn btn-link text-dark text-decoration-none p-0 d-flex align-items-center justify-content-center"
@@ -284,7 +284,7 @@ cart</a></div>
                 </div>
             </div>
         </section>
-       
+
     </div>
     </div>
 @endsection
