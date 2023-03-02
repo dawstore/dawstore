@@ -17,9 +17,7 @@ class CartController extends Controller
         return view('cart', @compact('products','total'));
     }
 
-    public function addProduct(Request $request,$id){
-        //TODO: Si ya existe sumarle una unidad
-        
+    public function addProduct(Request $request,$id) {
         $user = User::find(Auth::id());
         $cart=$user->cart;
         $product = Product::find($request->product_id);
@@ -44,17 +42,30 @@ class CartController extends Controller
             if ($product->id == $id) {
                 $amount = $product->pivot;
                 if ($option == 'add') {
-                    $amount->amount++;
-                } else {
-                    $amount->amount--;
-                }
+                    if ($amount->amount >= 0) {
+                        if ($amount->amount < $product->stock) {
+                            $amount->amount++;
+                        } else {
+                            $amount->amount;
+                            smilify('error', 'You have reached the maximum stock!');
+                        }
+                    } else {
+                        $amount->amount;
+                    }
+                } else if ($option == 'remove'){
+                    if ($amount->amount > 0) {
+                        $amount->amount--;
+                    } else {
+                        $amount->amount;
+                    }
+                } 
                 $amount->update();
             }
         }
         return back();
     }
 
-    private function total(){//funcion privada por que solo se va a utilizar aca
+    private function total() {
         $user = User::find(Auth::id());
         $products=$user->cart->products;
         $totalProducto = 0;
@@ -62,6 +73,28 @@ class CartController extends Controller
             $totalProducto += $product->price * $product->pivot->amount;
         }
         return $totalProducto;
+    }
+
+
+    // PROFILE
+
+    public function updateUser(Request $request)
+    {
+        $userUpdate = User::find(Auth::id());
+        if ($request->name != null) {
+            $userUpdate->name = $request->name;
+        }
+        if ($request->username != null) {
+            $userUpdate->username = $request->username;
+        }
+        if ($request->email != null) {
+            $userUpdate->email = $request->email;
+        }
+        $userUpdate->phone = $request->phone;
+        $userUpdate->address = $request->address;
+        $userUpdate->update();
+        smilify('success', 'User edit successfully!');
+        return back();
     }
 
 }

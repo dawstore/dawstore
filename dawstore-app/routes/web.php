@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminpanelController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InsertBbdd;
 use App\Http\Controllers\LoginAdminPanel;
@@ -71,6 +72,14 @@ Route::get('/profile', function () {
     return view('profile');
 })->middleware('auth')->name('profile'); //Si no esta logeado no puede entrar y le redirige al login (TOCAR EL MIDDLEWARE)
 
+// CHECKOUT
+
+Route::get('/checkout', [ CheckoutController::class, 'showCheck']);
+
+Route::post('/checkout', [ CheckoutController::class, 'createOrder'])->name('create-order');
+
+Route::get('/payment/{total}', [ CheckoutController::class, 'showPay']);
+
 //CARRITO
 
 Route::get('addcart/{id?}', [ CartController::class, 'addProduct' ])->name('cart.addProduct');
@@ -137,13 +146,21 @@ Route::get('/payment', function () {
     return view('payment');
 })->name('payment');
 
+Route::get('/paypal', function () {
+    return view('paypal');
+})->name('paypal');
+
 //Contact form
 
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+// PROFILE
 
+Route::put('/profile/edit-profile', [ CartController::class, 'updateUser' ]) -> name('edit-profile');
+
+// Route::get('/profile', [ CheckoutController::class,'orders']);
 
 //PRODUCTS
 
