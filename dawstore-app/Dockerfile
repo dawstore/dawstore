@@ -1,0 +1,1 @@
+RUN sail artisan serve
