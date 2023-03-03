@@ -42,4 +42,12 @@ Para iniciar sail debemos introducir el siguiente comando
 - sudo sail up
 
 Para parar servicio sail debemos ejecutar el siguiente comando
-- sudo sail down
+- sudo sail stop
+
+## Desplegar Docker Clásico
+Debemos tener instalado docker en nuestro equipo 
+Para levantar el contenedor docker
+- docker compose up -- Se nos instalará todo lo necesario para ejecutar gracias al archivo Dockerfile nuestra Aplicación 
+
+Para parar el contenedor
+- docker compose stop
