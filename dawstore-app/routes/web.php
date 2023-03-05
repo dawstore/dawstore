@@ -158,8 +158,6 @@ Route::get('/contact', function () {
 
 // PROFILE
 
-Route::get('/profile', [ CheckoutController::class,'orders']);
-
 Route::put('/profile/edit-profile', [ CartController::class, 'updateUser' ]) -> name('edit-profile');
 
 

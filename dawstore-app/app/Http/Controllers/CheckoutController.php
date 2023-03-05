@@ -72,22 +72,12 @@ class CheckoutController extends Controller
                 $cart = $user->cart;
                 $cart->products()->detach($product->id);
             }
-
             smilify('success', 'Order placed successfully!');
             return view('profile');
         } else {
             $this->showCheck();
         }
-    }
-
-    public function orders()
-    {
-        $user = User::find(Auth::id());
-        $orders = $user->orders;
-        $num_orders = $orders->count();
-        return view('profile', @compact('orders','num_orders'));
     } 
-        
 }
 
 
