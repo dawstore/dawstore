@@ -82,8 +82,10 @@ class CheckoutController extends Controller
 
     public function orders()
     {
-        
-        return view('profile');
+        $user = User::find(Auth::id());
+        $orders = $user->orders;
+        $num_orders = $orders->count();
+        return view('profile', @compact('orders','num_orders'));
     } 
         
 }
