@@ -361,12 +361,6 @@ Checkout
                         </ul>
                     </div>
                 </div>
-                {{-- <br>
-                    <div class="col-lg-12 form-group">
-                        <!--Añadir el payment-->
-                        <a href="{{ url('payment', $total) }}"><button class="btn btn-dark" type="submit">Pay with Credit or Debit Card <i class="bi bi-credit-card"></i></button></a>
-                        <a href="{{ url('paypal') }}"><button class="btn  btn-warning" type="submit">Pay with Paypal <i class="bi bi-paypal"></i></button></a>
-                    </div> --}}
             </div>
         </div>
     </section>
