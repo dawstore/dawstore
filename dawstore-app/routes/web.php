@@ -160,7 +160,6 @@ Route::get('/contact', function () {
 
 Route::put('/profile/edit-profile', [ CartController::class, 'updateUser' ]) -> name('edit-profile');
 
-// Route::get('/profile', [ CheckoutController::class,'orders']);
 
 //PRODUCTS
 

@@ -4,9 +4,9 @@
 TelloStore Ecommerce realizado utilizando las siguientes tecnologías:
 - Laravel 9
 - HTML
-- BOOTSTRAP 5.2
+- Bootstrap 5.2
 - CSS
-- Mysql
+- MySQL
 - JavaScript
 - GSAP
 
@@ -15,16 +15,15 @@ Clonar TelloStore
 - git clone https://github.com/dawstore/dawstore.git
 
 Entrar en el repositorio y actualizarlo para añadir la carpeta Vendor
-- Composer update
+- composer update
 
 General la "Llave" para utilizar nuestra Aplicación
 - php artisan key:generate
 
-
 Realizar la migración de los modelos 
 - php artisan migrate
 
-Para desplegar los productos de su Script Mysql debe introducirlo en la carpeta /database y ejecutar el siguiente comando
+Para desplegar los productos de su Script MySQL debe introducirlo en la carpeta /database y ejecutar el siguiente comando
 - php artisan db:seed
 
 Para iniciar nuestra Aplicación
@@ -45,8 +44,8 @@ Para parar servicio sail debemos ejecutar el siguiente comando
 - sudo sail stop
 
 ## Desplegar Docker Clásico
-Debemos tener instalado docker en nuestro equipo 
-Para levantar el contenedor docker
+Debemos tener instalado Docker en nuestro equipo 
+Para levantar el contenedor Docker
 - docker compose up -- Se nos instalará todo lo necesario para ejecutar gracias al archivo Dockerfile nuestra Aplicación 
 
 Para parar el contenedor

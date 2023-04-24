@@ -72,20 +72,12 @@ class CheckoutController extends Controller
                 $cart = $user->cart;
                 $cart->products()->detach($product->id);
             }
-
             smilify('success', 'Order placed successfully!');
             return view('profile');
         } else {
             $this->showCheck();
         }
-    }
-
-    public function orders()
-    {
-        
-        return view('profile');
     } 
-        
 }
 
 
